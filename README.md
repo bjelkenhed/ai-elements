@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-It is a repository for getting started with [AI Elements](https://ai-sdk.dev/elements/overview).
+It is a repository for getting started with [AI Elements](https://ai-sdk.dev/elements/overview), currently one of the best ways to create UIs for AI Agents.
 
 For a youtube tutorial see [Fullstack AI Chatbot with AI SDK 5 & Vercel’s New AI Elements](https://www.youtube.com/watch?v=6lur_Yit4PM).
 
