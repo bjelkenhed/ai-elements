@@ -58,6 +58,10 @@ const models = [
     name: 'Deepseek R1',
     value: 'deepseek/deepseek-r1',
   },
+  {
+    name: 'Qwen3-Next-80B-A3B-Thinking',
+    value: 'alibaba/qwen3-next-80b-a3b-thinking',
+  },
 ];
 
 const AIChat = () => {
