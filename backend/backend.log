@@ -1,0 +1,378 @@
+2025-09-14 17:20:45,813 - __main__ - INFO - Starting FastAPI development server...
+2025-09-14 17:20:45,813 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-14 17:20:45,814 - __main__ - WARNING - .env file not found at /Users/magnusbjelkenhed/think/projects/ai-elements/backend/.env
+2025-09-14 17:20:45,814 - __main__ - WARNING - Please copy .env.example to .env and add your OPENAI_API_KEY
+2025-09-14 17:24:00,709 - __main__ - INFO - Starting FastAPI development server...
+2025-09-14 17:24:00,709 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-14 17:27:15,075 - __main__ - INFO - Starting FastAPI development server...
+2025-09-14 17:27:15,075 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-14 17:27:35,750 - main - INFO - Health check requested
+2025-09-14 17:27:39,795 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:27:39,796 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:27:39,796 - main - INFO - WebSearch: False
+2025-09-14 17:27:39,796 - main - INFO - Messages count: 1
+2025-09-14 17:27:39,796 - main - INFO - Message 0: user - Hello...
+2025-09-14 17:27:39,799 - main - INFO - Starting chat stream for message 8e62f8bf-d9b3-40bf-b444-b5f0e68da94d
+2025-09-14 17:27:39,799 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:27:39,799 - main - INFO - Messages: 1 messages
+2025-09-14 17:27:39,799 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:27:39,799 - main - INFO -   Content: Hello
+2025-09-14 17:27:39,799 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:27:39,799 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:27:40,654 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:27:40,723 - main - INFO - Chat stream completed for message 8e62f8bf-d9b3-40bf-b444-b5f0e68da94d
+2025-09-14 17:27:40,723 - main - INFO - Total content length: 34
+2025-09-14 17:28:12,752 - __main__ - INFO - Starting FastAPI development server...
+2025-09-14 17:28:12,752 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-14 17:30:20,188 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:30:20,189 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:30:20,189 - main - INFO - WebSearch: False
+2025-09-14 17:30:20,189 - main - INFO - Messages count: 1
+2025-09-14 17:30:39,490 - __main__ - INFO - Starting FastAPI development server...
+2025-09-14 17:30:39,490 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-14 17:30:51,410 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:30:51,411 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:30:51,411 - main - INFO - WebSearch: False
+2025-09-14 17:30:51,411 - main - INFO - Messages count: 2
+2025-09-14 17:31:52,588 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:31:52,589 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:31:52,589 - main - INFO - WebSearch: False
+2025-09-14 17:31:52,589 - main - INFO - Messages count: 1
+2025-09-14 17:31:52,589 - main - INFO - Message 0: user - Hello
+2025-09-14 17:31:52,593 - main - INFO - Starting chat stream for message 096c90e9-aac5-4708-ae82-442ca8dda38e
+2025-09-14 17:31:52,594 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:31:52,594 - main - INFO - Messages: 1 messages
+2025-09-14 17:31:52,594 - main - INFO - Message 0: ID=Fkt7mtyNICoEw2U3, Role=user
+2025-09-14 17:31:52,594 - main - INFO -   Parts: 1 parts
+2025-09-14 17:31:52,594 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:31:52,594 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:31:52,594 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:31:54,320 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:31:54,362 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,389 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,389 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,391 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,404 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,404 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:31:54,404 - main - INFO - Chat stream completed for message 096c90e9-aac5-4708-ae82-442ca8dda38e
+2025-09-14 17:31:54,404 - main - INFO - Total content length: 34
+2025-09-14 17:31:54,404 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:27,572 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:32:27,574 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:32:27,574 - main - INFO - WebSearch: False
+2025-09-14 17:32:27,574 - main - INFO - Messages count: 2
+2025-09-14 17:32:27,574 - main - INFO - Message 0: user - Hello
+2025-09-14 17:32:27,574 - main - INFO - Message 1: user - Hello
+2025-09-14 17:32:27,575 - main - INFO - Starting chat stream for message 03fb5e9b-4407-4f44-acc4-46b5a9653706
+2025-09-14 17:32:27,575 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:32:27,575 - main - INFO - Messages: 2 messages
+2025-09-14 17:32:27,575 - main - INFO - Message 0: ID=Fkt7mtyNICoEw2U3, Role=user
+2025-09-14 17:32:27,575 - main - INFO -   Parts: 1 parts
+2025-09-14 17:32:27,575 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:32:27,575 - main - INFO - Message 1: ID=7122SBWir1br8fnO, Role=user
+2025-09-14 17:32:27,575 - main - INFO -   Parts: 1 parts
+2025-09-14 17:32:27,575 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:32:27,575 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:32:27,575 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:32:28,722 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:32:28,782 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,786 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,786 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,798 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,798 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,804 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,804 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:32:28,804 - main - INFO - Chat stream completed for message 03fb5e9b-4407-4f44-acc4-46b5a9653706
+2025-09-14 17:32:28,804 - main - INFO - Total content length: 37
+2025-09-14 17:32:28,804 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:34,509 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:34:34,509 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:34:34,509 - main - INFO - WebSearch: False
+2025-09-14 17:34:34,509 - main - INFO - Messages count: 3
+2025-09-14 17:34:34,509 - main - INFO - Message 0: user - Hello
+2025-09-14 17:34:34,509 - main - INFO - Message 1: user - Hello
+2025-09-14 17:34:34,509 - main - INFO - Message 2: user - Hello
+2025-09-14 17:34:34,515 - main - INFO - Starting chat stream for message 0631a4d5-188f-43fb-9703-be01f6cd0713
+2025-09-14 17:34:34,515 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:34:34,515 - main - INFO - Messages: 3 messages
+2025-09-14 17:34:34,515 - main - INFO - Message 0: ID=Fkt7mtyNICoEw2U3, Role=user
+2025-09-14 17:34:34,515 - main - INFO -   Parts: 1 parts
+2025-09-14 17:34:34,515 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:34:34,515 - main - INFO - Message 1: ID=7122SBWir1br8fnO, Role=user
+2025-09-14 17:34:34,515 - main - INFO -   Parts: 1 parts
+2025-09-14 17:34:34,515 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:34:34,515 - main - INFO - Message 2: ID=aq93KNaIdz3NDl5B, Role=user
+2025-09-14 17:34:34,515 - main - INFO -   Parts: 1 parts
+2025-09-14 17:34:34,515 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:34:34,515 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:34:34,516 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:34:35,002 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:34:35,016 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,017 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,017 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,029 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,029 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,033 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,033 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:34:35,033 - main - INFO - Chat stream completed for message 0631a4d5-188f-43fb-9703-be01f6cd0713
+2025-09-14 17:34:35,033 - main - INFO - Total content length: 37
+2025-09-14 17:34:35,033 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:17,650 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:35:17,650 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:35:17,650 - main - INFO - WebSearch: False
+2025-09-14 17:35:17,650 - main - INFO - Messages count: 4
+2025-09-14 17:35:17,650 - main - INFO - Message 0: user - Hello
+2025-09-14 17:35:17,650 - main - INFO - Message 1: user - Hello
+2025-09-14 17:35:17,650 - main - INFO - Message 2: user - Hello
+2025-09-14 17:35:17,650 - main - INFO - Message 3: user - hello
+2025-09-14 17:35:17,651 - main - INFO - Starting chat stream for message 97948a25-730b-4d8a-953f-bc2a44106089
+2025-09-14 17:35:17,651 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:35:17,651 - main - INFO - Messages: 4 messages
+2025-09-14 17:35:17,651 - main - INFO - Message 0: ID=Fkt7mtyNICoEw2U3, Role=user
+2025-09-14 17:35:17,651 - main - INFO -   Parts: 1 parts
+2025-09-14 17:35:17,651 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:35:17,651 - main - INFO - Message 1: ID=7122SBWir1br8fnO, Role=user
+2025-09-14 17:35:17,651 - main - INFO -   Parts: 1 parts
+2025-09-14 17:35:17,651 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:35:17,651 - main - INFO - Message 2: ID=aq93KNaIdz3NDl5B, Role=user
+2025-09-14 17:35:17,651 - main - INFO -   Parts: 1 parts
+2025-09-14 17:35:17,651 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:35:17,651 - main - INFO - Message 3: ID=dvbygDQ6WZu21AvZ, Role=user
+2025-09-14 17:35:17,651 - main - INFO -   Parts: 1 parts
+2025-09-14 17:35:17,652 - main - INFO -     Part 0: type=text, text=hello...
+2025-09-14 17:35:17,652 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'Hello'}, {'role': 'user', 'content': 'hello'}]
+2025-09-14 17:35:17,652 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:35:18,836 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:35:18,904 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,929 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,929 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,931 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,957 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,957 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:35:18,957 - main - INFO - Chat stream completed for message 97948a25-730b-4d8a-953f-bc2a44106089
+2025-09-14 17:35:18,957 - main - INFO - Total content length: 34
+2025-09-14 17:35:18,957 - asyncio - WARNING - socket.send() raised exception.
+2025-09-14 17:37:45,964 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:37:45,965 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:37:45,965 - main - INFO - WebSearch: False
+2025-09-14 17:37:45,965 - main - INFO - Messages count: 1
+2025-09-14 17:37:45,965 - main - INFO - Message 0: user - What is in a good taco dinner
+2025-09-14 17:37:45,970 - main - INFO - Starting chat stream for message b22d281c-c722-43c3-afdf-f5ab225de322
+2025-09-14 17:37:45,970 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:37:45,970 - main - INFO - Messages: 1 messages
+2025-09-14 17:37:45,970 - main - INFO - Message 0: ID=S3l0SN5RiQIl8aGf, Role=user
+2025-09-14 17:37:45,970 - main - INFO -   Parts: 1 parts
+2025-09-14 17:37:45,970 - main - INFO -     Part 0: type=text, text=What is in a good taco dinner...
+2025-09-14 17:37:45,970 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is in a good taco dinner'}]
+2025-09-14 17:37:45,970 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:37:46,376 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:37:53,909 - main - INFO - Chat stream completed for message b22d281c-c722-43c3-afdf-f5ab225de322
+2025-09-14 17:37:53,909 - main - INFO - Total content length: 2312
+2025-09-14 17:39:08,623 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:39:08,623 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:39:08,623 - main - INFO - WebSearch: False
+2025-09-14 17:39:08,623 - main - INFO - Messages count: 1
+2025-09-14 17:39:08,623 - main - INFO - Message 0: user - What is VO2 max
+2025-09-14 17:39:08,625 - main - INFO - Starting chat stream for message fa111c39-a892-48e0-bf7a-622aae534c74
+2025-09-14 17:39:08,625 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:39:08,625 - main - INFO - Messages: 1 messages
+2025-09-14 17:39:08,625 - main - INFO - Message 0: ID=To2VDRUwit4ArGFQ, Role=user
+2025-09-14 17:39:08,625 - main - INFO -   Parts: 1 parts
+2025-09-14 17:39:08,625 - main - INFO -     Part 0: type=text, text=What is VO2 max...
+2025-09-14 17:39:08,625 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is VO2 max'}]
+2025-09-14 17:39:08,625 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:39:09,123 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:39:12,094 - main - INFO - Chat stream completed for message fa111c39-a892-48e0-bf7a-622aae534c74
+2025-09-14 17:39:12,094 - main - INFO - Total content length: 1003
+2025-09-14 17:40:18,729 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:40:18,729 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:40:18,730 - main - INFO - WebSearch: False
+2025-09-14 17:40:18,730 - main - INFO - Messages count: 1
+2025-09-14 17:40:18,730 - main - INFO - Message 0: user - What is VO2 max
+2025-09-14 17:40:18,731 - main - INFO - Starting chat stream for message f179cd66-8d61-4dd5-9ec3-7f2710a07798
+2025-09-14 17:40:18,732 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:40:18,732 - main - INFO - Messages: 1 messages
+2025-09-14 17:40:18,732 - main - INFO - Message 0: ID=clOOtcCvBxSDcgLs, Role=user
+2025-09-14 17:40:18,732 - main - INFO -   Parts: 1 parts
+2025-09-14 17:40:18,733 - main - INFO -     Part 0: type=text, text=What is VO2 max...
+2025-09-14 17:40:18,733 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is VO2 max'}]
+2025-09-14 17:40:18,735 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:40:19,581 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:40:21,944 - main - INFO - Chat stream completed for message f179cd66-8d61-4dd5-9ec3-7f2710a07798
+2025-09-14 17:40:21,944 - main - INFO - Total content length: 1064
+2025-09-14 17:45:18,710 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:45:18,710 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:45:18,710 - main - INFO - WebSearch: False
+2025-09-14 17:45:18,710 - main - INFO - Messages count: 1
+2025-09-14 17:45:18,710 - main - INFO - Message 0: user - Hello
+2025-09-14 17:45:18,721 - main - INFO - Starting chat stream for message 435918f5-2ffb-492c-a405-432c1990967e
+2025-09-14 17:45:18,721 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:45:18,721 - main - INFO - Messages: 1 messages
+2025-09-14 17:45:18,721 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:45:18,721 - main - INFO -   Parts: 1 parts
+2025-09-14 17:45:18,721 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:45:18,721 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:45:18,721 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:45:19,281 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:45:19,383 - main - INFO - Chat stream completed for message 435918f5-2ffb-492c-a405-432c1990967e
+2025-09-14 17:45:28,755 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:45:28,756 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:45:28,756 - main - INFO - WebSearch: False
+2025-09-14 17:45:28,756 - main - INFO - Messages count: 1
+2025-09-14 17:45:28,756 - main - INFO - Message 0: user - Hello
+2025-09-14 17:45:28,757 - main - INFO - Starting chat stream for message f249c48c-92d8-4aa7-ae6d-8986502979bc
+2025-09-14 17:45:28,757 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:45:28,757 - main - INFO - Messages: 1 messages
+2025-09-14 17:45:28,757 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:45:28,757 - main - INFO -   Parts: 1 parts
+2025-09-14 17:45:28,757 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:45:28,757 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:45:28,757 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:45:29,948 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:45:30,054 - main - INFO - Chat stream completed for message f249c48c-92d8-4aa7-ae6d-8986502979bc
+2025-09-14 17:46:24,131 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:46:24,131 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:46:24,131 - main - INFO - WebSearch: False
+2025-09-14 17:46:24,131 - main - INFO - Messages count: 1
+2025-09-14 17:46:24,131 - main - INFO - Message 0: user - What is VO2 max
+2025-09-14 17:46:24,133 - main - INFO - Starting chat stream for message 709efd26-d288-4784-b0bb-dfe4824195ed
+2025-09-14 17:46:24,133 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:46:24,133 - main - INFO - Messages: 1 messages
+2025-09-14 17:46:24,134 - main - INFO - Message 0: ID=faQRok7tJcPJKJPV, Role=user
+2025-09-14 17:46:24,134 - main - INFO -   Parts: 1 parts
+2025-09-14 17:46:24,134 - main - INFO -     Part 0: type=text, text=What is VO2 max...
+2025-09-14 17:46:24,134 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is VO2 max'}]
+2025-09-14 17:46:24,134 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:46:25,162 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:46:28,363 - main - INFO - Chat stream completed for message 709efd26-d288-4784-b0bb-dfe4824195ed
+2025-09-14 17:50:47,744 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:50:47,744 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:50:47,744 - main - INFO - WebSearch: False
+2025-09-14 17:50:47,744 - main - INFO - Messages count: 1
+2025-09-14 17:50:47,744 - main - INFO - Message 0: user - Hello
+2025-09-14 17:50:47,751 - main - INFO - Starting chat stream for message 096cca99-24f2-40b2-8a3f-5d36b783ea49
+2025-09-14 17:50:47,751 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:50:47,751 - main - INFO - Messages: 1 messages
+2025-09-14 17:50:47,751 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:50:47,751 - main - INFO -   Parts: 1 parts
+2025-09-14 17:50:47,751 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:50:47,751 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:50:47,752 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:50:48,658 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:50:48,741 - main - INFO - Chat stream completed for message 096cca99-24f2-40b2-8a3f-5d36b783ea49
+2025-09-14 17:50:48,741 - main - INFO - Total content length: 34
+2025-09-14 17:50:56,657 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:50:56,657 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:50:56,658 - main - INFO - WebSearch: False
+2025-09-14 17:50:56,658 - main - INFO - Messages count: 1
+2025-09-14 17:50:56,658 - main - INFO - Message 0: user - Hello
+2025-09-14 17:50:56,658 - main - INFO - Starting chat stream for message 06a52ca9-c558-43b6-8b20-2e3359bc96b6
+2025-09-14 17:50:56,658 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:50:56,658 - main - INFO - Messages: 1 messages
+2025-09-14 17:50:56,658 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:50:56,658 - main - INFO -   Parts: 1 parts
+2025-09-14 17:50:56,658 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:50:56,658 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:50:56,659 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:50:57,263 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:50:57,363 - main - INFO - Chat stream completed for message 06a52ca9-c558-43b6-8b20-2e3359bc96b6
+2025-09-14 17:50:57,364 - main - INFO - Total content length: 34
+2025-09-14 17:51:34,407 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:51:34,407 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:51:34,407 - main - INFO - WebSearch: False
+2025-09-14 17:51:34,407 - main - INFO - Messages count: 1
+2025-09-14 17:51:34,407 - main - INFO - Message 0: user - Hello
+2025-09-14 17:51:34,416 - main - INFO - Starting chat stream for message 82a1bb2b-6a6f-4a36-9f3a-0700e6901757
+2025-09-14 17:51:34,417 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:51:34,417 - main - INFO - Messages: 1 messages
+2025-09-14 17:51:34,417 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:51:34,417 - main - INFO -   Parts: 1 parts
+2025-09-14 17:51:34,417 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:51:34,417 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:51:34,417 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:51:34,922 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:52:17,049 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:52:17,050 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:52:17,050 - main - INFO - WebSearch: False
+2025-09-14 17:52:17,050 - main - INFO - Messages count: 1
+2025-09-14 17:52:17,050 - main - INFO - Message 0: user - hello
+2025-09-14 17:52:17,052 - main - INFO - Starting chat stream for message 687afbc0-b1d6-4bb1-ae94-e0221e4afb79
+2025-09-14 17:52:17,053 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:52:17,053 - main - INFO - Messages: 1 messages
+2025-09-14 17:52:17,053 - main - INFO - Message 0: ID=4xTpJod3B1hFujJv, Role=user
+2025-09-14 17:52:17,053 - main - INFO -   Parts: 1 parts
+2025-09-14 17:52:17,053 - main - INFO -     Part 0: type=text, text=hello...
+2025-09-14 17:52:17,053 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'hello'}]
+2025-09-14 17:52:17,053 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:52:17,910 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:52:18,181 - main - INFO - Chat stream completed for message 687afbc0-b1d6-4bb1-ae94-e0221e4afb79
+2025-09-14 17:52:18,181 - main - INFO - Total content length: 34
+2025-09-14 17:54:38,432 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:54:38,432 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:54:38,432 - main - INFO - WebSearch: False
+2025-09-14 17:54:38,432 - main - INFO - Messages count: 1
+2025-09-14 17:54:38,432 - main - INFO - Message 0: user - Hello
+2025-09-14 17:54:38,447 - main - INFO - Starting chat stream for message fdbcd4f7-4103-44e1-8afc-3556f279889f
+2025-09-14 17:54:38,448 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:54:38,448 - main - INFO - Messages: 1 messages
+2025-09-14 17:54:38,448 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:54:38,448 - main - INFO -   Parts: 1 parts
+2025-09-14 17:54:38,448 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:54:38,448 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:54:38,448 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:54:38,967 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:54:50,568 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:54:50,568 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:54:50,568 - main - INFO - WebSearch: False
+2025-09-14 17:54:50,568 - main - INFO - Messages count: 1
+2025-09-14 17:54:50,568 - main - INFO - Message 0: user - Hello
+2025-09-14 17:54:50,569 - main - INFO - Starting chat stream for message 91b0e1d1-5f4e-4e24-8ac8-21f1be1f7033
+2025-09-14 17:54:50,569 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:54:50,569 - main - INFO - Messages: 1 messages
+2025-09-14 17:54:50,569 - main - INFO - Message 0: ID=test, Role=user
+2025-09-14 17:54:50,569 - main - INFO -   Parts: 1 parts
+2025-09-14 17:54:50,569 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:54:50,569 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:54:50,570 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:54:51,720 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:55:09,658 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:55:09,658 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:55:09,658 - main - INFO - WebSearch: False
+2025-09-14 17:55:09,658 - main - INFO - Messages count: 1
+2025-09-14 17:55:09,658 - main - INFO - Message 0: user - Hello
+2025-09-14 17:55:09,661 - main - INFO - Starting chat stream for message 82ed9adc-4e2c-45d2-9b81-f07edba501f6
+2025-09-14 17:55:09,661 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:55:09,661 - main - INFO - Messages: 1 messages
+2025-09-14 17:55:09,661 - main - INFO - Message 0: ID=dNJbAPI80e7oZniU, Role=user
+2025-09-14 17:55:09,661 - main - INFO -   Parts: 1 parts
+2025-09-14 17:55:09,661 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:55:09,662 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-14 17:55:09,662 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:55:10,369 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:55:10,459 - main - INFO - Chat stream completed for message 82ed9adc-4e2c-45d2-9b81-f07edba501f6
+2025-09-14 17:55:10,459 - main - INFO - Total content length: 34
+2025-09-14 17:55:28,462 - main - INFO - === CHAT REQUEST ===
+2025-09-14 17:55:28,462 - main - INFO - Model: openai/gpt-4o
+2025-09-14 17:55:28,462 - main - INFO - WebSearch: False
+2025-09-14 17:55:28,462 - main - INFO - Messages count: 3
+2025-09-14 17:55:28,462 - main - INFO - Message 0: user - Hello
+2025-09-14 17:55:28,462 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-14 17:55:28,462 - main - INFO - Message 2: user - What is VO2 max?
+2025-09-14 17:55:28,463 - main - INFO - Starting chat stream for message ba491117-14bc-4d49-84a3-92c37e159a1f
+2025-09-14 17:55:28,463 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 17:55:28,463 - main - INFO - Messages: 3 messages
+2025-09-14 17:55:28,463 - main - INFO - Message 0: ID=dNJbAPI80e7oZniU, Role=user
+2025-09-14 17:55:28,463 - main - INFO -   Parts: 1 parts
+2025-09-14 17:55:28,463 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-14 17:55:28,463 - main - INFO - Message 1: ID=dj6Ob3qVJGu5nUVV, Role=assistant
+2025-09-14 17:55:28,463 - main - INFO -   Parts: 2 parts
+2025-09-14 17:55:28,463 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-14 17:55:28,463 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-14 17:55:28,463 - main - INFO - Message 2: ID=N8NBLpJJCICYEch7, Role=user
+2025-09-14 17:55:28,463 - main - INFO -   Parts: 1 parts
+2025-09-14 17:55:28,463 - main - INFO -     Part 0: type=text, text=What is VO2 max?...
+2025-09-14 17:55:28,463 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'What is VO2 max?'}]
+2025-09-14 17:55:28,465 - main - INFO - Starting OpenAI stream...
+2025-09-14 17:55:29,117 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 17:55:32,435 - main - INFO - Chat stream completed for message ba491117-14bc-4d49-84a3-92c37e159a1f
+2025-09-14 17:55:32,435 - main - INFO - Total content length: 935

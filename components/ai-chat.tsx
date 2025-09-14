@@ -34,6 +34,7 @@ import {
 } from '@/components/ai-elements/actions';
 import { useState, Fragment } from 'react';
 import { useChat } from '@ai-sdk/react';
+import { getApiUrl, getChatConfig } from '@/lib/chat-config';
 import { Response } from '@/components/ai-elements/response';
 import { GlobeIcon, RefreshCcwIcon, CopyIcon } from 'lucide-react';
 import {
@@ -72,7 +73,9 @@ const AIChat = () => {
   const [input, setInput] = useState('');
   const [model, setModel] = useState<string>(models[0].value);
   const [webSearch, setWebSearch] = useState(false);
-  const { messages, sendMessage, status } = useChat();
+
+  const chatConfig = getChatConfig();
+  const { messages, sendMessage, status, reload } = useChat();
 
   const handleSubmit = (message: PromptInputMessage) => {
     const hasText = Boolean(message.text);
@@ -82,15 +85,18 @@ const AIChat = () => {
       return;
     }
 
+    console.log('backend:', chatConfig.backendType);
+
     sendMessage(
-      { 
+      {
         text: message.text || 'Sent with attachments',
-        files: message.files 
+        files: message.files
       },
       {
         body: {
           model: model,
           webSearch: webSearch,
+          _endpoint: chatConfig.backendType === 'local' ? getApiUrl() : undefined,
         },
       },
     );
@@ -99,6 +105,17 @@ const AIChat = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 relative size-full h-screen">
+      {/* Backend indicator */}
+      <div className="absolute top-2 right-2 z-10">
+        <div className={`px-2 py-1 text-xs rounded-md ${
+          chatConfig.backendType === 'local'
+            ? 'bg-green-100 text-green-800 border border-green-200'
+            : 'bg-blue-100 text-blue-800 border border-blue-200'
+        }`}>
+          {chatConfig.backendType === 'local' ? 'Local FastAPI' : 'AI Gateway'}
+        </div>
+      </div>
+
       <div className="flex flex-col h-full">
         <Conversation className="h-full">
           <ConversationContent>
@@ -139,7 +156,7 @@ const AIChat = () => {
                           {message.role === 'assistant' && i === messages.length - 1 && (
                             <Actions className="mt-2">
                               <Action
-                                onClick={() => regenerate()}
+                                onClick={() => reload()}
                                 label="Retry"
                               >
                                 <RefreshCcwIcon className="size-3" />
