@@ -59,6 +59,10 @@ const models = [
     value: 'deepseek/deepseek-r1',
   },
   {
+    name: 'GPT OSS 120B',
+    value: 'openai/gpt-oss-120b',
+  },
+  {
     name: 'Qwen3-Next-80B-A3B-Thinking',
     value: 'alibaba/qwen3-next-80b-a3b-thinking',
   },
