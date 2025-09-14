@@ -376,3 +376,19 @@
 2025-09-14 17:55:29,117 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2025-09-14 17:55:32,435 - main - INFO - Chat stream completed for message ba491117-14bc-4d49-84a3-92c37e159a1f
 2025-09-14 17:55:32,435 - main - INFO - Total content length: 935
+2025-09-14 18:00:38,423 - main - INFO - === CHAT REQUEST ===
+2025-09-14 18:00:38,423 - main - INFO - Model: openai/gpt-4o
+2025-09-14 18:00:38,423 - main - INFO - WebSearch: False
+2025-09-14 18:00:38,423 - main - INFO - Messages count: 1
+2025-09-14 18:00:38,423 - main - INFO - Message 0: user - What is good ways to prefer for sleep to improve sleep quality
+2025-09-14 18:00:38,424 - main - INFO - Starting chat stream for message de315738-df36-4852-b849-1d106170218d
+2025-09-14 18:00:38,424 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-14 18:00:38,424 - main - INFO - Messages: 1 messages
+2025-09-14 18:00:38,424 - main - INFO - Message 0: ID=zc5Hxq9gJLhwjGKo, Role=user
+2025-09-14 18:00:38,424 - main - INFO -   Parts: 1 parts
+2025-09-14 18:00:38,424 - main - INFO -     Part 0: type=text, text=What is good ways to prefer for sleep to improve sleep quality...
+2025-09-14 18:00:38,424 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is good ways to prefer for sleep to improve sleep quality'}]
+2025-09-14 18:00:38,426 - main - INFO - Starting OpenAI stream...
+2025-09-14 18:00:39,015 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-14 18:00:44,541 - main - INFO - Chat stream completed for message de315738-df36-4852-b849-1d106170218d
+2025-09-14 18:00:44,541 - main - INFO - Total content length: 2070

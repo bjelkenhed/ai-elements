@@ -570,7 +570,7 @@ export const PromptInputActionMenuTrigger = ({
   children,
   ...props
 }: PromptInputActionMenuTriggerProps) => (
-  <DropdownMenuTrigger asChild>
+  <DropdownMenuTrigger asChild suppressHydrationWarning>
     <PromptInputButton className={className} {...props}>
       {children ?? <PlusIcon className="size-4" />}
     </PromptInputButton>
@@ -655,6 +655,7 @@ export const PromptInputModelSelectTrigger = ({
       'hover:bg-accent hover:text-foreground [&[aria-expanded="true"]]:bg-accent [&[aria-expanded="true"]]:text-foreground',
       className
     )}
+    suppressHydrationWarning
     {...props}
   />
 );
