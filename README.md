@@ -25,5 +25,5 @@ So far this repository showcases this [chatbot](https://ai-sdk.dev/elements/exam
 
 ## Learn More
 
-To learn more about AI Elements, take a look at [this][https://vercel.com/changelog/introducing-ai-elements]
+To learn more about AI Elements, take a look at [this](https://vercel.com/changelog/introducing-ai-elements)
 
