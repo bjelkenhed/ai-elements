@@ -537,3 +537,1810 @@
 2025-09-15 05:54:16,310 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
 2025-09-15 05:54:33,803 - __main__ - INFO - Starting FastAPI development server...
 2025-09-15 05:54:33,803 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 06:34:32,779 - __main__ - INFO - Starting FastAPI development server...
+2025-09-15 06:34:32,780 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 06:35:03,586 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:35:03,586 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:35:03,586 - main - INFO - WebSearch: False
+2025-09-15 06:35:03,586 - main - INFO - Messages count: 1
+2025-09-15 06:35:03,586 - main - INFO - Message 0: user - What is the weather like in San Francisco?
+2025-09-15 06:35:03,589 - main - INFO - Starting chat stream for message 3ee12df9-bd0f-4f8e-8a95-ddcc0edb87c2
+2025-09-15 06:35:03,589 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:35:03,589 - main - INFO - Messages: 1 messages
+2025-09-15 06:35:03,589 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 06:35:03,589 - main - INFO -   Parts: 1 parts
+2025-09-15 06:35:03,589 - main - INFO -     Part 0: type=text, text=What is the weather like in San Francisco?...
+2025-09-15 06:35:03,589 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in San Francisco?'}]
+2025-09-15 06:35:03,590 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:35:05,027 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:35:05,215 - main - INFO - Processing tool call: getWeather with args: 
+2025-09-15 06:35:05,215 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-15 06:35:05,215 - main - INFO - Processing tool call:  with args: {"city":"San Francisco"}
+2025-09-15 06:35:05,216 - main - WARNING - Tool  not found in registry
+2025-09-15 06:35:05,216 - main - INFO - Chat stream completed for message 3ee12df9-bd0f-4f8e-8a95-ddcc0edb87c2
+2025-09-15 06:35:05,216 - main - INFO - Total content length: 0
+2025-09-15 06:35:05,216 - main - INFO - Tool calls processed: 2
+2025-09-15 06:35:47,251 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:35:47,251 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:35:47,251 - main - INFO - WebSearch: False
+2025-09-15 06:35:47,251 - main - INFO - Messages count: 1
+2025-09-15 06:35:47,251 - main - INFO - Message 0: user - What is the weather like in Paris?
+2025-09-15 06:35:47,254 - main - INFO - Starting chat stream for message bdc97fdf-840f-474f-a939-d80f9ee28b08
+2025-09-15 06:35:47,254 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:35:47,254 - main - INFO - Messages: 1 messages
+2025-09-15 06:35:47,254 - main - INFO - Message 0: ID=test-2, Role=user
+2025-09-15 06:35:47,254 - main - INFO -   Parts: 1 parts
+2025-09-15 06:35:47,254 - main - INFO -     Part 0: type=text, text=What is the weather like in Paris?...
+2025-09-15 06:35:47,254 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Paris?'}]
+2025-09-15 06:35:47,254 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:35:48,247 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:35:48,367 - main - INFO - Processing tool call: getWeather with args: 
+2025-09-15 06:35:48,367 - main - WARNING - Skipping incomplete tool call: name='getWeather', args=''
+2025-09-15 06:35:48,367 - main - INFO - Processing tool call:  with args: {"city":"Paris"}
+2025-09-15 06:35:48,367 - main - WARNING - Skipping incomplete tool call: name='', args='{"city":"Paris"}'
+2025-09-15 06:35:48,367 - main - INFO - Chat stream completed for message bdc97fdf-840f-474f-a939-d80f9ee28b08
+2025-09-15 06:35:48,367 - main - INFO - Total content length: 0
+2025-09-15 06:35:48,367 - main - INFO - Tool calls processed: 2
+2025-09-15 06:36:21,552 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:36:21,552 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:36:21,552 - main - INFO - WebSearch: False
+2025-09-15 06:36:21,552 - main - INFO - Messages count: 1
+2025-09-15 06:36:21,552 - main - INFO - Message 0: user - What is the weather like in Tokyo?
+2025-09-15 06:36:21,555 - main - INFO - Starting chat stream for message 21f2c565-bc85-43b6-bc78-228b4176d6b7
+2025-09-15 06:36:21,555 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:36:21,555 - main - INFO - Messages: 1 messages
+2025-09-15 06:36:21,555 - main - INFO - Message 0: ID=test-3, Role=user
+2025-09-15 06:36:21,555 - main - INFO -   Parts: 1 parts
+2025-09-15 06:36:21,555 - main - INFO -     Part 0: type=text, text=What is the weather like in Tokyo?...
+2025-09-15 06:36:21,555 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Tokyo?'}]
+2025-09-15 06:36:21,555 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:36:22,231 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:36:22,373 - main - INFO - Processing tool call: getWeather with args: {"city":"Tokyo"}
+2025-09-15 06:36:22,875 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:36:22,875 - main - INFO - Chat stream completed for message 21f2c565-bc85-43b6-bc78-228b4176d6b7
+2025-09-15 06:36:22,875 - main - INFO - Total content length: 0
+2025-09-15 06:36:22,875 - main - INFO - Tool calls processed: 1
+2025-09-15 06:37:24,880 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:37:24,881 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:37:24,881 - main - INFO - WebSearch: False
+2025-09-15 06:37:24,881 - main - INFO - Messages count: 1
+2025-09-15 06:37:24,881 - main - INFO - Message 0: user - hello
+2025-09-15 06:37:24,881 - main - INFO - Starting chat stream for message 39b28c32-7519-41e4-93b3-ac5aefef4a26
+2025-09-15 06:37:24,881 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:37:24,881 - main - INFO - Messages: 1 messages
+2025-09-15 06:37:24,882 - main - INFO - Message 0: ID=fHJrW4UI9QLuioMc, Role=user
+2025-09-15 06:37:24,882 - main - INFO -   Parts: 1 parts
+2025-09-15 06:37:24,882 - main - INFO -     Part 0: type=text, text=hello...
+2025-09-15 06:37:24,882 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'hello'}]
+2025-09-15 06:37:24,882 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:37:25,463 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:37:25,558 - main - INFO - Chat stream completed for message 39b28c32-7519-41e4-93b3-ac5aefef4a26
+2025-09-15 06:37:25,558 - main - INFO - Total content length: 34
+2025-09-15 06:37:25,558 - main - INFO - Tool calls processed: 0
+2025-09-15 06:37:36,307 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:37:36,308 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:37:36,308 - main - INFO - WebSearch: False
+2025-09-15 06:37:36,308 - main - INFO - Messages count: 3
+2025-09-15 06:37:36,308 - main - INFO - Message 0: user - hello
+2025-09-15 06:37:36,308 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 06:37:36,308 - main - INFO - Message 2: user - What is the weather like in Paris
+2025-09-15 06:37:36,308 - main - INFO - Starting chat stream for message 3fda00fb-f879-4b47-8d57-49f6edee2eb7
+2025-09-15 06:37:36,308 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:37:36,308 - main - INFO - Messages: 3 messages
+2025-09-15 06:37:36,308 - main - INFO - Message 0: ID=fHJrW4UI9QLuioMc, Role=user
+2025-09-15 06:37:36,308 - main - INFO -   Parts: 1 parts
+2025-09-15 06:37:36,308 - main - INFO -     Part 0: type=text, text=hello...
+2025-09-15 06:37:36,308 - main - INFO - Message 1: ID=ebhaWBYCphGNpOvw, Role=assistant
+2025-09-15 06:37:36,308 - main - INFO -   Parts: 2 parts
+2025-09-15 06:37:36,308 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 06:37:36,308 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-15 06:37:36,308 - main - INFO - Message 2: ID=ChYZIdnQ78Ge2fIZ, Role=user
+2025-09-15 06:37:36,308 - main - INFO -   Parts: 1 parts
+2025-09-15 06:37:36,308 - main - INFO -     Part 0: type=text, text=What is the weather like in Paris...
+2025-09-15 06:37:36,308 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Paris'}]
+2025-09-15 06:37:36,309 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:37:37,388 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:37:37,512 - main - INFO - Processing tool call: getWeather with args: {"city":"Paris"}
+2025-09-15 06:37:38,014 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:37:38,014 - main - INFO - Chat stream completed for message 3fda00fb-f879-4b47-8d57-49f6edee2eb7
+2025-09-15 06:37:38,014 - main - INFO - Total content length: 0
+2025-09-15 06:37:38,015 - main - INFO - Tool calls processed: 1
+2025-09-15 06:38:06,201 - __main__ - INFO - Starting FastAPI development server...
+2025-09-15 06:38:06,201 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 06:38:46,013 - __main__ - INFO - Starting FastAPI development server...
+2025-09-15 06:38:46,013 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 06:39:06,736 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:39:06,736 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:39:06,736 - main - INFO - WebSearch: False
+2025-09-15 06:39:06,736 - main - INFO - Messages count: 5
+2025-09-15 06:39:06,737 - main - INFO - Message 0: user - hello
+2025-09-15 06:39:06,737 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 06:39:06,737 - main - INFO - Message 2: user - What is the weather like in Paris
+2025-09-15 06:39:06,737 - main - INFO - Message 3: assistant - 
+2025-09-15 06:39:06,737 - main - INFO - Message 4: user - How to become a good leader
+2025-09-15 06:39:06,740 - main - INFO - Starting chat stream for message 3b995af8-d3b8-42ac-b947-ea78f07d6bee
+2025-09-15 06:39:06,740 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:39:06,740 - main - INFO - Messages: 5 messages
+2025-09-15 06:39:06,740 - main - INFO - Message 0: ID=fHJrW4UI9QLuioMc, Role=user
+2025-09-15 06:39:06,740 - main - INFO -   Parts: 1 parts
+2025-09-15 06:39:06,740 - main - INFO -     Part 0: type=text, text=hello...
+2025-09-15 06:39:06,740 - main - INFO - Message 1: ID=ebhaWBYCphGNpOvw, Role=assistant
+2025-09-15 06:39:06,740 - main - INFO -   Parts: 2 parts
+2025-09-15 06:39:06,740 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 06:39:06,740 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-15 06:39:06,740 - main - INFO - Message 2: ID=ChYZIdnQ78Ge2fIZ, Role=user
+2025-09-15 06:39:06,740 - main - INFO -   Parts: 1 parts
+2025-09-15 06:39:06,740 - main - INFO -     Part 0: type=text, text=What is the weather like in Paris...
+2025-09-15 06:39:06,740 - main - INFO - Message 3: ID=lDJRMsQ0Qlq9SRKL, Role=assistant
+2025-09-15 06:39:06,740 - main - INFO -   Parts: 2 parts
+2025-09-15 06:39:06,740 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 06:39:06,740 - main - INFO -     Part 1: type=tool-, text=None...
+2025-09-15 06:39:06,740 - main - INFO - Message 4: ID=BKNHzsqZN3zrxZzI, Role=user
+2025-09-15 06:39:06,740 - main - INFO -   Parts: 1 parts
+2025-09-15 06:39:06,740 - main - INFO -     Part 0: type=text, text=How to become a good leader...
+2025-09-15 06:39:06,740 - main - WARNING - No content found in message lDJRMsQ0Qlq9SRKL
+2025-09-15 06:39:06,740 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Paris'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'How to become a good leader'}]
+2025-09-15 06:39:06,741 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:39:07,299 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:39:14,176 - main - INFO - Chat stream completed for message 3b995af8-d3b8-42ac-b947-ea78f07d6bee
+2025-09-15 06:39:14,176 - main - INFO - Total content length: 1590
+2025-09-15 06:39:14,176 - main - INFO - Tool calls processed: 0
+2025-09-15 06:39:48,046 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:39:48,046 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:39:48,046 - main - INFO - WebSearch: False
+2025-09-15 06:39:48,046 - main - INFO - Messages count: 1
+2025-09-15 06:39:48,046 - main - INFO - Message 0: user - What is the weather like in Stockholm
+2025-09-15 06:39:48,047 - main - INFO - Starting chat stream for message e127c1df-9560-488e-bc1e-8f9371fff09c
+2025-09-15 06:39:48,047 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:39:48,047 - main - INFO - Messages: 1 messages
+2025-09-15 06:39:48,047 - main - INFO - Message 0: ID=9VIh1a2Jp5Mk6BOt, Role=user
+2025-09-15 06:39:48,047 - main - INFO -   Parts: 1 parts
+2025-09-15 06:39:48,047 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm...
+2025-09-15 06:39:48,047 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm'}]
+2025-09-15 06:39:48,048 - main - INFO - Starting OpenAI stream...
+2025-09-15 06:39:48,974 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:39:49,193 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:39:49,695 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:39:49,696 - main - INFO - Chat stream completed for message e127c1df-9560-488e-bc1e-8f9371fff09c
+2025-09-15 06:39:49,696 - main - INFO - Total content length: 0
+2025-09-15 06:39:49,697 - main - INFO - Tool calls processed: 1
+2025-09-15 06:44:01,721 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:44:01,722 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:44:01,722 - main - INFO - WebSearch: False
+2025-09-15 06:44:01,722 - main - INFO - Messages count: 1
+2025-09-15 06:44:01,722 - main - INFO - Message 0: user - What is the weather like in London?
+2025-09-15 06:44:01,725 - main - INFO - Starting chat stream for message 90438c61-44b4-4251-95aa-923797c1cb24
+2025-09-15 06:44:01,725 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:44:01,725 - main - INFO - Messages: 1 messages
+2025-09-15 06:44:01,725 - main - INFO - Message 0: ID=test-4, Role=user
+2025-09-15 06:44:01,725 - main - INFO -   Parts: 1 parts
+2025-09-15 06:44:01,725 - main - INFO -     Part 0: type=text, text=What is the weather like in London?...
+2025-09-15 06:44:01,725 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in London?'}]
+2025-09-15 06:44:01,725 - main - INFO - Starting OpenAI request...
+2025-09-15 06:44:02,713 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:44:02,729 - main - INFO - Processing tool call: getWeather with args: {"city":"London"}
+2025-09-15 06:44:03,230 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:44:03,231 - main - INFO - Chat completed for message 90438c61-44b4-4251-95aa-923797c1cb24
+2025-09-15 06:44:03,231 - main - INFO - Tool calls processed: 1
+2025-09-15 06:47:48,548 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:47:48,548 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:47:48,548 - main - INFO - WebSearch: False
+2025-09-15 06:47:48,548 - main - INFO - Messages count: 1
+2025-09-15 06:47:48,548 - main - INFO - Message 0: user - What is the weather like in Berlin?
+2025-09-15 06:47:48,551 - main - INFO - Starting chat stream for message d477066a-0d3d-41a8-b7e6-0141e5a54b36
+2025-09-15 06:47:48,551 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:47:48,551 - main - INFO - Messages: 1 messages
+2025-09-15 06:47:48,551 - main - INFO - Message 0: ID=test-5, Role=user
+2025-09-15 06:47:48,551 - main - INFO -   Parts: 1 parts
+2025-09-15 06:47:48,551 - main - INFO -     Part 0: type=text, text=What is the weather like in Berlin?...
+2025-09-15 06:47:48,552 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Berlin?'}]
+2025-09-15 06:47:48,552 - main - INFO - Starting OpenAI request...
+2025-09-15 06:47:50,115 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:47:50,125 - main - INFO - Processing tool call: getWeather with args: {"city":"Berlin"}
+2025-09-15 06:47:50,627 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:47:50,627 - main - INFO - Chat completed for message d477066a-0d3d-41a8-b7e6-0141e5a54b36
+2025-09-15 06:47:50,627 - main - INFO - Tool calls processed: 1
+2025-09-15 06:48:36,381 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:48:36,381 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:48:36,381 - main - INFO - WebSearch: False
+2025-09-15 06:48:36,381 - main - INFO - Messages count: 1
+2025-09-15 06:48:36,381 - main - INFO - Message 0: user - Hello
+2025-09-15 06:48:36,382 - main - INFO - Starting chat stream for message 1102a161-a40d-4c72-9ec9-be1fef4a74de
+2025-09-15 06:48:36,382 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:48:36,382 - main - INFO - Messages: 1 messages
+2025-09-15 06:48:36,382 - main - INFO - Message 0: ID=eOO3MSQ7efIw8WIJ, Role=user
+2025-09-15 06:48:36,382 - main - INFO -   Parts: 1 parts
+2025-09-15 06:48:36,382 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 06:48:36,382 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-15 06:48:36,382 - main - INFO - Starting OpenAI request...
+2025-09-15 06:48:36,952 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:48:37,335 - main - INFO - Chat completed for message 1102a161-a40d-4c72-9ec9-be1fef4a74de
+2025-09-15 06:48:37,335 - main - INFO - Tool calls processed: 0
+2025-09-15 06:48:46,248 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:48:46,248 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:48:46,249 - main - INFO - WebSearch: False
+2025-09-15 06:48:46,249 - main - INFO - Messages count: 3
+2025-09-15 06:48:46,249 - main - INFO - Message 0: user - Hello
+2025-09-15 06:48:46,249 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 06:48:46,249 - main - INFO - Message 2: user - What is the weather like in Stockholm
+2025-09-15 06:48:46,249 - main - INFO - Starting chat stream for message 639ce84b-42c2-4158-b4f1-a9d21da7e084
+2025-09-15 06:48:46,249 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:48:46,249 - main - INFO - Messages: 3 messages
+2025-09-15 06:48:46,249 - main - INFO - Message 0: ID=eOO3MSQ7efIw8WIJ, Role=user
+2025-09-15 06:48:46,249 - main - INFO -   Parts: 1 parts
+2025-09-15 06:48:46,249 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 06:48:46,249 - main - INFO - Message 1: ID=H5k2fqDA3OX7ycxR, Role=assistant
+2025-09-15 06:48:46,249 - main - INFO -   Parts: 1 parts
+2025-09-15 06:48:46,249 - main - INFO -     Part 0: type=text, text=Hello! How can I assist you today?...
+2025-09-15 06:48:46,249 - main - INFO - Message 2: ID=Apcp23eSeI12F3lu, Role=user
+2025-09-15 06:48:46,249 - main - INFO -   Parts: 1 parts
+2025-09-15 06:48:46,249 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm...
+2025-09-15 06:48:46,249 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm'}]
+2025-09-15 06:48:46,250 - main - INFO - Starting OpenAI request...
+2025-09-15 06:48:47,507 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:48:47,510 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:48:48,011 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:48:48,012 - main - INFO - Chat completed for message 639ce84b-42c2-4158-b4f1-a9d21da7e084
+2025-09-15 06:48:48,012 - main - INFO - Tool calls processed: 1
+2025-09-15 06:50:06,445 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:50:06,446 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:50:06,446 - main - INFO - WebSearch: False
+2025-09-15 06:50:06,446 - main - INFO - Messages count: 1
+2025-09-15 06:50:06,446 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:50:06,446 - main - INFO - Starting chat stream for message 2895ecef-5b92-4000-80f5-b6f190e848b3
+2025-09-15 06:50:06,446 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:50:06,446 - main - INFO - Messages: 1 messages
+2025-09-15 06:50:06,446 - main - INFO - Message 0: ID=test-6, Role=user
+2025-09-15 06:50:06,447 - main - INFO -   Parts: 1 parts
+2025-09-15 06:50:06,447 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:50:06,447 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:50:06,447 - main - INFO - Starting OpenAI request...
+2025-09-15 06:50:07,819 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:50:07,826 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:50:08,327 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:50:08,328 - main - INFO - Chat completed for message 2895ecef-5b92-4000-80f5-b6f190e848b3
+2025-09-15 06:50:08,328 - main - INFO - Tool calls processed: 1
+2025-09-15 06:50:49,223 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:50:49,223 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:50:49,223 - main - INFO - WebSearch: False
+2025-09-15 06:50:49,223 - main - INFO - Messages count: 1
+2025-09-15 06:50:49,223 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:50:49,227 - main - INFO - Starting chat stream for message 5c326ee0-c11b-49ea-867b-f538f5c88103
+2025-09-15 06:50:49,227 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:50:49,227 - main - INFO - Messages: 1 messages
+2025-09-15 06:50:49,227 - main - INFO - Message 0: ID=test-7, Role=user
+2025-09-15 06:50:49,227 - main - INFO -   Parts: 1 parts
+2025-09-15 06:50:49,227 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:50:49,227 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:50:49,227 - main - INFO - Starting OpenAI request...
+2025-09-15 06:50:50,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:50:50,586 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:50:51,087 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:50:52,582 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:51:23,659 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:51:23,659 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:51:23,659 - main - INFO - WebSearch: False
+2025-09-15 06:51:23,659 - main - INFO - Messages count: 1
+2025-09-15 06:51:23,659 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:51:23,659 - main - INFO - Starting chat stream for message 6087d1df-c6c6-4c8a-88fc-a9ebb789191b
+2025-09-15 06:51:23,659 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:51:23,659 - main - INFO - Messages: 1 messages
+2025-09-15 06:51:23,659 - main - INFO - Message 0: ID=Mwmy1scLo9G6SGl6, Role=user
+2025-09-15 06:51:23,659 - main - INFO -   Parts: 1 parts
+2025-09-15 06:51:23,659 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:51:23,659 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:51:23,659 - main - INFO - Starting OpenAI request...
+2025-09-15 06:51:24,376 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:51:24,381 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:51:24,882 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:51:26,843 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:51:28,253 - main - INFO - Chat completed for message 6087d1df-c6c6-4c8a-88fc-a9ebb789191b
+2025-09-15 06:51:28,253 - main - INFO - Tool calls processed: 1
+2025-09-15 06:53:35,244 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:53:35,244 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:53:35,244 - main - INFO - WebSearch: False
+2025-09-15 06:53:35,244 - main - INFO - Messages count: 3
+2025-09-15 06:53:35,244 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:53:35,244 - main - INFO - Message 1: assistant - The weather in Stockholm is currently sunny with a temperature of 72°F and a humidity level of 45%. ...
+2025-09-15 06:53:35,244 - main - INFO - Message 2: user - What is the weather like in Kramfors?
+2025-09-15 06:53:35,248 - main - INFO - Starting chat stream for message 06edb1d3-24df-4926-bee6-190fc76d5cb5
+2025-09-15 06:53:35,248 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:53:35,248 - main - INFO - Messages: 3 messages
+2025-09-15 06:53:35,248 - main - INFO - Message 0: ID=Mwmy1scLo9G6SGl6, Role=user
+2025-09-15 06:53:35,248 - main - INFO -   Parts: 1 parts
+2025-09-15 06:53:35,248 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:53:35,248 - main - INFO - Message 1: ID=9NrfDjVvwoC58xuN, Role=assistant
+2025-09-15 06:53:35,248 - main - INFO -   Parts: 1 parts
+2025-09-15 06:53:35,248 - main - INFO -     Part 0: type=text, text=The weather in Stockholm is currently sunny with a temperature of 72°F and a humidity level of 45%. ...
+2025-09-15 06:53:35,248 - main - INFO - Message 2: ID=e3EqfBogKxePnckB, Role=user
+2025-09-15 06:53:35,248 - main - INFO -   Parts: 1 parts
+2025-09-15 06:53:35,248 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors?...
+2025-09-15 06:53:35,248 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'assistant', 'content': "The weather in Stockholm is currently sunny with a temperature of 72°F and a humidity level of 45%. It's a beautiful sunny day!"}, {'role': 'user', 'content': 'What is the weather like in Kramfors?'}]
+2025-09-15 06:53:35,248 - main - INFO - Starting OpenAI request...
+2025-09-15 06:53:36,218 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:53:36,229 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 06:53:36,731 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:53:39,356 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:53:41,336 - main - INFO - Chat completed for message 06edb1d3-24df-4926-bee6-190fc76d5cb5
+2025-09-15 06:53:41,336 - main - INFO - Tool calls processed: 1
+2025-09-15 06:58:35,181 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:58:35,183 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:58:35,183 - main - INFO - WebSearch: False
+2025-09-15 06:58:35,183 - main - INFO - Messages count: 1
+2025-09-15 06:58:35,183 - main - INFO - Message 0: user - What is the weather like in Kramfors?
+2025-09-15 06:58:35,190 - main - INFO - Starting chat stream for message 262e938a-bf80-4c7c-9ee6-782e0010c3b8
+2025-09-15 06:58:35,190 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:58:35,190 - main - INFO - Messages: 1 messages
+2025-09-15 06:58:35,190 - main - INFO - Message 0: ID=1757912314922, Role=user
+2025-09-15 06:58:35,190 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:35,190 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors?...
+2025-09-15 06:58:35,190 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors?'}]
+2025-09-15 06:58:35,190 - main - INFO - Starting OpenAI request...
+2025-09-15 06:58:36,177 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:36,193 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 06:58:36,695 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:58:39,532 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:42,098 - main - INFO - Chat completed for message 262e938a-bf80-4c7c-9ee6-782e0010c3b8
+2025-09-15 06:58:42,098 - main - INFO - Tool calls processed: 1
+2025-09-15 06:58:47,200 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:58:47,200 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:58:47,200 - main - INFO - WebSearch: False
+2025-09-15 06:58:47,200 - main - INFO - Messages count: 1
+2025-09-15 06:58:47,200 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:58:47,200 - main - INFO - Starting chat stream for message f4ef108a-3d11-4e08-a288-20298596d9f9
+2025-09-15 06:58:47,200 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:58:47,200 - main - INFO - Messages: 1 messages
+2025-09-15 06:58:47,200 - main - INFO - Message 0: ID=1757912326956, Role=user
+2025-09-15 06:58:47,200 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:47,200 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:58:47,201 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:58:47,201 - main - INFO - Starting OpenAI request...
+2025-09-15 06:58:48,020 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:48,033 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:58:48,535 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:58:49,939 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:49,945 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:58:49,945 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:58:49,945 - main - INFO - WebSearch: False
+2025-09-15 06:58:49,945 - main - INFO - Messages count: 1
+2025-09-15 06:58:49,945 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:58:49,945 - main - INFO - Starting chat stream for message 200b6bc8-9e2a-4a36-9321-4bd17d84d896
+2025-09-15 06:58:49,945 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:58:49,945 - main - INFO - Messages: 1 messages
+2025-09-15 06:58:49,945 - main - INFO - Message 0: ID=1757912328955, Role=user
+2025-09-15 06:58:49,945 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:49,945 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:58:49,945 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:58:49,945 - main - INFO - Starting OpenAI request...
+2025-09-15 06:58:51,210 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:51,213 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:58:51,714 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:58:52,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:54,776 - main - INFO - Chat completed for message f4ef108a-3d11-4e08-a288-20298596d9f9
+2025-09-15 06:58:54,776 - main - INFO - Tool calls processed: 1
+2025-09-15 06:58:55,060 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:58:55,060 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:58:55,060 - main - INFO - WebSearch: False
+2025-09-15 06:58:55,060 - main - INFO - Messages count: 1
+2025-09-15 06:58:55,060 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:58:55,061 - main - INFO - Starting chat stream for message 98212112-b65f-4f4f-bba2-95d0f022998a
+2025-09-15 06:58:55,061 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:58:55,061 - main - INFO - Messages: 1 messages
+2025-09-15 06:58:55,061 - main - INFO - Message 0: ID=egVFsIe7pK8jONiU, Role=user
+2025-09-15 06:58:55,061 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:55,061 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:58:55,061 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:58:55,061 - main - INFO - Starting OpenAI request...
+2025-09-15 06:58:55,775 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:55,777 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:58:56,285 - main - INFO - Chat completed for message 200b6bc8-9e2a-4a36-9321-4bd17d84d896
+2025-09-15 06:58:56,285 - main - INFO - Tool calls processed: 1
+2025-09-15 06:58:56,538 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:58:56,538 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:58:56,538 - main - INFO - WebSearch: False
+2025-09-15 06:58:56,538 - main - INFO - Messages count: 2
+2025-09-15 06:58:56,538 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:58:56,538 - main - INFO - Message 1: user - What is the weather like in Stockholm?
+2025-09-15 06:58:56,539 - main - INFO - Starting chat stream for message 841c756a-2d6d-4dae-a4fb-423180b4c930
+2025-09-15 06:58:56,539 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:58:56,539 - main - INFO - Messages: 2 messages
+2025-09-15 06:58:56,539 - main - INFO - Message 0: ID=egVFsIe7pK8jONiU, Role=user
+2025-09-15 06:58:56,539 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:56,539 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:58:56,539 - main - INFO - Message 1: ID=idYTGr1NSSkJxDTm, Role=user
+2025-09-15 06:58:56,539 - main - INFO -   Parts: 1 parts
+2025-09-15 06:58:56,539 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:58:56,539 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:58:56,539 - main - INFO - Starting OpenAI request...
+2025-09-15 06:58:57,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:58:57,366 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:04,502 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:59:04,503 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:59:04,503 - main - INFO - WebSearch: False
+2025-09-15 06:59:04,503 - main - INFO - Messages count: 3
+2025-09-15 06:59:04,503 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:59:04,503 - main - INFO - Message 1: user - What is the weather like in Stockholm?
+2025-09-15 06:59:04,503 - main - INFO - Message 2: user - What is the weather like in Stockholm?
+2025-09-15 06:59:04,503 - main - INFO - Starting chat stream for message fe6a56c4-701b-4213-a2ee-5ab8ac520331
+2025-09-15 06:59:04,503 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:59:04,503 - main - INFO - Messages: 3 messages
+2025-09-15 06:59:04,503 - main - INFO - Message 0: ID=egVFsIe7pK8jONiU, Role=user
+2025-09-15 06:59:04,503 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:04,503 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:04,503 - main - INFO - Message 1: ID=idYTGr1NSSkJxDTm, Role=user
+2025-09-15 06:59:04,503 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:04,503 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:04,503 - main - INFO - Message 2: ID=1757912344264, Role=user
+2025-09-15 06:59:04,503 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:04,503 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:04,503 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:59:04,503 - main - INFO - Starting OpenAI request...
+2025-09-15 06:59:05,266 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:05,272 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:05,773 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:59:08,174 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:10,848 - main - INFO - Chat completed for message fe6a56c4-701b-4213-a2ee-5ab8ac520331
+2025-09-15 06:59:10,848 - main - INFO - Tool calls processed: 1
+2025-09-15 06:59:11,111 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:59:11,111 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:59:11,111 - main - INFO - WebSearch: False
+2025-09-15 06:59:11,111 - main - INFO - Messages count: 3
+2025-09-15 06:59:11,111 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:59:11,111 - main - INFO - Message 1: user - What is the weather like in Stockholm?
+2025-09-15 06:59:11,111 - main - INFO - Message 2: user - What is the weather like in Stockholm?
+2025-09-15 06:59:11,111 - main - INFO - Starting chat stream for message 2e9d41f7-83e3-4fd4-a7df-9fd4e01dc6be
+2025-09-15 06:59:11,111 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:59:11,111 - main - INFO - Messages: 3 messages
+2025-09-15 06:59:11,111 - main - INFO - Message 0: ID=egVFsIe7pK8jONiU, Role=user
+2025-09-15 06:59:11,111 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:11,111 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:11,111 - main - INFO - Message 1: ID=idYTGr1NSSkJxDTm, Role=user
+2025-09-15 06:59:11,112 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:11,112 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:11,112 - main - INFO - Message 2: ID=EctR2xywdZVlLmWx, Role=user
+2025-09-15 06:59:11,112 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:11,112 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:11,112 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:59:11,112 - main - INFO - Starting OpenAI request...
+2025-09-15 06:59:11,955 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:11,956 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:21,183 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:59:21,183 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:59:21,183 - main - INFO - WebSearch: False
+2025-09-15 06:59:21,183 - main - INFO - Messages count: 1
+2025-09-15 06:59:21,183 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:59:21,184 - main - INFO - Starting chat stream for message d296690d-f326-4636-8be6-ba444f99bca4
+2025-09-15 06:59:21,184 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:59:21,184 - main - INFO - Messages: 1 messages
+2025-09-15 06:59:21,184 - main - INFO - Message 0: ID=1757912360930, Role=user
+2025-09-15 06:59:21,184 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:21,184 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:21,184 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:59:21,184 - main - INFO - Starting OpenAI request...
+2025-09-15 06:59:22,205 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:22,223 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:22,724 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:59:23,938 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:26,129 - main - INFO - Chat completed for message d296690d-f326-4636-8be6-ba444f99bca4
+2025-09-15 06:59:26,129 - main - INFO - Tool calls processed: 1
+2025-09-15 06:59:26,391 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:59:26,391 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:59:26,391 - main - INFO - WebSearch: False
+2025-09-15 06:59:26,391 - main - INFO - Messages count: 1
+2025-09-15 06:59:26,391 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:59:26,391 - main - INFO - Starting chat stream for message 4c4aada3-319b-4237-98f0-f2163126f43f
+2025-09-15 06:59:26,391 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:59:26,391 - main - INFO - Messages: 1 messages
+2025-09-15 06:59:26,391 - main - INFO - Message 0: ID=kO0Y1pvzS3zp8AtS, Role=user
+2025-09-15 06:59:26,391 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:26,391 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:26,391 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:59:26,391 - main - INFO - Starting OpenAI request...
+2025-09-15 06:59:27,179 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:27,179 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:42,823 - main - INFO - === CHAT REQUEST ===
+2025-09-15 06:59:42,823 - main - INFO - Model: openai/gpt-4o
+2025-09-15 06:59:42,823 - main - INFO - WebSearch: False
+2025-09-15 06:59:42,823 - main - INFO - Messages count: 1
+2025-09-15 06:59:42,823 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 06:59:42,826 - main - INFO - Starting chat stream for message ba3c75ad-d665-4743-85a8-904091b65736
+2025-09-15 06:59:42,826 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 06:59:42,826 - main - INFO - Messages: 1 messages
+2025-09-15 06:59:42,826 - main - INFO - Message 0: ID=test-8, Role=user
+2025-09-15 06:59:42,826 - main - INFO -   Parts: 1 parts
+2025-09-15 06:59:42,826 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 06:59:42,826 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 06:59:42,826 - main - INFO - Starting OpenAI request...
+2025-09-15 06:59:43,595 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 06:59:43,603 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 06:59:44,104 - main - INFO - Tool getWeather executed successfully
+2025-09-15 06:59:45,994 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:01:24,011 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:01:24,012 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:01:24,012 - main - INFO - WebSearch: False
+2025-09-15 07:01:24,012 - main - INFO - Messages count: 1
+2025-09-15 07:01:24,012 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:01:24,012 - main - INFO - Starting chat stream for message f052ab07-f5e6-46cf-9839-267d5ef165bb
+2025-09-15 07:01:24,012 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:01:24,012 - main - INFO - Messages: 1 messages
+2025-09-15 07:01:24,012 - main - INFO - Message 0: ID=1757912483741, Role=user
+2025-09-15 07:01:24,012 - main - INFO -   Parts: 1 parts
+2025-09-15 07:01:24,012 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:01:24,013 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 07:01:24,013 - main - INFO - Starting OpenAI request...
+2025-09-15 07:01:24,833 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:01:24,838 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 07:01:25,339 - main - INFO - Tool getWeather executed successfully
+2025-09-15 07:01:26,597 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:01:28,518 - main - INFO - Chat completed for message f052ab07-f5e6-46cf-9839-267d5ef165bb
+2025-09-15 07:01:28,518 - main - INFO - Tool calls processed: 1
+2025-09-15 07:01:28,797 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:01:28,797 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:01:28,797 - main - INFO - WebSearch: False
+2025-09-15 07:01:28,797 - main - INFO - Messages count: 1
+2025-09-15 07:01:28,797 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:01:28,798 - main - INFO - Starting chat stream for message 8b6e40d9-c6fc-4de0-a634-17b15741ec77
+2025-09-15 07:01:28,798 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:01:28,798 - main - INFO - Messages: 1 messages
+2025-09-15 07:01:28,798 - main - INFO - Message 0: ID=grnGLHGXXb82WF5C, Role=user
+2025-09-15 07:01:28,798 - main - INFO -   Parts: 1 parts
+2025-09-15 07:01:28,798 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:01:28,798 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 07:01:28,798 - main - INFO - Starting OpenAI request...
+2025-09-15 07:01:29,688 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:01:29,689 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 07:07:05,894 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:07:05,896 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:07:05,896 - main - INFO - WebSearch: False
+2025-09-15 07:07:05,896 - main - INFO - Messages count: 1
+2025-09-15 07:07:05,896 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:07:05,900 - main - INFO - Starting chat stream for message 050fe11f-b059-4b34-b3d3-bca48960c7b7
+2025-09-15 07:07:05,900 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:07:05,900 - main - INFO - Messages: 1 messages
+2025-09-15 07:07:05,900 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 07:07:05,900 - main - INFO -   Parts: 1 parts
+2025-09-15 07:07:05,900 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:07:05,900 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 07:07:05,900 - main - INFO - Starting OpenAI request...
+2025-09-15 07:07:06,690 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:07:06,695 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 07:07:07,197 - main - INFO - Tool getWeather executed successfully
+2025-09-15 07:07:08,316 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:07:13,078 - main - INFO - Chat completed for message 050fe11f-b059-4b34-b3d3-bca48960c7b7
+2025-09-15 07:07:13,079 - main - INFO - Tool calls processed: 1
+2025-09-15 07:08:06,147 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:08:06,148 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:08:06,148 - main - INFO - WebSearch: False
+2025-09-15 07:08:06,148 - main - INFO - Messages count: 1
+2025-09-15 07:08:06,149 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:08:06,153 - main - INFO - Starting chat stream for message 49a6bc76-cb14-40ca-863b-a4b0333a84d4
+2025-09-15 07:08:06,153 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:08:06,153 - main - INFO - Messages: 1 messages
+2025-09-15 07:08:06,153 - main - INFO - Message 0: ID=yIDQI0U2C7CSF2jA, Role=user
+2025-09-15 07:08:06,153 - main - INFO -   Parts: 1 parts
+2025-09-15 07:08:06,153 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:08:06,153 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 07:08:06,154 - main - INFO - Starting OpenAI request...
+2025-09-15 07:08:07,004 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:08:07,005 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 07:08:07,506 - main - INFO - Tool getWeather executed successfully
+2025-09-15 07:08:08,973 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:08:14,675 - main - INFO - Chat completed for message 49a6bc76-cb14-40ca-863b-a4b0333a84d4
+2025-09-15 07:08:14,676 - main - INFO - Tool calls processed: 1
+2025-09-15 07:08:35,917 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:08:35,917 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:08:35,917 - main - INFO - WebSearch: False
+2025-09-15 07:08:35,917 - main - INFO - Messages count: 3
+2025-09-15 07:08:35,917 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:08:35,917 - main - INFO - Message 1: assistant - 🔧 **Used getWeather**
+**Parameters:** `{"city": "Stockholm"}`
+**Result:** {
+  "city": "Stockholm",
+ ...
+2025-09-15 07:08:35,917 - main - INFO - Message 2: user - Hello
+2025-09-15 07:08:35,918 - main - INFO - Starting chat stream for message ab910bf8-b9be-4a84-8a45-71ac823dac22
+2025-09-15 07:08:35,918 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:08:35,918 - main - INFO - Messages: 3 messages
+2025-09-15 07:08:35,918 - main - INFO - Message 0: ID=yIDQI0U2C7CSF2jA, Role=user
+2025-09-15 07:08:35,918 - main - INFO -   Parts: 1 parts
+2025-09-15 07:08:35,918 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:08:35,918 - main - INFO - Message 1: ID=8AyYgMSdCdrrq8Ez, Role=assistant
+2025-09-15 07:08:35,918 - main - INFO -   Parts: 1 parts
+2025-09-15 07:08:35,918 - main - INFO -     Part 0: type=text, text=🔧 **Used getWeather**
+**Parameters:** `{"city": "Stockholm"}`
+**Result:** {
+  "city": "Stockholm",
+ ...
+2025-09-15 07:08:35,918 - main - INFO - Message 2: ID=VbJCBxLB8TLK6dq5, Role=user
+2025-09-15 07:08:35,918 - main - INFO -   Parts: 1 parts
+2025-09-15 07:08:35,918 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 07:08:35,918 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'assistant', 'content': '🔧 **Used getWeather**\n**Parameters:** `{"city": "Stockholm"}`\n**Result:** {\n  "city": "Stockholm",\n  "weather": "sunny",\n  "temperature": "19\\u00b0C",\n  "humidity": "95%",\n  "description": "It\'s raining cats and dogs in Stockholm!"\n}\n\nThe weather in Stockholm is currently sunny with a temperature of 19°C. However, the humidity is quite high at 95%. Despite the sunny description, it seems there\'s a humorous note about it "raining cats and dogs," which might indicate unpredictable or changing weather conditions.'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-15 07:08:35,919 - main - INFO - Starting OpenAI request...
+2025-09-15 07:08:36,599 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:08:36,973 - main - INFO - Chat completed for message ab910bf8-b9be-4a84-8a45-71ac823dac22
+2025-09-15 07:08:36,973 - main - INFO - Tool calls processed: 0
+2025-09-15 07:09:14,972 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:09:14,972 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:09:14,972 - main - INFO - WebSearch: False
+2025-09-15 07:09:14,972 - main - INFO - Messages count: 5
+2025-09-15 07:09:14,972 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 07:09:14,972 - main - INFO - Message 1: assistant - 🔧 **Used getWeather**
+**Parameters:** `{"city": "Stockholm"}`
+**Result:** {
+  "city": "Stockholm",
+ ...
+2025-09-15 07:09:14,972 - main - INFO - Message 2: user - Hello
+2025-09-15 07:09:14,972 - main - INFO - Message 3: assistant - Hello! How can I assist you today?
+2025-09-15 07:09:14,972 - main - INFO - Message 4: user - What is the weather like in Kramfors?
+2025-09-15 07:09:14,973 - main - INFO - Starting chat stream for message 41fa1f5e-95c1-4bdd-bfdd-4dfb55fd5add
+2025-09-15 07:09:14,973 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:09:14,973 - main - INFO - Messages: 5 messages
+2025-09-15 07:09:14,973 - main - INFO - Message 0: ID=yIDQI0U2C7CSF2jA, Role=user
+2025-09-15 07:09:14,973 - main - INFO -   Parts: 1 parts
+2025-09-15 07:09:14,973 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 07:09:14,973 - main - INFO - Message 1: ID=8AyYgMSdCdrrq8Ez, Role=assistant
+2025-09-15 07:09:14,973 - main - INFO -   Parts: 1 parts
+2025-09-15 07:09:14,973 - main - INFO -     Part 0: type=text, text=🔧 **Used getWeather**
+**Parameters:** `{"city": "Stockholm"}`
+**Result:** {
+  "city": "Stockholm",
+ ...
+2025-09-15 07:09:14,973 - main - INFO - Message 2: ID=VbJCBxLB8TLK6dq5, Role=user
+2025-09-15 07:09:14,973 - main - INFO -   Parts: 1 parts
+2025-09-15 07:09:14,973 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 07:09:14,973 - main - INFO - Message 3: ID=uOOkmyezHfaRDPui, Role=assistant
+2025-09-15 07:09:14,973 - main - INFO -   Parts: 1 parts
+2025-09-15 07:09:14,973 - main - INFO -     Part 0: type=text, text=Hello! How can I assist you today?...
+2025-09-15 07:09:14,973 - main - INFO - Message 4: ID=aU0FkZUGqIujcpbW, Role=user
+2025-09-15 07:09:14,973 - main - INFO -   Parts: 1 parts
+2025-09-15 07:09:14,973 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors?...
+2025-09-15 07:09:14,973 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}, {'role': 'assistant', 'content': '🔧 **Used getWeather**\n**Parameters:** `{"city": "Stockholm"}`\n**Result:** {\n  "city": "Stockholm",\n  "weather": "sunny",\n  "temperature": "19\\u00b0C",\n  "humidity": "95%",\n  "description": "It\'s raining cats and dogs in Stockholm!"\n}\n\nThe weather in Stockholm is currently sunny with a temperature of 19°C. However, the humidity is quite high at 95%. Despite the sunny description, it seems there\'s a humorous note about it "raining cats and dogs," which might indicate unpredictable or changing weather conditions.'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Kramfors?'}]
+2025-09-15 07:09:14,973 - main - INFO - Starting OpenAI request...
+2025-09-15 07:09:15,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:09:15,999 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 07:09:16,500 - main - INFO - Tool getWeather executed successfully
+2025-09-15 07:09:18,789 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:09:24,795 - main - INFO - Chat completed for message 41fa1f5e-95c1-4bdd-bfdd-4dfb55fd5add
+2025-09-15 07:09:24,796 - main - INFO - Tool calls processed: 1
+2025-09-15 07:10:06,011 - main - INFO - === CHAT REQUEST ===
+2025-09-15 07:10:06,011 - main - INFO - Model: openai/gpt-4o
+2025-09-15 07:10:06,011 - main - INFO - WebSearch: False
+2025-09-15 07:10:06,011 - main - INFO - Messages count: 1
+2025-09-15 07:10:06,011 - main - INFO - Message 0: user - What is the weather like in Kramfors?
+2025-09-15 07:10:06,015 - main - INFO - Starting chat stream for message 4f551add-37ff-4146-9152-d6c99c39a021
+2025-09-15 07:10:06,015 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 07:10:06,015 - main - INFO - Messages: 1 messages
+2025-09-15 07:10:06,015 - main - INFO - Message 0: ID=oVBp4L0EZLtXNTR8, Role=user
+2025-09-15 07:10:06,015 - main - INFO -   Parts: 1 parts
+2025-09-15 07:10:06,015 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors?...
+2025-09-15 07:10:06,015 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors?'}]
+2025-09-15 07:10:06,015 - main - INFO - Starting OpenAI request...
+2025-09-15 07:10:06,718 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:10:06,725 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 07:10:07,227 - main - INFO - Tool getWeather executed successfully
+2025-09-15 07:10:08,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 07:10:13,146 - main - INFO - Chat completed for message 4f551add-37ff-4146-9152-d6c99c39a021
+2025-09-15 07:10:13,146 - main - INFO - Tool calls processed: 1
+2025-09-15 12:38:09,544 - main - INFO - === CHAT REQUEST ===
+2025-09-15 12:38:09,545 - main - INFO - Model: openai/gpt-4o
+2025-09-15 12:38:09,545 - main - INFO - WebSearch: False
+2025-09-15 12:38:09,545 - main - INFO - Messages count: 1
+2025-09-15 12:38:09,545 - main - INFO - Message 0: user - Vad är det för väder i Kramfors
+2025-09-15 12:38:09,546 - main - INFO - Starting chat stream for message e9cd5a2e-10d0-46c3-b0c5-569b846f2f0f
+2025-09-15 12:38:09,546 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 12:38:09,546 - main - INFO - Messages: 1 messages
+2025-09-15 12:38:09,546 - main - INFO - Message 0: ID=2TdT8DrLAsr4kK3f, Role=user
+2025-09-15 12:38:09,546 - main - INFO -   Parts: 1 parts
+2025-09-15 12:38:09,546 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors...
+2025-09-15 12:38:09,546 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors'}]
+2025-09-15 12:38:09,547 - main - INFO - Starting OpenAI request...
+2025-09-15 12:38:09,564 - openai._base_client - INFO - Retrying request to /chat/completions in 0.498908 seconds
+2025-09-15 12:38:10,071 - openai._base_client - INFO - Retrying request to /chat/completions in 0.931330 seconds
+2025-09-15 12:38:11,009 - main - ERROR - Error in chat stream: Connection error.
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 993, in _request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/main.py", line 232, in generate_ui_message_stream
+    response = client.chat.completions.create(
+        model="gpt-4o", messages=full_messages, tools=openai_tools, temperature=0.7
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/resources/chat/completions.py", line 859, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<40 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1280, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 957, in request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        cast_to=cast_to,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        retries_taken=retries_taken,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1017, in _request
+    return self._retry_request(
+           ~~~~~~~~~~~~~~~~~~~^
+        input_options,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        response_headers=None,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1095, in _retry_request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stream_cls=stream_cls,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1017, in _request
+    return self._retry_request(
+           ~~~~~~~~~~~~~~~~~~~^
+        input_options,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        response_headers=None,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1095, in _retry_request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stream_cls=stream_cls,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1027, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2025-09-15 12:38:23,209 - __main__ - INFO - Starting FastAPI development server...
+2025-09-15 12:38:23,209 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 12:38:45,678 - main - INFO - === CHAT REQUEST ===
+2025-09-15 12:38:45,678 - main - INFO - Model: openai/gpt-4o
+2025-09-15 12:38:45,678 - main - INFO - WebSearch: False
+2025-09-15 12:38:45,678 - main - INFO - Messages count: 1
+2025-09-15 12:38:45,679 - main - INFO - Message 0: user - Vad är det för väder i Kramfors
+2025-09-15 12:38:45,682 - main - INFO - Starting chat stream for message e391ec8a-e8ff-481d-bbda-e2f04c847884
+2025-09-15 12:38:45,682 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 12:38:45,682 - main - INFO - Messages: 1 messages
+2025-09-15 12:38:45,682 - main - INFO - Message 0: ID=YjnxMY0ge6pl74A1, Role=user
+2025-09-15 12:38:45,682 - main - INFO -   Parts: 1 parts
+2025-09-15 12:38:45,682 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors...
+2025-09-15 12:38:45,682 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors'}]
+2025-09-15 12:38:45,682 - main - INFO - Starting OpenAI request...
+2025-09-15 12:38:45,703 - openai._base_client - INFO - Retrying request to /chat/completions in 0.396304 seconds
+2025-09-15 12:38:46,105 - openai._base_client - INFO - Retrying request to /chat/completions in 0.914874 seconds
+2025-09-15 12:38:47,027 - main - ERROR - Error in chat stream: Connection error.
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+        pool_request.request
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_backends/sync.py", line 207, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 993, in _request
+    response = self._client.send(
+        request,
+        stream=stream or self._should_stream_response_body(request=request),
+        **kwargs,
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+        request,
+    ...<2 lines>...
+        history=[],
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+        request,
+        follow_redirects=follow_redirects,
+        history=history,
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.2/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/main.py", line 232, in generate_ui_message_stream
+    response = client.chat.completions.create(
+        model="gpt-4o", messages=full_messages, tools=openai_tools, temperature=0.7
+    )
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/resources/chat/completions.py", line 859, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<40 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1280, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 957, in request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        cast_to=cast_to,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        retries_taken=retries_taken,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1017, in _request
+    return self._retry_request(
+           ~~~~~~~~~~~~~~~~~~~^
+        input_options,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        response_headers=None,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1095, in _retry_request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stream_cls=stream_cls,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1017, in _request
+    return self._retry_request(
+           ~~~~~~~~~~~~~~~~~~~^
+        input_options,
+        ^^^^^^^^^^^^^^
+    ...<4 lines>...
+        response_headers=None,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1095, in _retry_request
+    return self._request(
+           ~~~~~~~~~~~~~^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stream_cls=stream_cls,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/magnusbjelkenhed/think/projects/ai-elements/backend/venv/lib/python3.13/site-packages/openai/_base_client.py", line 1027, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+2025-09-15 12:39:57,025 - main - INFO - === CHAT REQUEST ===
+2025-09-15 12:39:57,025 - main - INFO - Model: openai/gpt-4o
+2025-09-15 12:39:57,026 - main - INFO - WebSearch: False
+2025-09-15 12:39:57,026 - main - INFO - Messages count: 1
+2025-09-15 12:39:57,026 - main - INFO - Message 0: user - Vad är det för väder i Kramfors
+2025-09-15 12:39:57,027 - main - INFO - Starting chat stream for message 3d21a9cf-9df4-40b0-8e8c-e0d15f1b293f
+2025-09-15 12:39:57,027 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 12:39:57,027 - main - INFO - Messages: 1 messages
+2025-09-15 12:39:57,027 - main - INFO - Message 0: ID=yF6KRnw2pZoihjJv, Role=user
+2025-09-15 12:39:57,027 - main - INFO -   Parts: 1 parts
+2025-09-15 12:39:57,027 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors...
+2025-09-15 12:39:57,027 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors'}]
+2025-09-15 12:39:57,027 - main - INFO - Starting OpenAI request...
+2025-09-15 12:39:58,105 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:39:58,119 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 12:39:58,621 - main - INFO - Tool getWeather executed successfully
+2025-09-15 12:40:00,196 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:40:03,835 - main - INFO - Chat completed for message 3d21a9cf-9df4-40b0-8e8c-e0d15f1b293f
+2025-09-15 12:40:03,835 - main - INFO - Tool calls processed: 1
+2025-09-15 12:45:06,304 - main - INFO - === CHAT REQUEST ===
+2025-09-15 12:45:06,304 - main - INFO - Model: openai/gpt-4o
+2025-09-15 12:45:06,304 - main - INFO - WebSearch: False
+2025-09-15 12:45:06,304 - main - INFO - Messages count: 1
+2025-09-15 12:45:06,305 - main - INFO - Message 0: user - Vad är det för väder i Kramfors?
+2025-09-15 12:45:06,305 - main - INFO - Starting chat stream for message 1c64aa9a-47c6-4e84-a92a-6e39657118f9
+2025-09-15 12:45:06,305 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 12:45:06,305 - main - INFO - Messages: 1 messages
+2025-09-15 12:45:06,305 - main - INFO - Message 0: ID=O6ITorelSRdtmLs6, Role=user
+2025-09-15 12:45:06,305 - main - INFO -   Parts: 1 parts
+2025-09-15 12:45:06,305 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors?...
+2025-09-15 12:45:06,305 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors?'}]
+2025-09-15 12:45:06,305 - main - INFO - Starting OpenAI request...
+2025-09-15 12:45:07,862 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:45:07,863 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 12:45:08,364 - main - INFO - Tool getWeather executed successfully
+2025-09-15 12:45:09,164 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:45:12,768 - main - INFO - Chat completed for message 1c64aa9a-47c6-4e84-a92a-6e39657118f9
+2025-09-15 12:45:12,768 - main - INFO - Tool calls processed: 1
+2025-09-15 12:46:08,231 - main - INFO - === CHAT REQUEST ===
+2025-09-15 12:46:08,231 - main - INFO - Model: openai/gpt-4o
+2025-09-15 12:46:08,231 - main - INFO - WebSearch: False
+2025-09-15 12:46:08,231 - main - INFO - Messages count: 3
+2025-09-15 12:46:08,231 - main - INFO - Message 0: user - Vad är det för väder i Kramfors?
+2025-09-15 12:46:08,231 - main - INFO - Message 1: assistant - 🔧 **Used getWeather**
+**Parameters:** `{"city": "Kramfors"}`
+**Result:** {
+  "city": "Kramfors",
+  "...
+2025-09-15 12:46:08,231 - main - INFO - Message 2: user - Vad är VO2 max
+2025-09-15 12:46:08,231 - main - INFO - Starting chat stream for message 32cffd58-2979-4252-bd7c-68947476a5c1
+2025-09-15 12:46:08,231 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 12:46:08,231 - main - INFO - Messages: 3 messages
+2025-09-15 12:46:08,231 - main - INFO - Message 0: ID=O6ITorelSRdtmLs6, Role=user
+2025-09-15 12:46:08,231 - main - INFO -   Parts: 1 parts
+2025-09-15 12:46:08,231 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors?...
+2025-09-15 12:46:08,231 - main - INFO - Message 1: ID=W7RxRnfDGXHUBpeH, Role=assistant
+2025-09-15 12:46:08,231 - main - INFO -   Parts: 1 parts
+2025-09-15 12:46:08,231 - main - INFO -     Part 0: type=text, text=🔧 **Used getWeather**
+**Parameters:** `{"city": "Kramfors"}`
+**Result:** {
+  "city": "Kramfors",
+  "...
+2025-09-15 12:46:08,232 - main - INFO - Message 2: ID=9eUNO9IyP0fpUFdK, Role=user
+2025-09-15 12:46:08,232 - main - INFO -   Parts: 1 parts
+2025-09-15 12:46:08,232 - main - INFO -     Part 0: type=text, text=Vad är VO2 max...
+2025-09-15 12:46:08,232 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors?'}, {'role': 'assistant', 'content': '🔧 **Used getWeather**\n**Parameters:** `{"city": "Kramfors"}`\n**Result:** {\n  "city": "Kramfors",\n  "weather": "raining",\n  "temperature": "19\\u00b0C",\n  "humidity": "95%",\n  "description": "It\'s raining cats and dogs in Kramfors!"\n}\n\nJust nu regnar det kraftigt i Kramfors och temperaturen är 19°C. Luftfuktigheten är på 95%.'}, {'role': 'user', 'content': 'Vad är VO2 max'}]
+2025-09-15 12:46:08,232 - main - INFO - Starting OpenAI request...
+2025-09-15 12:46:11,161 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:46:17,408 - main - INFO - Chat completed for message 32cffd58-2979-4252-bd7c-68947476a5c1
+2025-09-15 12:46:17,408 - main - INFO - Tool calls processed: 0
+2025-09-15 15:09:28,876 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:09:28,877 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:09:28,877 - main - INFO - WebSearch: False
+2025-09-15 15:09:28,877 - main - INFO - Messages count: 1
+2025-09-15 15:09:28,877 - main - INFO - Message 0: user - What is the capital of france
+2025-09-15 15:09:28,878 - main - INFO - Starting chat stream for message 8f7a0ccd-e52c-49e3-a9ed-9369f35f236c
+2025-09-15 15:09:28,878 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:09:28,878 - main - INFO - Messages: 1 messages
+2025-09-15 15:09:28,878 - main - INFO - Message 0: ID=5shs6zo03a7ycAY4, Role=user
+2025-09-15 15:09:28,878 - main - INFO -   Parts: 1 parts
+2025-09-15 15:09:28,878 - main - INFO -     Part 0: type=text, text=What is the capital of france...
+2025-09-15 15:09:28,878 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the capital of france'}]
+2025-09-15 15:09:28,880 - main - INFO - Starting OpenAI request...
+2025-09-15 15:09:29,921 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:09:30,281 - main - INFO - Chat completed for message 8f7a0ccd-e52c-49e3-a9ed-9369f35f236c
+2025-09-15 15:09:30,281 - main - INFO - Tool calls processed: 0
+2025-09-15 15:10:14,362 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:10:14,363 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:10:14,363 - main - INFO - WebSearch: False
+2025-09-15 15:10:14,363 - main - INFO - Messages count: 1
+2025-09-15 15:10:14,363 - main - INFO - Message 0: user - Hello
+2025-09-15 15:10:14,364 - main - INFO - Starting chat stream for message 18219485-bca5-40d6-906c-95fb54c6faec
+2025-09-15 15:10:14,364 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:10:14,364 - main - INFO - Messages: 1 messages
+2025-09-15 15:10:14,364 - main - INFO - Message 0: ID=mYehpDiFH3LjN4In, Role=user
+2025-09-15 15:10:14,364 - main - INFO -   Parts: 1 parts
+2025-09-15 15:10:14,364 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:10:14,364 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:10:14,364 - main - INFO - Starting OpenAI request...
+2025-09-15 15:10:15,663 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:10:16,047 - main - INFO - Chat completed for message 18219485-bca5-40d6-906c-95fb54c6faec
+2025-09-15 15:10:16,047 - main - INFO - Tool calls processed: 0
+2025-09-15 15:12:49,050 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:12:49,050 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:12:49,050 - main - INFO - WebSearch: False
+2025-09-15 15:12:49,050 - main - INFO - Messages count: 3
+2025-09-15 15:12:49,050 - main - INFO - Message 0: user - Hello
+2025-09-15 15:12:49,050 - main - INFO - Message 1: assistant - Hi there! How can I assist you today?
+2025-09-15 15:12:49,050 - main - INFO - Message 2: user - Hello
+2025-09-15 15:12:49,052 - main - INFO - Starting chat stream for message 0019e28c-3f8c-433e-8186-7c553ab15374
+2025-09-15 15:12:49,052 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:12:49,052 - main - INFO - Messages: 3 messages
+2025-09-15 15:12:49,052 - main - INFO - Message 0: ID=76bSfmejh3lqH0XA, Role=user
+2025-09-15 15:12:49,052 - main - INFO -   Parts: 1 parts
+2025-09-15 15:12:49,052 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:12:49,052 - main - INFO - Message 1: ID=okrkMJMcTmeUw8ep, Role=assistant
+2025-09-15 15:12:49,052 - main - INFO -   Parts: 2 parts
+2025-09-15 15:12:49,052 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:12:49,053 - main - INFO -     Part 1: type=text, text=Hi there! How can I assist you today?...
+2025-09-15 15:12:49,053 - main - INFO - Message 2: ID=chUlzBlUK4bgeyTK, Role=user
+2025-09-15 15:12:49,053 - main - INFO -   Parts: 1 parts
+2025-09-15 15:12:49,053 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:12:49,053 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! How can I assist you today?'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:12:49,054 - main - INFO - Starting OpenAI request...
+2025-09-15 15:12:50,680 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:12:51,078 - main - INFO - Chat completed for message 0019e28c-3f8c-433e-8186-7c553ab15374
+2025-09-15 15:12:51,078 - main - INFO - Tool calls processed: 0
+2025-09-15 15:15:31,843 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:15:31,843 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:15:31,843 - main - INFO - WebSearch: False
+2025-09-15 15:15:31,843 - main - INFO - Messages count: 1
+2025-09-15 15:15:31,843 - main - INFO - Message 0: user - Hello
+2025-09-15 15:15:31,847 - main - INFO - Starting chat stream for message 348382a1-20e1-4e5f-87b1-b175fa5f9188
+2025-09-15 15:15:31,847 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:15:31,847 - main - INFO - Messages: 1 messages
+2025-09-15 15:15:31,847 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:15:31,847 - main - INFO -   Parts: 1 parts
+2025-09-15 15:15:31,847 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:15:31,847 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:15:31,847 - main - INFO - Starting OpenAI request...
+2025-09-15 15:15:32,626 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:15:47,146 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:15:47,146 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:15:47,146 - main - INFO - WebSearch: False
+2025-09-15 15:15:47,147 - main - INFO - Messages count: 1
+2025-09-15 15:15:47,147 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 15:15:47,147 - main - INFO - Starting chat stream for message 895c5052-f605-4700-90a9-40418ad381d4
+2025-09-15 15:15:47,147 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:15:47,147 - main - INFO - Messages: 1 messages
+2025-09-15 15:15:47,147 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:15:47,147 - main - INFO -   Parts: 1 parts
+2025-09-15 15:15:47,147 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 15:15:47,147 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 15:15:47,148 - main - INFO - Starting OpenAI request...
+2025-09-15 15:15:48,584 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:15:48,593 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 15:15:49,094 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:15:51,057 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:16:15,535 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:16:15,535 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:16:15,536 - main - INFO - WebSearch: False
+2025-09-15 15:16:15,536 - main - INFO - Messages count: 1
+2025-09-15 15:16:15,536 - main - INFO - Message 0: user - Hello
+2025-09-15 15:16:15,536 - main - INFO - Starting chat stream for message 8cbd9121-8774-41bd-9684-bfd3e578bb52
+2025-09-15 15:16:15,536 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:16:15,536 - main - INFO - Messages: 1 messages
+2025-09-15 15:16:15,537 - main - INFO - Message 0: ID=kYl9WWyb6sRpdM0a, Role=user
+2025-09-15 15:16:15,537 - main - INFO -   Parts: 1 parts
+2025-09-15 15:16:15,537 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:16:15,537 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:16:15,537 - main - INFO - Starting OpenAI request...
+2025-09-15 15:16:16,349 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:16:16,730 - main - INFO - Chat completed for message 8cbd9121-8774-41bd-9684-bfd3e578bb52
+2025-09-15 15:16:16,730 - main - INFO - Tool calls processed: 0
+2025-09-15 15:19:41,702 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:19:41,702 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:19:41,702 - main - INFO - WebSearch: False
+2025-09-15 15:19:41,702 - main - INFO - Messages count: 1
+2025-09-15 15:19:41,702 - main - INFO - Message 0: user - Hello there
+2025-09-15 15:19:41,706 - main - INFO - Starting chat stream for message 427f1d81-bd04-4f4e-b043-a0164d2b3485
+2025-09-15 15:19:41,707 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:19:41,707 - main - INFO - Messages: 1 messages
+2025-09-15 15:19:41,707 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:19:41,707 - main - INFO -   Parts: 1 parts
+2025-09-15 15:19:41,707 - main - INFO -     Part 0: type=text, text=Hello there...
+2025-09-15 15:19:41,707 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello there'}]
+2025-09-15 15:19:41,707 - main - INFO - Starting OpenAI request...
+2025-09-15 15:19:43,070 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:20:01,620 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:20:01,620 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:20:01,620 - main - INFO - WebSearch: False
+2025-09-15 15:20:01,620 - main - INFO - Messages count: 1
+2025-09-15 15:20:01,620 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 15:20:01,632 - main - INFO - Starting chat stream for message 4a9da6e9-84cb-465d-987c-e050693785c1
+2025-09-15 15:20:01,632 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:20:01,632 - main - INFO - Messages: 1 messages
+2025-09-15 15:20:01,632 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:20:01,632 - main - INFO -   Parts: 1 parts
+2025-09-15 15:20:01,632 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 15:20:01,632 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 15:20:01,632 - main - INFO - Starting OpenAI request...
+2025-09-15 15:20:02,781 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:20:02,787 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 15:20:03,289 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:20:06,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:20:47,146 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:20:47,147 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:20:47,147 - main - INFO - WebSearch: False
+2025-09-15 15:20:47,147 - main - INFO - Messages count: 5
+2025-09-15 15:20:47,147 - main - INFO - Message 0: user - Hello
+2025-09-15 15:20:47,147 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 15:20:47,147 - main - INFO - Message 2: user - Hello
+2025-09-15 15:20:47,147 - main - INFO - Message 3: assistant - Hi there! What can I do for you today?
+2025-09-15 15:20:47,147 - main - INFO - Message 4: user - Hello
+2025-09-15 15:20:47,148 - main - INFO - Starting chat stream for message 59ce827f-3b7e-4983-a76e-f299598b1b19
+2025-09-15 15:20:47,148 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:20:47,148 - main - INFO - Messages: 5 messages
+2025-09-15 15:20:47,148 - main - INFO - Message 0: ID=kYl9WWyb6sRpdM0a, Role=user
+2025-09-15 15:20:47,148 - main - INFO -   Parts: 1 parts
+2025-09-15 15:20:47,148 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:20:47,148 - main - INFO - Message 1: ID=Rcjy8TH5q0F32M4S, Role=assistant
+2025-09-15 15:20:47,148 - main - INFO -   Parts: 2 parts
+2025-09-15 15:20:47,148 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:20:47,148 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-15 15:20:47,148 - main - INFO - Message 2: ID=jmnm4P7Pw7vIxXFa, Role=user
+2025-09-15 15:20:47,148 - main - INFO -   Parts: 1 parts
+2025-09-15 15:20:47,148 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:20:47,148 - main - INFO - Message 3: ID=RG2lEEDMWjPiv1Fe, Role=assistant
+2025-09-15 15:20:47,148 - main - INFO -   Parts: 2 parts
+2025-09-15 15:20:47,148 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:20:47,148 - main - INFO -     Part 1: type=text, text=Hi there! What can I do for you today?...
+2025-09-15 15:20:47,148 - main - INFO - Message 4: ID=6xnPGNDYSrPy4LwZ, Role=user
+2025-09-15 15:20:47,148 - main - INFO -   Parts: 1 parts
+2025-09-15 15:20:47,148 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:20:47,148 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! What can I do for you today?'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:20:47,148 - main - INFO - Starting OpenAI request...
+2025-09-15 15:20:50,625 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:20:51,042 - main - INFO - Chat completed for message 59ce827f-3b7e-4983-a76e-f299598b1b19
+2025-09-15 15:20:51,042 - main - INFO - Tool calls processed: 0
+2025-09-15 15:21:10,827 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:21:10,827 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:21:10,827 - main - INFO - WebSearch: False
+2025-09-15 15:21:10,827 - main - INFO - Messages count: 7
+2025-09-15 15:21:10,827 - main - INFO - Message 0: user - Hello
+2025-09-15 15:21:10,827 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 15:21:10,827 - main - INFO - Message 2: user - Hello
+2025-09-15 15:21:10,827 - main - INFO - Message 3: assistant - Hi there! What can I do for you today?
+2025-09-15 15:21:10,827 - main - INFO - Message 4: user - Hello
+2025-09-15 15:21:10,828 - main - INFO - Message 5: assistant - Hello again! How can I assist you today?
+2025-09-15 15:21:10,828 - main - INFO - Message 6: user - What is the weather in Paris
+2025-09-15 15:21:10,828 - main - INFO - Starting chat stream for message ac02e273-3217-4f17-8033-7e579626fc7b
+2025-09-15 15:21:10,828 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:21:10,828 - main - INFO - Messages: 7 messages
+2025-09-15 15:21:10,828 - main - INFO - Message 0: ID=kYl9WWyb6sRpdM0a, Role=user
+2025-09-15 15:21:10,828 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:10,828 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:10,828 - main - INFO - Message 1: ID=Rcjy8TH5q0F32M4S, Role=assistant
+2025-09-15 15:21:10,828 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:10,828 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:10,828 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-15 15:21:10,828 - main - INFO - Message 2: ID=jmnm4P7Pw7vIxXFa, Role=user
+2025-09-15 15:21:10,828 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:10,829 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:10,829 - main - INFO - Message 3: ID=RG2lEEDMWjPiv1Fe, Role=assistant
+2025-09-15 15:21:10,829 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:10,829 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:10,829 - main - INFO -     Part 1: type=text, text=Hi there! What can I do for you today?...
+2025-09-15 15:21:10,829 - main - INFO - Message 4: ID=6xnPGNDYSrPy4LwZ, Role=user
+2025-09-15 15:21:10,829 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:10,829 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:10,829 - main - INFO - Message 5: ID=JXcRyPVYSp3zaoBI, Role=assistant
+2025-09-15 15:21:10,829 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:10,829 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:10,829 - main - INFO -     Part 1: type=text, text=Hello again! How can I assist you today?...
+2025-09-15 15:21:10,829 - main - INFO - Message 6: ID=XilrXsickOkH8P3N, Role=user
+2025-09-15 15:21:10,829 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:10,829 - main - INFO -     Part 0: type=text, text=What is the weather in Paris...
+2025-09-15 15:21:10,829 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! What can I do for you today?'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello again! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather in Paris'}]
+2025-09-15 15:21:10,829 - main - INFO - Starting OpenAI request...
+2025-09-15 15:21:11,485 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:21:11,488 - main - INFO - Processing tool call: getWeather with args: {"city":"Paris"}
+2025-09-15 15:21:11,989 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:21:14,849 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:21:17,962 - main - INFO - Chat completed for message ac02e273-3217-4f17-8033-7e579626fc7b
+2025-09-15 15:21:17,963 - main - INFO - Tool calls processed: 1
+2025-09-15 15:21:54,748 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:21:54,749 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:21:54,749 - main - INFO - WebSearch: False
+2025-09-15 15:21:54,749 - main - INFO - Messages count: 9
+2025-09-15 15:21:54,749 - main - INFO - Message 0: user - Hello
+2025-09-15 15:21:54,749 - main - INFO - Message 1: assistant - Hello! How can I assist you today?
+2025-09-15 15:21:54,749 - main - INFO - Message 2: user - Hello
+2025-09-15 15:21:54,749 - main - INFO - Message 3: assistant - Hi there! What can I do for you today?
+2025-09-15 15:21:54,749 - main - INFO - Message 4: user - Hello
+2025-09-15 15:21:54,749 - main - INFO - Message 5: assistant - Hello again! How can I assist you today?
+2025-09-15 15:21:54,749 - main - INFO - Message 6: user - What is the weather in Paris
+2025-09-15 15:21:54,749 - main - INFO - Message 7: assistant - 🔧 **Used getWeather**
+**Parameters:** `{"city": "Paris"}`
+**Result:** {
+  "city": "Paris",
+  "weathe...
+2025-09-15 15:21:54,749 - main - INFO - Message 8: user - What is the weather in Kramfors
+2025-09-15 15:21:54,749 - main - INFO - Starting chat stream for message e46722dd-1210-432d-bf3c-5a985df73ce7
+2025-09-15 15:21:54,749 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:21:54,749 - main - INFO - Messages: 9 messages
+2025-09-15 15:21:54,750 - main - INFO - Message 0: ID=kYl9WWyb6sRpdM0a, Role=user
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:54,750 - main - INFO - Message 1: ID=Rcjy8TH5q0F32M4S, Role=assistant
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:54,750 - main - INFO -     Part 1: type=text, text=Hello! How can I assist you today?...
+2025-09-15 15:21:54,750 - main - INFO - Message 2: ID=jmnm4P7Pw7vIxXFa, Role=user
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:54,750 - main - INFO - Message 3: ID=RG2lEEDMWjPiv1Fe, Role=assistant
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:54,750 - main - INFO -     Part 1: type=text, text=Hi there! What can I do for you today?...
+2025-09-15 15:21:54,750 - main - INFO - Message 4: ID=6xnPGNDYSrPy4LwZ, Role=user
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:21:54,750 - main - INFO - Message 5: ID=JXcRyPVYSp3zaoBI, Role=assistant
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:54,750 - main - INFO -     Part 1: type=text, text=Hello again! How can I assist you today?...
+2025-09-15 15:21:54,750 - main - INFO - Message 6: ID=XilrXsickOkH8P3N, Role=user
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=text, text=What is the weather in Paris...
+2025-09-15 15:21:54,750 - main - INFO - Message 7: ID=toteh36M1gqIibUa, Role=assistant
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 2 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:21:54,750 - main - INFO -     Part 1: type=text, text=🔧 **Used getWeather**
+**Parameters:** `{"city": "Paris"}`
+**Result:** {
+  "city": "Paris",
+  "weathe...
+2025-09-15 15:21:54,750 - main - INFO - Message 8: ID=N1skTaXBkC2SFDcP, Role=user
+2025-09-15 15:21:54,750 - main - INFO -   Parts: 1 parts
+2025-09-15 15:21:54,750 - main - INFO -     Part 0: type=text, text=What is the weather in Kramfors...
+2025-09-15 15:21:54,751 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello! How can I assist you today?'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! What can I do for you today?'}, {'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hello again! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather in Paris'}, {'role': 'assistant', 'content': '🔧 **Used getWeather**\n**Parameters:** `{"city": "Paris"}`\n**Result:** {\n  "city": "Paris",\n  "weather": "raining",\n  "temperature": "19\\u00b0C",\n  "humidity": "95%",\n  "description": "It\'s raining cats and dogs in Paris!"\n}\n\nThe weather in Paris is currently rainy, with a temperature of 19°C and a humidity level of 95%. It\'s really coming down heavily, so you might want to grab an umbrella if you\'re heading out!'}, {'role': 'user', 'content': 'What is the weather in Kramfors'}]
+2025-09-15 15:21:54,751 - main - INFO - Starting OpenAI request...
+2025-09-15 15:21:55,910 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:21:55,912 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 15:21:56,413 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:21:57,632 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:22:00,598 - main - INFO - Chat completed for message e46722dd-1210-432d-bf3c-5a985df73ce7
+2025-09-15 15:22:00,598 - main - INFO - Tool calls processed: 1
+2025-09-15 15:22:33,479 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:22:33,480 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:22:33,480 - main - INFO - WebSearch: False
+2025-09-15 15:22:33,480 - main - INFO - Messages count: 1
+2025-09-15 15:22:33,480 - main - INFO - Message 0: user - What is the weather in Kramfors
+2025-09-15 15:22:33,483 - main - INFO - Starting chat stream for message 7f15f1ee-13e3-4e80-a993-5b9bfe03e7e1
+2025-09-15 15:22:33,483 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:22:33,483 - main - INFO - Messages: 1 messages
+2025-09-15 15:22:33,483 - main - INFO - Message 0: ID=4PCgUXKLRUNNuHbs, Role=user
+2025-09-15 15:22:33,483 - main - INFO -   Parts: 1 parts
+2025-09-15 15:22:33,483 - main - INFO -     Part 0: type=text, text=What is the weather in Kramfors...
+2025-09-15 15:22:33,483 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather in Kramfors'}]
+2025-09-15 15:22:33,485 - main - INFO - Starting OpenAI request...
+2025-09-15 15:22:34,515 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:22:34,516 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 15:22:35,018 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:22:49,259 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:22:52,323 - main - INFO - Chat completed for message 7f15f1ee-13e3-4e80-a993-5b9bfe03e7e1
+2025-09-15 15:22:52,324 - main - INFO - Tool calls processed: 1
+2025-09-15 15:43:12,673 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:43:12,674 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:43:12,674 - main - INFO - WebSearch: False
+2025-09-15 15:43:12,674 - main - INFO - Messages count: 1
+2025-09-15 15:43:12,674 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 15:43:12,676 - main - INFO - Starting chat stream for message d4772ea0-571f-421c-ae59-2b709aeae21a
+2025-09-15 15:43:12,676 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:43:12,676 - main - INFO - Messages: 1 messages
+2025-09-15 15:43:12,676 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:43:12,676 - main - INFO -   Parts: 1 parts
+2025-09-15 15:43:12,676 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 15:43:12,676 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 15:43:12,679 - main - INFO - Starting OpenAI request...
+2025-09-15 15:43:13,984 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:43:13,994 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 15:43:14,496 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:43:15,847 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:43:19,264 - main - INFO - Chat completed for message d4772ea0-571f-421c-ae59-2b709aeae21a
+2025-09-15 15:43:19,264 - main - INFO - Tool calls processed: 1
+2025-09-15 15:44:05,330 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:44:05,330 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:44:05,330 - main - INFO - WebSearch: False
+2025-09-15 15:44:05,330 - main - INFO - Messages count: 1
+2025-09-15 15:44:05,330 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 15:44:05,334 - main - INFO - Starting chat stream for message c7a9613b-aba1-40cc-96e8-ad4b169166ca
+2025-09-15 15:44:05,334 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:44:05,334 - main - INFO - Messages: 1 messages
+2025-09-15 15:44:05,334 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 15:44:05,334 - main - INFO -   Parts: 1 parts
+2025-09-15 15:44:05,334 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 15:44:05,334 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 15:44:05,335 - main - INFO - Starting OpenAI request...
+2025-09-15 15:44:06,818 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:44:06,828 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 15:44:07,549 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:44:07,549 - main - INFO - Chat completed for message c7a9613b-aba1-40cc-96e8-ad4b169166ca
+2025-09-15 15:44:07,549 - main - INFO - Tool calls processed: 1
+2025-09-15 15:46:55,331 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:46:55,331 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:46:55,331 - main - INFO - WebSearch: False
+2025-09-15 15:46:55,331 - main - INFO - Messages count: 1
+2025-09-15 15:46:55,331 - main - INFO - Message 0: user - Hello
+2025-09-15 15:46:55,332 - main - INFO - Starting chat stream for message aa151730-a779-4d65-845d-6c1a29832f28
+2025-09-15 15:46:55,332 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:46:55,332 - main - INFO - Messages: 1 messages
+2025-09-15 15:46:55,332 - main - INFO - Message 0: ID=JlvdaofMy8NCgk5E, Role=user
+2025-09-15 15:46:55,332 - main - INFO -   Parts: 1 parts
+2025-09-15 15:46:55,332 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:46:55,332 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}]
+2025-09-15 15:46:55,332 - main - INFO - Starting OpenAI request...
+2025-09-15 15:46:56,086 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:46:56,493 - main - INFO - Chat completed for message aa151730-a779-4d65-845d-6c1a29832f28
+2025-09-15 15:46:56,493 - main - INFO - Tool calls processed: 0
+2025-09-15 15:47:17,576 - main - INFO - === CHAT REQUEST ===
+2025-09-15 15:47:17,576 - main - INFO - Model: openai/gpt-4o
+2025-09-15 15:47:17,576 - main - INFO - WebSearch: False
+2025-09-15 15:47:17,576 - main - INFO - Messages count: 3
+2025-09-15 15:47:17,577 - main - INFO - Message 0: user - Hello
+2025-09-15 15:47:17,577 - main - INFO - Message 1: assistant - Hi there! How can I assist you today?
+2025-09-15 15:47:17,577 - main - INFO - Message 2: user - What is the weather like in Kramfors
+2025-09-15 15:47:17,577 - main - INFO - Starting chat stream for message 4c78e9c0-6314-453a-8dcf-f36728291e77
+2025-09-15 15:47:17,577 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 15:47:17,577 - main - INFO - Messages: 3 messages
+2025-09-15 15:47:17,577 - main - INFO - Message 0: ID=JlvdaofMy8NCgk5E, Role=user
+2025-09-15 15:47:17,577 - main - INFO -   Parts: 1 parts
+2025-09-15 15:47:17,577 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 15:47:17,577 - main - INFO - Message 1: ID=KKhAWkTF0ao7AZey, Role=assistant
+2025-09-15 15:47:17,577 - main - INFO -   Parts: 2 parts
+2025-09-15 15:47:17,577 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 15:47:17,577 - main - INFO -     Part 1: type=text, text=Hi there! How can I assist you today?...
+2025-09-15 15:47:17,577 - main - INFO - Message 2: ID=gc53LKn5AwfjmvJj, Role=user
+2025-09-15 15:47:17,577 - main - INFO -   Parts: 1 parts
+2025-09-15 15:47:17,577 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 15:47:17,577 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 15:47:17,577 - main - INFO - Starting OpenAI request...
+2025-09-15 15:47:18,242 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 15:47:18,243 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 15:47:18,955 - main - INFO - Tool getWeather executed successfully
+2025-09-15 15:47:18,956 - main - INFO - Chat completed for message 4c78e9c0-6314-453a-8dcf-f36728291e77
+2025-09-15 15:47:18,956 - main - INFO - Tool calls processed: 1
+2025-09-15 16:10:55,320 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:10:55,320 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:10:55,320 - main - INFO - WebSearch: False
+2025-09-15 16:10:55,320 - main - INFO - Messages count: 1
+2025-09-15 16:10:55,320 - main - INFO - Message 0: user - What is the weather like in Stockholm?
+2025-09-15 16:10:55,323 - main - INFO - Starting chat stream for message 92a36369-8594-46b9-953c-7b76d97b20b6
+2025-09-15 16:10:55,324 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:10:55,324 - main - INFO - Messages: 1 messages
+2025-09-15 16:10:55,324 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 16:10:55,324 - main - INFO -   Parts: 1 parts
+2025-09-15 16:10:55,324 - main - INFO -     Part 0: type=text, text=What is the weather like in Stockholm?...
+2025-09-15 16:10:55,324 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Stockholm?'}]
+2025-09-15 16:10:55,324 - main - INFO - Starting OpenAI request...
+2025-09-15 16:10:58,687 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:10:58,698 - main - INFO - Processing tool call: getWeather with args: {"city":"Stockholm"}
+2025-09-15 16:11:00,919 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:11:00,920 - main - INFO - Chat completed for message 92a36369-8594-46b9-953c-7b76d97b20b6
+2025-09-15 16:11:00,920 - main - INFO - Tool calls processed: 1
+2025-09-15 16:14:01,695 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:14:01,696 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:14:01,696 - main - INFO - WebSearch: False
+2025-09-15 16:14:01,696 - main - INFO - Messages count: 5
+2025-09-15 16:14:01,696 - main - INFO - Message 0: user - Hello
+2025-09-15 16:14:01,696 - main - INFO - Message 1: assistant - Hi there! How can I assist you today?
+2025-09-15 16:14:01,696 - main - INFO - Message 2: user - What is the weather like in Kramfors
+2025-09-15 16:14:01,696 - main - INFO - Message 3: assistant - 
+2025-09-15 16:14:01,696 - main - INFO - Message 4: user - What is the weather like in Kramfors
+2025-09-15 16:14:01,697 - main - INFO - Starting chat stream for message 099669db-67dc-4ae2-9ecd-f0f555ec3eab
+2025-09-15 16:14:01,697 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:14:01,697 - main - INFO - Messages: 5 messages
+2025-09-15 16:14:01,697 - main - INFO - Message 0: ID=ZAUZurkflg8v2Gv6, Role=user
+2025-09-15 16:14:01,697 - main - INFO -   Parts: 1 parts
+2025-09-15 16:14:01,697 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 16:14:01,697 - main - INFO - Message 1: ID=UnQ7JuY6UjU0Zbdr, Role=assistant
+2025-09-15 16:14:01,697 - main - INFO -   Parts: 2 parts
+2025-09-15 16:14:01,697 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:14:01,697 - main - INFO -     Part 1: type=text, text=Hi there! How can I assist you today?...
+2025-09-15 16:14:01,697 - main - INFO - Message 2: ID=mr0DRrOBNJZF2189, Role=user
+2025-09-15 16:14:01,697 - main - INFO -   Parts: 1 parts
+2025-09-15 16:14:01,697 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:14:01,697 - main - INFO - Message 3: ID=ZVNXwNIDrbQNYOHN, Role=assistant
+2025-09-15 16:14:01,697 - main - INFO -   Parts: 2 parts
+2025-09-15 16:14:01,697 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:14:01,697 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:14:01,697 - main - INFO - Message 4: ID=ILtiLx4p88gUqOic, Role=user
+2025-09-15 16:14:01,697 - main - INFO -   Parts: 1 parts
+2025-09-15 16:14:01,697 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:14:01,697 - main - WARNING - No content found in message ZVNXwNIDrbQNYOHN
+2025-09-15 16:14:01,697 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Hello'}, {'role': 'assistant', 'content': 'Hi there! How can I assist you today?'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:14:01,697 - main - INFO - Starting OpenAI request...
+2025-09-15 16:14:02,820 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:14:02,835 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:14:05,051 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:14:05,052 - main - INFO - Chat completed for message 099669db-67dc-4ae2-9ecd-f0f555ec3eab
+2025-09-15 16:14:05,052 - main - INFO - Tool calls processed: 1
+2025-09-15 16:14:48,863 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:14:48,863 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:14:48,863 - main - INFO - WebSearch: False
+2025-09-15 16:14:48,863 - main - INFO - Messages count: 1
+2025-09-15 16:14:48,863 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:14:48,864 - main - INFO - Starting chat stream for message 4ddb90f3-4127-45c3-ba9c-25ab1218c47f
+2025-09-15 16:14:48,864 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:14:48,864 - main - INFO - Messages: 1 messages
+2025-09-15 16:14:48,864 - main - INFO - Message 0: ID=dvxXmRTpD3eNl4rn, Role=user
+2025-09-15 16:14:48,864 - main - INFO -   Parts: 1 parts
+2025-09-15 16:14:48,864 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:14:48,864 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:14:48,864 - main - INFO - Starting OpenAI request...
+2025-09-15 16:14:50,126 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:14:50,128 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:14:52,336 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:14:52,336 - main - INFO - Chat completed for message 4ddb90f3-4127-45c3-ba9c-25ab1218c47f
+2025-09-15 16:14:52,336 - main - INFO - Tool calls processed: 1
+2025-09-15 16:15:14,433 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:15:14,433 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:15:14,433 - main - INFO - WebSearch: False
+2025-09-15 16:15:14,433 - main - INFO - Messages count: 3
+2025-09-15 16:15:14,433 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:15:14,433 - main - INFO - Message 1: assistant - 
+2025-09-15 16:15:14,433 - main - INFO - Message 2: user - Hello
+2025-09-15 16:15:14,434 - main - INFO - Starting chat stream for message d4338764-3451-4f8f-9263-ed478c8615e9
+2025-09-15 16:15:14,434 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:15:14,434 - main - INFO - Messages: 3 messages
+2025-09-15 16:15:14,434 - main - INFO - Message 0: ID=dvxXmRTpD3eNl4rn, Role=user
+2025-09-15 16:15:14,434 - main - INFO -   Parts: 1 parts
+2025-09-15 16:15:14,434 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:15:14,434 - main - INFO - Message 1: ID=VKMjdAVB8DIhfZ84, Role=assistant
+2025-09-15 16:15:14,434 - main - INFO -   Parts: 2 parts
+2025-09-15 16:15:14,434 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:15:14,434 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:15:14,434 - main - INFO - Message 2: ID=MjUUHMXKQtn2NfJQ, Role=user
+2025-09-15 16:15:14,434 - main - INFO -   Parts: 1 parts
+2025-09-15 16:15:14,434 - main - INFO -     Part 0: type=text, text=Hello...
+2025-09-15 16:15:14,434 - main - WARNING - No content found in message VKMjdAVB8DIhfZ84
+2025-09-15 16:15:14,434 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'Hello'}]
+2025-09-15 16:15:14,434 - main - INFO - Starting OpenAI request...
+2025-09-15 16:15:15,215 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:15:15,579 - main - INFO - Chat completed for message d4338764-3451-4f8f-9263-ed478c8615e9
+2025-09-15 16:15:15,579 - main - INFO - Tool calls processed: 0
+2025-09-15 16:24:05,799 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:24:05,799 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:24:05,799 - main - INFO - WebSearch: False
+2025-09-15 16:24:05,799 - main - INFO - Messages count: 1
+2025-09-15 16:24:05,799 - main - INFO - Message 0: user - What is the weather in Kramfors
+2025-09-15 16:24:05,804 - main - INFO - Starting chat stream for message f9494e1c-3b22-4b65-a7e8-95be1316fbd9
+2025-09-15 16:24:05,804 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:24:05,804 - main - INFO - Messages: 1 messages
+2025-09-15 16:24:05,804 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 16:24:05,804 - main - INFO -   Parts: 1 parts
+2025-09-15 16:24:05,804 - main - INFO -     Part 0: type=text, text=What is the weather in Kramfors...
+2025-09-15 16:24:05,804 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather in Kramfors'}]
+2025-09-15 16:24:05,804 - main - INFO - Starting OpenAI request...
+2025-09-15 16:24:06,687 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:24:06,693 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:24:08,902 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:24:08,902 - main - INFO - Chat completed for message f9494e1c-3b22-4b65-a7e8-95be1316fbd9
+2025-09-15 16:24:08,902 - main - INFO - Tool calls processed: 1
+2025-09-15 16:26:03,744 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:26:03,745 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:26:03,745 - main - INFO - WebSearch: False
+2025-09-15 16:26:03,745 - main - INFO - Messages count: 1
+2025-09-15 16:26:03,745 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:26:03,747 - main - INFO - Starting chat stream for message b6526065-53a9-4e2e-945b-09088d8b3718
+2025-09-15 16:26:03,747 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:26:03,747 - main - INFO - Messages: 1 messages
+2025-09-15 16:26:03,747 - main - INFO - Message 0: ID=1qUSCFQszNHkq3E5, Role=user
+2025-09-15 16:26:03,747 - main - INFO -   Parts: 1 parts
+2025-09-15 16:26:03,747 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:26:03,747 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:26:03,747 - main - INFO - Starting OpenAI request...
+2025-09-15 16:26:04,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:26:04,577 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:26:06,787 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:26:06,787 - main - INFO - Chat completed for message b6526065-53a9-4e2e-945b-09088d8b3718
+2025-09-15 16:26:06,787 - main - INFO - Tool calls processed: 1
+2025-09-15 16:27:16,723 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:27:16,724 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:27:16,724 - main - INFO - WebSearch: False
+2025-09-15 16:27:16,724 - main - INFO - Messages count: 3
+2025-09-15 16:27:16,724 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:27:16,724 - main - INFO - Message 1: assistant - 
+2025-09-15 16:27:16,724 - main - INFO - Message 2: user - What is the weather like in Kramfors
+2025-09-15 16:27:16,730 - main - INFO - Starting chat stream for message 4d42ba34-d068-4d04-9565-e4bc7f8e6db5
+2025-09-15 16:27:16,730 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:27:16,730 - main - INFO - Messages: 3 messages
+2025-09-15 16:27:16,730 - main - INFO - Message 0: ID=1qUSCFQszNHkq3E5, Role=user
+2025-09-15 16:27:16,730 - main - INFO -   Parts: 1 parts
+2025-09-15 16:27:16,730 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:27:16,730 - main - INFO - Message 1: ID=eDkrtyAymzzS9eJx, Role=assistant
+2025-09-15 16:27:16,730 - main - INFO -   Parts: 2 parts
+2025-09-15 16:27:16,730 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:27:16,730 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:27:16,730 - main - INFO - Message 2: ID=oihhsdUmNl1ZGGlP, Role=user
+2025-09-15 16:27:16,730 - main - INFO -   Parts: 1 parts
+2025-09-15 16:27:16,730 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:27:16,730 - main - WARNING - No content found in message eDkrtyAymzzS9eJx
+2025-09-15 16:27:16,730 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:27:16,730 - main - INFO - Starting OpenAI request...
+2025-09-15 16:27:17,809 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:27:17,818 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:27:20,031 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:27:20,031 - main - INFO - Chat completed for message 4d42ba34-d068-4d04-9565-e4bc7f8e6db5
+2025-09-15 16:27:20,031 - main - INFO - Tool calls processed: 1
+2025-09-15 16:29:26,927 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:29:26,927 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:29:26,927 - main - INFO - WebSearch: False
+2025-09-15 16:29:26,927 - main - INFO - Messages count: 5
+2025-09-15 16:29:26,928 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:29:26,928 - main - INFO - Message 1: assistant - 
+2025-09-15 16:29:26,928 - main - INFO - Message 2: user - What is the weather like in Kramfors
+2025-09-15 16:29:26,928 - main - INFO - Message 3: assistant - 
+2025-09-15 16:29:26,928 - main - INFO - Message 4: user - What is the weather like in Kramfors
+2025-09-15 16:29:26,932 - main - INFO - Starting chat stream for message 1f9569ac-3845-4057-860c-cc9377109699
+2025-09-15 16:29:26,932 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:29:26,932 - main - INFO - Messages: 5 messages
+2025-09-15 16:29:26,932 - main - INFO - Message 0: ID=1qUSCFQszNHkq3E5, Role=user
+2025-09-15 16:29:26,932 - main - INFO -   Parts: 1 parts
+2025-09-15 16:29:26,932 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:29:26,933 - main - INFO - Message 1: ID=eDkrtyAymzzS9eJx, Role=assistant
+2025-09-15 16:29:26,933 - main - INFO -   Parts: 2 parts
+2025-09-15 16:29:26,933 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:29:26,933 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:29:26,933 - main - INFO - Message 2: ID=oihhsdUmNl1ZGGlP, Role=user
+2025-09-15 16:29:26,933 - main - INFO -   Parts: 1 parts
+2025-09-15 16:29:26,933 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:29:26,933 - main - INFO - Message 3: ID=40fdFNGJ7zq05FSd, Role=assistant
+2025-09-15 16:29:26,933 - main - INFO -   Parts: 2 parts
+2025-09-15 16:29:26,933 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:29:26,933 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:29:26,933 - main - INFO - Message 4: ID=b8HJb3tYjQBfBNT7, Role=user
+2025-09-15 16:29:26,933 - main - INFO -   Parts: 1 parts
+2025-09-15 16:29:26,933 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:29:26,933 - main - WARNING - No content found in message eDkrtyAymzzS9eJx
+2025-09-15 16:29:26,933 - main - WARNING - No content found in message 40fdFNGJ7zq05FSd
+2025-09-15 16:29:26,933 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:29:26,933 - main - INFO - Starting OpenAI request...
+2025-09-15 16:29:28,575 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:29:28,602 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:29:30,809 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:29:30,809 - main - INFO - Chat completed for message 1f9569ac-3845-4057-860c-cc9377109699
+2025-09-15 16:29:30,809 - main - INFO - Tool calls processed: 1
+2025-09-15 16:30:06,947 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:30:06,947 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:30:06,947 - main - INFO - WebSearch: False
+2025-09-15 16:30:06,947 - main - INFO - Messages count: 1
+2025-09-15 16:30:06,947 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:30:06,948 - main - INFO - Starting chat stream for message 51f18ca5-086b-42af-b0f0-0eb9cdb0f2d3
+2025-09-15 16:30:06,948 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:30:06,948 - main - INFO - Messages: 1 messages
+2025-09-15 16:30:06,948 - main - INFO - Message 0: ID=rONxPdUN8keMezHF, Role=user
+2025-09-15 16:30:06,948 - main - INFO -   Parts: 1 parts
+2025-09-15 16:30:06,948 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:30:06,948 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:30:06,948 - main - INFO - Starting OpenAI request...
+2025-09-15 16:30:07,992 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:30:07,998 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:30:10,209 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:30:10,209 - main - INFO - Chat completed for message 51f18ca5-086b-42af-b0f0-0eb9cdb0f2d3
+2025-09-15 16:30:10,210 - main - INFO - Tool calls processed: 1
+2025-09-15 16:31:54,704 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:31:54,704 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:31:54,705 - main - INFO - WebSearch: False
+2025-09-15 16:31:54,705 - main - INFO - Messages count: 3
+2025-09-15 16:31:54,705 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:31:54,705 - main - INFO - Message 1: assistant - 
+2025-09-15 16:31:54,705 - main - INFO - Message 2: user - What is the weather like in Kramfors
+2025-09-15 16:31:54,709 - main - INFO - Starting chat stream for message 01080f2a-9451-4b59-8e2c-83de4c9a63b7
+2025-09-15 16:31:54,709 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:31:54,709 - main - INFO - Messages: 3 messages
+2025-09-15 16:31:54,709 - main - INFO - Message 0: ID=rONxPdUN8keMezHF, Role=user
+2025-09-15 16:31:54,709 - main - INFO -   Parts: 1 parts
+2025-09-15 16:31:54,709 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:31:54,709 - main - INFO - Message 1: ID=EzRlFfkXbNb8AASX, Role=assistant
+2025-09-15 16:31:54,709 - main - INFO -   Parts: 2 parts
+2025-09-15 16:31:54,709 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 16:31:54,709 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 16:31:54,709 - main - INFO - Message 2: ID=6t6WfnyTwyMCav3A, Role=user
+2025-09-15 16:31:54,709 - main - INFO -   Parts: 1 parts
+2025-09-15 16:31:54,710 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:31:54,710 - main - WARNING - No content found in message EzRlFfkXbNb8AASX
+2025-09-15 16:31:54,710 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': '[Empty message]'}, {'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:31:54,710 - main - INFO - Starting OpenAI request...
+2025-09-15 16:31:55,561 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:31:55,568 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:31:57,802 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:31:57,802 - main - INFO - Chat completed for message 01080f2a-9451-4b59-8e2c-83de4c9a63b7
+2025-09-15 16:31:57,802 - main - INFO - Tool calls processed: 1
+2025-09-15 16:56:30,558 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:56:30,558 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:56:30,558 - main - INFO - WebSearch: False
+2025-09-15 16:56:30,558 - main - INFO - Messages count: 1
+2025-09-15 16:56:30,558 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:56:30,559 - main - INFO - Starting chat stream for message 17cf8298-0653-44f0-a2ca-3e2f3accef64
+2025-09-15 16:56:30,559 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:56:30,559 - main - INFO - Messages: 1 messages
+2025-09-15 16:56:30,559 - main - INFO - Message 0: ID=Z2hPe9shL0l8QQ41, Role=user
+2025-09-15 16:56:30,559 - main - INFO -   Parts: 1 parts
+2025-09-15 16:56:30,559 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:56:30,559 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:56:30,559 - main - INFO - Starting OpenAI request...
+2025-09-15 16:56:31,462 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:56:31,463 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:56:33,676 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:56:33,677 - main - INFO - Chat completed for message 17cf8298-0653-44f0-a2ca-3e2f3accef64
+2025-09-15 16:56:33,677 - main - INFO - Tool calls processed: 1
+2025-09-15 16:57:49,707 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:57:49,707 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:57:49,707 - main - INFO - WebSearch: False
+2025-09-15 16:57:49,707 - main - INFO - Messages count: 1
+2025-09-15 16:57:49,707 - main - INFO - Message 0: user - What is the weather in Kramfors?
+2025-09-15 16:57:49,711 - main - INFO - Starting chat stream for message 832e6c28-d459-4190-a1c3-b4d39fa83677
+2025-09-15 16:57:49,711 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:57:49,711 - main - INFO - Messages: 1 messages
+2025-09-15 16:57:49,711 - main - INFO - Message 0: ID=test, Role=user
+2025-09-15 16:57:49,711 - main - INFO -   Parts: 1 parts
+2025-09-15 16:57:49,711 - main - INFO -     Part 0: type=text, text=What is the weather in Kramfors?...
+2025-09-15 16:57:49,711 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather in Kramfors?'}]
+2025-09-15 16:57:49,711 - main - INFO - Starting OpenAI request...
+2025-09-15 16:57:50,855 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:57:50,870 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:57:53,083 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:57:53,900 - main - INFO - Chat completed for message 832e6c28-d459-4190-a1c3-b4d39fa83677
+2025-09-15 16:57:53,900 - main - INFO - Tool calls processed: 1
+2025-09-15 16:58:31,639 - main - INFO - === CHAT REQUEST ===
+2025-09-15 16:58:31,639 - main - INFO - Model: openai/gpt-4o
+2025-09-15 16:58:31,639 - main - INFO - WebSearch: False
+2025-09-15 16:58:31,639 - main - INFO - Messages count: 1
+2025-09-15 16:58:31,639 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 16:58:31,640 - main - INFO - Starting chat stream for message fae97035-02e7-4b2c-ab37-07c0b55fda5e
+2025-09-15 16:58:31,640 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 16:58:31,640 - main - INFO - Messages: 1 messages
+2025-09-15 16:58:31,640 - main - INFO - Message 0: ID=IiunGSJLbk9aJA8M, Role=user
+2025-09-15 16:58:31,640 - main - INFO -   Parts: 1 parts
+2025-09-15 16:58:31,640 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 16:58:31,640 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 16:58:31,640 - main - INFO - Starting OpenAI request...
+2025-09-15 16:58:32,608 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 16:58:32,612 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 16:58:34,823 - main - INFO - Tool getWeather executed successfully
+2025-09-15 16:58:35,640 - main - INFO - Chat completed for message fae97035-02e7-4b2c-ab37-07c0b55fda5e
+2025-09-15 16:58:35,640 - main - INFO - Tool calls processed: 1
+2025-09-15 17:03:33,197 - main - INFO - === CHAT REQUEST ===
+2025-09-15 17:03:33,198 - main - INFO - Model: openai/gpt-4o
+2025-09-15 17:03:33,198 - main - INFO - WebSearch: False
+2025-09-15 17:03:33,199 - main - INFO - Messages count: 1
+2025-09-15 17:03:33,199 - main - INFO - Message 0: user - What is the weather like in Paris
+2025-09-15 17:03:33,203 - main - INFO - Starting chat stream for message fa76afd9-54a6-4dac-a2b5-b7d63830a655
+2025-09-15 17:03:33,203 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 17:03:33,203 - main - INFO - Messages: 1 messages
+2025-09-15 17:03:33,203 - main - INFO - Message 0: ID=qzlj3CCccgyX9FPK, Role=user
+2025-09-15 17:03:33,204 - main - INFO -   Parts: 1 parts
+2025-09-15 17:03:33,205 - main - INFO -     Part 0: type=text, text=What is the weather like in Paris...
+2025-09-15 17:03:33,205 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Paris'}]
+2025-09-15 17:03:33,205 - main - INFO - Starting OpenAI request...
+2025-09-15 17:03:33,873 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:03:33,877 - main - INFO - Processing tool call: getWeather with args: {"city":"Paris"}
+2025-09-15 17:03:36,057 - main - INFO - Tool getWeather executed successfully
+2025-09-15 17:03:36,875 - main - INFO - Chat completed for message fa76afd9-54a6-4dac-a2b5-b7d63830a655
+2025-09-15 17:03:36,875 - main - INFO - Tool calls processed: 1
+2025-09-15 20:12:31,385 - __main__ - INFO - Starting FastAPI development server...
+2025-09-15 20:12:31,385 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-15 20:21:31,734 - main - INFO - === CHAT REQUEST ===
+2025-09-15 20:21:31,735 - main - INFO - Model: openai/gpt-4o
+2025-09-15 20:21:31,735 - main - INFO - WebSearch: False
+2025-09-15 20:21:31,735 - main - INFO - Messages count: 1
+2025-09-15 20:21:31,735 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 20:21:31,739 - main - INFO - Starting chat stream for message f102a6c1-bc80-4908-84a6-2ce05454ccd8
+2025-09-15 20:21:31,739 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 20:21:31,739 - main - INFO - Messages: 1 messages
+2025-09-15 20:21:31,739 - main - INFO - Message 0: ID=MBw8M7Zfixhsbux0, Role=user
+2025-09-15 20:21:31,739 - main - INFO -   Parts: 1 parts
+2025-09-15 20:21:31,739 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 20:21:31,739 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}]
+2025-09-15 20:21:31,740 - main - INFO - Starting OpenAI request...
+2025-09-15 20:21:33,386 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 20:21:33,412 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-15 20:21:35,624 - main - INFO - Tool getWeather executed successfully
+2025-09-15 20:21:36,440 - main - INFO - Chat completed for message f102a6c1-bc80-4908-84a6-2ce05454ccd8
+2025-09-15 20:21:36,440 - main - INFO - Tool calls processed: 1
+2025-09-15 20:26:51,684 - main - INFO - === CHAT REQUEST ===
+2025-09-15 20:26:51,684 - main - INFO - Model: openai/gpt-4o
+2025-09-15 20:26:51,685 - main - INFO - WebSearch: False
+2025-09-15 20:26:51,685 - main - INFO - Messages count: 3
+2025-09-15 20:26:51,685 - main - INFO - Message 0: user - What is the weather like in Kramfors
+2025-09-15 20:26:51,685 - main - INFO - Message 1: assistant - The weather in Kramfors is currently rainy, with a temperature of 19°C. It's pouring quite heavily!
+2025-09-15 20:26:51,685 - main - INFO - Message 2: user - Vad är vädret i Malmö
+2025-09-15 20:26:51,686 - main - INFO - Starting chat stream for message d2efa46b-06ef-4d94-bcf7-2e5025638233
+2025-09-15 20:26:51,686 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 20:26:51,686 - main - INFO - Messages: 3 messages
+2025-09-15 20:26:51,686 - main - INFO - Message 0: ID=MBw8M7Zfixhsbux0, Role=user
+2025-09-15 20:26:51,686 - main - INFO -   Parts: 1 parts
+2025-09-15 20:26:51,686 - main - INFO -     Part 0: type=text, text=What is the weather like in Kramfors...
+2025-09-15 20:26:51,687 - main - INFO - Message 1: ID=cORtbsFmiSP2BcES, Role=assistant
+2025-09-15 20:26:51,687 - main - INFO -   Parts: 4 parts
+2025-09-15 20:26:51,687 - main - INFO -     Part 0: type=step-start, text=None...
+2025-09-15 20:26:51,687 - main - INFO -     Part 1: type=tool-getWeather, text=None...
+2025-09-15 20:26:51,687 - main - INFO -     Part 2: type=step-start, text=None...
+2025-09-15 20:26:51,687 - main - INFO -     Part 3: type=text, text=The weather in Kramfors is currently rainy, with a temperature of 19°C. It's pouring quite heavily!...
+2025-09-15 20:26:51,687 - main - INFO - Message 2: ID=Acsz39tVZ8fbTyJJ, Role=user
+2025-09-15 20:26:51,687 - main - INFO -   Parts: 1 parts
+2025-09-15 20:26:51,687 - main - INFO -     Part 0: type=text, text=Vad är vädret i Malmö...
+2025-09-15 20:26:51,687 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'What is the weather like in Kramfors'}, {'role': 'assistant', 'content': "The weather in Kramfors is currently rainy, with a temperature of 19°C. It's pouring quite heavily!"}, {'role': 'user', 'content': 'Vad är vädret i Malmö'}]
+2025-09-15 20:26:51,688 - main - INFO - Starting OpenAI request...
+2025-09-15 20:26:53,191 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 20:26:53,200 - main - INFO - Processing tool call: getWeather with args: {"city":"Malmö"}
+2025-09-15 20:26:55,379 - main - INFO - Tool getWeather executed successfully
+2025-09-15 20:26:56,197 - main - INFO - Chat completed for message d2efa46b-06ef-4d94-bcf7-2e5025638233
+2025-09-15 20:26:56,197 - main - INFO - Tool calls processed: 1

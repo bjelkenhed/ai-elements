@@ -1,9 +1,11 @@
+import asyncio
 import json
 import logging
 import os
 import time
 import uuid
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Callable
+from abc import ABC, abstractmethod
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -14,16 +16,17 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 # Load environment variables from parent directory (.env.local)
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env.local'))
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env.local"))
 
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG,  # Enable debug logging
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AI Elements FastAPI Backend")
+
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
@@ -31,6 +34,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     logger.error(f"Request body: {await request.body()}")
     logger.error(f"Validation errors: {exc.errors()}")
     return HTTPException(status_code=422, detail=f"Validation error: {exc.errors()}")
+
 
 # CORS middleware for development
 app.add_middleware(
@@ -44,16 +48,19 @@ app.add_middleware(
 # OpenAI client
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+
 class MessageFile(BaseModel):
     name: str
     type: str
     size: int
     url: Optional[str] = None
 
+
 class MessagePart(BaseModel):
     type: str
     text: Optional[str] = None
     # Add other part types as needed
+
 
 class UIMessage(BaseModel):
     id: str
@@ -62,10 +69,109 @@ class UIMessage(BaseModel):
     content: Optional[str] = None  # For compatibility
     files: Optional[List[MessageFile]] = None
 
+
 class ChatRequest(BaseModel):
     messages: List[UIMessage]
     model: str
     webSearch: bool = False
+
+
+# Tool Framework
+class ToolSchema(BaseModel):
+    type: str = "object"
+    properties: Dict[str, Any]
+    required: List[str] = []
+
+
+class ToolDefinition(BaseModel):
+    name: str
+    description: str
+    parameters: ToolSchema
+
+
+class BaseTool(ABC):
+    def __init__(self, name: str, description: str, parameters: ToolSchema):
+        self.name = name
+        self.description = description
+        self.parameters = parameters
+
+    @abstractmethod
+    async def execute(self, **kwargs) -> Any:
+        pass
+
+    def to_definition(self) -> ToolDefinition:
+        return ToolDefinition(
+            name=self.name, description=self.description, parameters=self.parameters
+        )
+
+
+# Weather Tool Implementation
+class WeatherTool(BaseTool):
+    def __init__(self):
+        super().__init__(
+            name="getWeather",
+            description="Get the current weather for a city",
+            parameters=ToolSchema(
+                properties={
+                    "city": {
+                        "type": "string",
+                        "description": "The city to get weather for",
+                    }
+                },
+                required=["city"],
+            ),
+        )
+
+    async def execute_streaming(self, streaming_callback, **kwargs):
+        """Execute with streaming callback to yield progressive results"""
+        city = kwargs.get("city", "Unknown")
+
+        # First yield: loading state
+        await streaming_callback(
+            {
+                "status": "loading",
+                "text": f"Getting weather for {city}...",
+                "weather": None,
+            }
+        )
+
+        # Simulate processing time
+        await asyncio.sleep(2.0)
+
+        # Prepare weather data
+        weather_data = {
+            "city": city,
+            "weather": "raining",
+            "temperature": "29°C",
+            "humidity": "95%",
+            "description": f"It's raining cats and dogs in {city}!",
+        }
+
+        # Second yield: final result
+        await streaming_callback(
+            {
+                "status": "success",
+                "text": f"The weather in {city} is currently {weather_data['weather']} at {weather_data['temperature']}. {weather_data['description']}",
+                "weather": weather_data,
+            }
+        )
+
+    async def execute(self, **kwargs) -> Dict[str, Any]:
+        """Legacy execute method for backward compatibility"""
+        city = kwargs.get("city", "Unknown")
+        weather_data = {
+            "city": city,
+            "weather": "raining",
+            "temperature": "39°C",
+            "humidity": "95%",
+            "description": f"It's raining cats and dogs in {city}!",
+        }
+        await asyncio.sleep(0.5)
+        return weather_data
+
+
+# Tool Registry
+tools_registry: Dict[str, BaseTool] = {"getWeather": WeatherTool()}
 
 
 def convert_messages_for_openai(ui_messages: List[UIMessage]) -> List[Dict[str, Any]]:
@@ -76,7 +182,9 @@ def convert_messages_for_openai(ui_messages: List[UIMessage]) -> List[Dict[str, 
         # Extract content from parts or use direct content
         content = ""
         if msg.parts:
-            text_parts = [part.text for part in msg.parts if part.type == "text" and part.text]
+            text_parts = [
+                part.text for part in msg.parts if part.type == "text" and part.text
+            ]
             content = " ".join(text_parts)
         elif msg.content:
             content = msg.content
@@ -85,10 +193,7 @@ def convert_messages_for_openai(ui_messages: List[UIMessage]) -> List[Dict[str, 
             logger.warning(f"No content found in message {msg.id}")
             content = "[Empty message]"
 
-        openai_msg = {
-            "role": msg.role,
-            "content": content
-        }
+        openai_msg = {"role": msg.role, "content": content}
 
         # Handle files if present (basic implementation)
         if msg.files:
@@ -101,7 +206,8 @@ def convert_messages_for_openai(ui_messages: List[UIMessage]) -> List[Dict[str, 
 
     return openai_messages
 
-def generate_ui_message_stream(request: ChatRequest):
+
+async def generate_ui_message_stream(request: ChatRequest):
     """Generate UI Message Stream compatible with AI SDK useChat hook"""
     message_id = str(uuid.uuid4())
 
@@ -117,7 +223,9 @@ def generate_ui_message_stream(request: ChatRequest):
         if msg.parts:
             logger.info(f"  Parts: {len(msg.parts)} parts")
             for j, part in enumerate(msg.parts):
-                logger.info(f"    Part {j}: type={part.type}, text={part.text[:100] if part.text else None}...")
+                logger.info(
+                    f"    Part {j}: type={part.type}, text={part.text[:100] if part.text else None}..."
+                )
         elif msg.content:
             logger.info(f"  Content: {msg.content[:100]}...")
         else:
@@ -131,53 +239,177 @@ def generate_ui_message_stream(request: ChatRequest):
         openai_messages = convert_messages_for_openai(request.messages)
         logger.info(f"Converted messages for OpenAI: {openai_messages}")
 
+        # Prepare tools for OpenAI
+        openai_tools = [
+            {
+                "type": "function",
+                "function": {
+                    "name": tool.name,
+                    "description": tool.description,
+                    "parameters": tool.parameters.model_dump(),
+                },
+            }
+            for tool in tools_registry.values()
+        ]
+
         # Add system message
         full_messages = [
-            {"role": "system", "content": "You are a helpful assistant that can answer questions and help with tasks"}
+            {
+                "role": "system",
+                "content": "You are a helpful assistant that can answer questions and help with tasks. When appropriate, use the available tools to provide accurate information.",
+            }
         ] + openai_messages
 
-        # Send start event (like AI Gateway)
-        yield f'data: {json.dumps({"type": "start"})}\n\n'
-
-        # Send start-step event
-        yield f'data: {json.dumps({"type": "start-step"})}\n\n'
-
-        # Start OpenAI streaming
-        logger.info("Starting OpenAI stream...")
-        stream = client.chat.completions.create(
-            model="gpt-4o",  # Fixed to gpt-4o as requested
-            messages=full_messages,
-            stream=True,
-            temperature=0.7
+        # Get the full OpenAI response (non-streaming) to process tools properly
+        logger.info("Starting OpenAI request...")
+        response = client.chat.completions.create(
+            model="gpt-4o", messages=full_messages, tools=openai_tools, temperature=0.7
         )
 
-        text_id = f"msg_{message_id}"
-        accumulated_text = ""
+        # Send start event
+        yield f"data: {json.dumps({'type': 'start'})}\n\n"
 
-        # Send text-start event (like AI Gateway)
-        yield f'data: {json.dumps({"type": "text-start", "id": text_id})}\n\n'
+        # Send start-step event (matching AI Gateway)
+        yield f"data: {json.dumps({'type': 'start-step'})}\n\n"
 
-        for chunk in stream:
-            if chunk.choices[0].delta.content is not None:
-                content = chunk.choices[0].delta.content
-                accumulated_text += content
-                logger.debug(f"Streaming content: {repr(content)}")
+        message = response.choices[0].message
 
-                # Send text-delta event (like AI Gateway)
-                yield f'data: {json.dumps({"type": "text-delta", "id": text_id, "delta": content})}\n\n'
+        # If we have tool calls, stream them using AI Gateway canonical format
+        if message.tool_calls:
+            # Stream tool calls using the canonical format
+            for tool_call in message.tool_calls:
+                call_id = tool_call.id
+                tool_name = tool_call.function.name
+                arguments_json = tool_call.function.arguments
 
-        # Send text-stop event
-        yield f'data: {json.dumps({"type": "text-stop", "id": text_id})}\n\n'
+                logger.info(
+                    f"Processing tool call: {tool_name} with args: {arguments_json}"
+                )
+
+                # Stream tool-input-start
+                yield f"data: {json.dumps({'type': 'tool-input-start', 'toolCallId': call_id, 'toolName': tool_name})}\n\n"
+
+                # Stream tool input deltas (simulate streaming the JSON parameters)
+                for char in arguments_json:
+                    yield f"data: {json.dumps({'type': 'tool-input-delta', 'toolCallId': call_id, 'inputTextDelta': char})}\n\n"
+                    await asyncio.sleep(0.01)
+
+                try:
+                    arguments = json.loads(arguments_json)
+                except json.JSONDecodeError as e:
+                    logger.error(f"Failed to parse tool arguments: {e}")
+                    continue
+
+                # Stream tool-input-available
+                provider_metadata = {"openai": {"itemId": f"fc_{call_id}"}}
+                yield f"data: {json.dumps({'type': 'tool-input-available', 'toolCallId': call_id, 'toolName': tool_name, 'input': arguments, 'providerMetadata': provider_metadata})}\n\n"
+
+                # Execute tool with streaming progressive results
+                if tool_name in tools_registry:
+                    tool = tools_registry[tool_name]
+
+                    # Check if tool supports streaming execution
+                    if hasattr(tool, "execute_streaming"):
+                        # Use streaming execution with callback
+                        results_queue = []
+
+                        async def streaming_callback(result):
+                            results_queue.append(result)
+
+                        # First, stream loading state immediately
+                        loading_result = {
+                            "status": "loading",
+                            "text": f"Getting weather for {arguments.get('city', 'Unknown')}...",
+                            "weather": None,
+                        }
+                        yield f"data: {json.dumps({'type': 'tool-output-available', 'toolCallId': call_id, 'output': loading_result})}\n\n"
+
+                        # Simulate processing delay
+                        await asyncio.sleep(2.0)
+
+                        # Then stream final result
+                        city = arguments.get("city", "Unknown")
+                        weather_data = {
+                            "city": city,
+                            "weather": "raining",
+                            "temperature": "9°C",
+                            "humidity": "95%",
+                            "description": f"It's raining cats and dogs in {city}!",
+                        }
+
+                        final_result = {
+                            "status": "success",
+                            "text": f"The weather in {city} is currently {weather_data['weather']} at {weather_data['temperature']}. {weather_data['description']}",
+                            "weather": weather_data,
+                        }
+                        yield f"data: {json.dumps({'type': 'tool-output-available', 'toolCallId': call_id, 'output': final_result})}\n\n"
+                    else:
+                        # Fallback to regular execution
+                        result = await tool.execute(**arguments)
+                        yield f"data: {json.dumps({'type': 'tool-output-available', 'toolCallId': call_id, 'output': result})}\n\n"
+
+                    logger.info(f"Tool {tool_name} executed successfully")
+                else:
+                    logger.warning(f"Tool {tool_name} not found in registry")
+                    error_result = {"error": "Tool not found"}
+                    yield f"data: {json.dumps({'type': 'tool-output-available', 'toolCallId': call_id, 'output': error_result})}\n\n"
+
+            # After tool execution, generate follow-up text response (matching AI Gateway multi-step pattern)
+
+            # Send finish-step to complete tool execution phase
+            yield f"data: {json.dumps({'type': 'finish-step'})}\n\n"
+
+            # Send start-step to begin text response phase
+            yield f"data: {json.dumps({'type': 'start-step'})}\n\n"
+
+            # Generate follow-up conversational response
+            follow_up_text = f"The weather in {arguments.get('city', 'Unknown')} is currently rainy, with a temperature of 19°C. It's pouring quite heavily!"
+
+        else:
+            # No tool calls, use the original response
+            follow_up_text = message.content
+
+        # Stream the response text
+        if follow_up_text:
+            text_id = f"msg_{message_id}"
+            # Add providerMetadata to match AI Gateway format
+            yield f"data: {json.dumps({'type': 'text-start', 'id': text_id, 'providerMetadata': {'openai': {'itemId': text_id}}})}\n\n"
+
+            # Stream the text content word by word (matching AI Gateway behavior)
+            words = follow_up_text.split(" ")
+            for i, word in enumerate(words):
+                if i == 0:
+                    # First word without leading space
+                    delta = word
+                else:
+                    # Subsequent words with leading space
+                    delta = f" {word}"
+
+                yield f"data: {json.dumps({'type': 'text-delta', 'id': text_id, 'delta': delta})}\n\n"
+                await asyncio.sleep(
+                    0.05
+                )  # Slightly longer delay for word-based streaming
+
+            yield f"data: {json.dumps({'type': 'text-end', 'id': text_id})}\n\n"
+
+        # Send finish-step event (matching AI Gateway)
+        yield f"data: {json.dumps({'type': 'finish-step'})}\n\n"
 
         # Send finish event
-        yield f'data: {json.dumps({"type": "finish"})}\n\n'
+        yield f"data: {json.dumps({'type': 'finish'})}\n\n"
 
-        logger.info(f"Chat stream completed for message {message_id}")
-        logger.info(f"Total content length: {len(accumulated_text)}")
+        # Send final DONE marker (matching AI Gateway)
+        yield "data: [DONE]\n\n"
+
+        logger.info(f"Chat completed for message {message_id}")
+        logger.info(
+            f"Tool calls processed: {len(message.tool_calls) if message.tool_calls else 0}"
+        )
 
     except Exception as e:
         logger.error(f"Error in chat stream: {str(e)}", exc_info=True)
-        yield f'data: {json.dumps({"type": "error", "error": str(e)})}\n\n'
+        yield f"data: {json.dumps({'type': 'error', 'error': str(e)})}\n\n"
+
 
 @app.post("/chat")
 async def chat_endpoint(request: ChatRequest):
@@ -191,11 +423,19 @@ async def chat_endpoint(request: ChatRequest):
         # Extract a preview of the content for logging
         content_preview = ""
         if msg.parts:
-            text_parts = [part.text for part in msg.parts if part.type == "text" and part.text]
+            text_parts = [
+                part.text for part in msg.parts if part.type == "text" and part.text
+            ]
             if text_parts:
-                content_preview = text_parts[0][:100] + "..." if len(text_parts[0]) > 100 else text_parts[0]
+                content_preview = (
+                    text_parts[0][:100] + "..."
+                    if len(text_parts[0]) > 100
+                    else text_parts[0]
+                )
         elif msg.content:
-            content_preview = msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
+            content_preview = (
+                msg.content[:100] + "..." if len(msg.content) > 100 else msg.content
+            )
 
         logger.info(f"Message {i}: {msg.role} - {content_preview}")
         if msg.files:
@@ -216,8 +456,9 @@ async def chat_endpoint(request: ChatRequest):
         headers={
             "Cache-Control": "no-cache",
             "Connection": "keep-alive",
-        }
+        },
     )
+
 
 @app.get("/health")
 async def health_check():
@@ -226,14 +467,17 @@ async def health_check():
     return {
         "status": "healthy",
         "timestamp": time.time(),
-        "openai_key_configured": bool(os.getenv("OPENAI_API_KEY"))
+        "openai_key_configured": bool(os.getenv("OPENAI_API_KEY")),
     }
+
 
 @app.get("/")
 async def root():
     """Root endpoint"""
     return {"message": "AI Elements FastAPI Backend", "version": "1.0.0"}
 
+
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

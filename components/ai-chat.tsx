@@ -32,6 +32,13 @@ import {
   Action,
   ActionsContent,
 } from '@/components/ai-elements/actions';
+import {
+  Tool,
+  ToolHeader,
+  ToolContent,
+  ToolInput,
+  ToolOutput,
+} from '@/components/ai-elements/tool';
 import { useState, Fragment } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { getApiUrl, getChatConfig } from '@/lib/chat-config';
@@ -73,11 +80,12 @@ const AIChat = () => {
   const [input, setInput] = useState('');
   const [model, setModel] = useState<string>(models[0].value);
   const [webSearch, setWebSearch] = useState(false);
+  const [toolCalls, setToolCalls] = useState<any[]>([]);
 
   const chatConfig = getChatConfig();
-  const { messages, sendMessage, status, reload } = useChat();
+  const { messages, sendMessage, status, reload, setMessages } = useChat();
 
-  const handleSubmit = (message: PromptInputMessage) => {
+  const handleSubmit = async (message: PromptInputMessage) => {
     const hasText = Boolean(message.text);
     const hasAttachments = Boolean(message.files?.length);
 
@@ -87,6 +95,10 @@ const AIChat = () => {
 
     console.log('backend:', chatConfig.backendType);
 
+    // Clear previous tool calls
+    setToolCalls([]);
+
+    // Use the regular sendMessage
     sendMessage(
       {
         text: message.text || 'Sent with attachments',
@@ -119,8 +131,24 @@ const AIChat = () => {
       <div className="flex flex-col h-full">
         <Conversation className="h-full">
           <ConversationContent>
-            {messages.map((message) => (
-              <div key={message.id}>
+            {messages.map((message) => {
+              // Debug logging for message parts
+              console.log('🔍 Message:', message.id, 'Role:', message.role, 'Parts:', message.parts.length);
+              message.parts.forEach((part, i) => {
+                console.log(`🔍 Part ${i}:`, part.type, part);
+                if (part.type === 'tool-call') {
+                  console.log('🔧 Tool-call part details:', {
+                    toolName: part.toolName,
+                    state: part.state,
+                    input: part.input,
+                    output: part.output,
+                    errorText: part.errorText
+                  });
+                }
+              });
+
+              return (
+                <div key={message.id}>
                 {message.role === 'assistant' && message.parts.filter((part) => part.type === 'source-url').length > 0 && (
                   <Sources>
                     <SourcesTrigger
@@ -141,6 +169,27 @@ const AIChat = () => {
                     ))}
                   </Sources>
                 )}
+
+                {/* Display active tool calls */}
+                {toolCalls.map((toolCall) => (
+                  <Tool key={toolCall.toolCallId} className="mb-4">
+                    <ToolHeader
+                      type={toolCall.toolName}
+                      state={toolCall.state}
+                    />
+                    <ToolContent>
+                      {toolCall.input && (
+                        <ToolInput input={toolCall.input} />
+                      )}
+                      {(toolCall.output || toolCall.errorText) && (
+                        <ToolOutput
+                          output={toolCall.output}
+                          errorText={toolCall.errorText}
+                        />
+                      )}
+                    </ToolContent>
+                  </Tool>
+                ))}
                 {message.parts.map((part, i) => {
                   switch (part.type) {
                     case 'text':
@@ -184,12 +233,65 @@ const AIChat = () => {
                           <ReasoningContent>{part.text}</ReasoningContent>
                         </Reasoning>
                       );
+                    case 'tool-call':
+                      return (
+                        <Tool key={`${message.id}-${i}`} className="mb-4">
+                          <ToolHeader
+                            type={part.toolName}
+                            state={part.state}
+                          />
+                          <ToolContent>
+                            {part.input && (
+                              <ToolInput input={part.input} />
+                            )}
+                            {(part.output || part.errorText) && (
+                              <ToolOutput
+                                output={part.output}
+                                errorText={part.errorText}
+                              />
+                            )}
+                          </ToolContent>
+                        </Tool>
+                      );
                     default:
+                      // Handle dynamic tool types from AI Gateway (e.g., 'tool-getWeather')
+                      if (part.type && part.type.startsWith('tool-')) {
+                        console.log('🔧 Found tool part:', part.type, part);
+                        console.log('🔧 Available properties:', Object.keys(part));
+
+                        if ('state' in part) {
+                          const toolPart = part as any; // Type assertion for tool parts
+                          const toolName = part.type.replace('tool-', ''); // Extract tool name from type
+                          console.log('🔧 Rendering tool component for:', toolName, 'state:', toolPart.state);
+                          return (
+                            <Tool key={`${message.id}-${i}`} className="mb-4">
+                              <ToolHeader
+                                type={toolName}
+                                state={toolPart.state}
+                              />
+                              <ToolContent>
+                                {toolPart.input && (
+                                  <ToolInput input={toolPart.input} />
+                                )}
+                                {(toolPart.output || toolPart.errorText) && (
+                                  <ToolOutput
+                                    output={toolPart.output}
+                                    errorText={toolPart.errorText}
+                                  />
+                                )}
+                              </ToolContent>
+                            </Tool>
+                          );
+                        } else {
+                          console.log('🔧 Tool part missing state property, skipping');
+                        }
+                      }
                       return null;
                   }
                 })}
-              </div>
-            ))}
+                </div>
+              );
+            })}
             {status === 'submitted' && <Loader />}
           </ConversationContent>
           <ConversationScrollButton />

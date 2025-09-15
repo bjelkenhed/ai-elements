@@ -1,7 +1,43 @@
-import { streamText, UIMessage, convertToModelMessages } from 'ai';
+import { streamText, UIMessage, convertToModelMessages, tool, stepCountIs } from 'ai';
+import { z } from 'zod';
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
+
+// getWeather tool definition with generator pattern for progressive results
+const getWeather = tool({
+  description: 'Get the current weather for a city',
+  inputSchema: z.object({
+    city: z.string().describe('The city to get weather for'),
+  }),
+  async *execute({ city }) {
+    // Yield loading state
+    yield {
+      status: 'loading' as const,
+      text: `Getting weather for ${city}...`,
+      weather: undefined,
+    };
+
+    // Simulate weather API call delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // Prepare weather data (matching FastAPI for consistency)
+    const weatherData = {
+      city: city,
+      weather: "raining",
+      temperature: "19°C",
+      humidity: "95%",
+      description: `It's raining cats and dogs in ${city}!`,
+    };
+
+    // Yield final result
+    yield {
+      status: 'success' as const,
+      text: `The weather in ${city} is currently ${weatherData.weather} at ${weatherData.temperature}. ${weatherData.description}`,
+      weather: weatherData,
+    };
+  },
+});
 
 export async function POST(req: Request) {
   const {
@@ -15,11 +51,6 @@ export async function POST(req: Request) {
     webSearch: boolean;
     _endpoint?: string;
   } = await req.json();
-
-  console.log('messages', messages);
-  console.log('model', model);
-  console.log('webSearch', webSearch);
-  console.log('_endpoint', _endpoint);
 
   // If custom endpoint is specified, proxy to FastAPI
   if (_endpoint) {
@@ -68,6 +99,10 @@ export async function POST(req: Request) {
     messages: convertToModelMessages(messages),
     system:
       'You are a helpful assistant that can answer questions and help with tasks',
+    tools: {
+      getWeather,
+    },
+    stopWhen: stepCountIs(3), // Allow up to 3 steps for tool calls and follow-up response
   });
 
   // send sources and reasoning back to the client

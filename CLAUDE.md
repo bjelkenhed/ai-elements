@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Next.js 15 project showcasing AI Elements - a component library for building AI interfaces. The project demonstrates a chatbot implementation using Vercel's AI SDK 5 and AI Elements components.
 
+### Main Objective
+
+The main objective for this project is to use AI SDK and the AI Elements components as the frontend for AI agents implemented in Python and exposed through FastAPI endpoints. As AI agents are long running, the progress is best shown by streaming back the progress of the agent to the frontend rather than just having some kind of spinner or progress bar. That way the user gets valuable information about what the agent is doing and an intuition about how the process might be improved. It will also give the user partial results while waiting for the final results at the completion of the task.
+
 ## Environment Setup
 
 Requires a `.env.local` file with:
