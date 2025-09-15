@@ -40,11 +40,11 @@ if __name__ == "__main__":
     logger.info("Starting FastAPI development server...")
     logger.info(f"Backend directory: {backend_dir}")
 
-    # Check for .env file
-    env_file = backend_dir / ".env"
+    # Check for .env.local file in parent directory
+    env_file = backend_dir.parent / ".env.local"
     if not env_file.exists():
-        logger.warning(f".env file not found at {env_file}")
-        logger.warning("Please copy .env.example to .env and add your OPENAI_API_KEY")
+        logger.warning(f".env.local file not found at {env_file}")
+        logger.warning("Please create .env.local in project root with AI_GATEWAY_API_KEY and OPENAI_API_KEY")
 
     uvicorn.run(
         "main:app",

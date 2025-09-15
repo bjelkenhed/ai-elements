@@ -8,7 +8,9 @@ This is a Next.js 15 project showcasing AI Elements - a component library for bu
 
 ## Environment Setup
 
-Requires a `.env.local` file with an `AI_GATEWAY_API_KEY`. Get one from Vercel's AI Gateway.
+Requires a `.env.local` file with:
+- `AI_GATEWAY_API_KEY` - Get one from Vercel's AI Gateway
+- `OPENAI_API_KEY` - Required for the FastAPI backend
 
 ## Development Commands
 
@@ -76,7 +78,7 @@ The AI Elements components follow a composable pattern:
 ### FastAPI Backend
 - **Location**: `backend/` directory
 - **Dependencies**: FastAPI, OpenAI, uvicorn (see `backend/requirements.txt`)
-- **Environment**: Requires `OPENAI_API_KEY` in `backend/.env`
+- **Environment**: Uses `OPENAI_API_KEY` from root `.env.local` file
 - **Endpoints**: `/chat` (main), `/health` (status check)
 - **Logging**: Extensive debugging logs to console and `backend.log`
 - **Testing**: `backend/test_endpoint.py` for endpoint validation

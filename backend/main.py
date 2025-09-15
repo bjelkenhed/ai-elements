@@ -13,8 +13,8 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 from openai import OpenAI
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from parent directory (.env.local)
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env.local'))
 
 # Configure logging
 logging.basicConfig(
