@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "dev:gateway": "next dev --turbopack",
     "dev:local": "concurrently \"npm run backend\" \"next dev --turbopack\"",
-    "backend": "cd backend && source venv/bin/activate && python start.py",
-    "backend:setup": "cd backend && pip install -r requirements.txt",
+    "backend": "source .venv/bin/activate && cd backend && python start.py",
+    "backend:setup": "python -m venv .venv && source .venv/bin/activate && pip install -r backend/requirements.txt",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"

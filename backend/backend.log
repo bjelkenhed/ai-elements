@@ -2344,3 +2344,185 @@ openai.APIConnectionError: Connection error.
 2025-09-15 20:26:55,379 - main - INFO - Tool getWeather executed successfully
 2025-09-15 20:26:56,197 - main - INFO - Chat completed for message d2efa46b-06ef-4d94-bcf7-2e5025638233
 2025-09-15 20:26:56,197 - main - INFO - Tool calls processed: 1
+2025-09-15 20:59:34,597 - main - INFO - === CHAT REQUEST ===
+2025-09-15 20:59:34,597 - main - INFO - Model: openai/gpt-4o
+2025-09-15 20:59:34,598 - main - INFO - WebSearch: False
+2025-09-15 20:59:34,598 - main - INFO - Messages count: 1
+2025-09-15 20:59:34,598 - main - INFO - Message 0: user - Vad är det för väder i England
+2025-09-15 20:59:34,599 - main - INFO - Starting chat stream for message a6ca3369-0453-4f18-9e58-5de7a4b9042e
+2025-09-15 20:59:34,599 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-15 20:59:34,599 - main - INFO - Messages: 1 messages
+2025-09-15 20:59:34,599 - main - INFO - Message 0: ID=nAwetxhK0GrfJy3p, Role=user
+2025-09-15 20:59:34,599 - main - INFO -   Parts: 1 parts
+2025-09-15 20:59:34,599 - main - INFO -     Part 0: type=text, text=Vad är det för väder i England...
+2025-09-15 20:59:34,599 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i England'}]
+2025-09-15 20:59:34,600 - main - INFO - Starting OpenAI request...
+2025-09-15 20:59:35,939 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 20:59:35,947 - main - INFO - Processing tool call: getWeather with args: {"city":"London"}
+2025-09-15 20:59:38,138 - main - INFO - Tool getWeather executed successfully
+2025-09-15 20:59:38,957 - main - INFO - Chat completed for message a6ca3369-0453-4f18-9e58-5de7a4b9042e
+2025-09-15 20:59:38,958 - main - INFO - Tool calls processed: 1
+2025-09-16 05:22:57,910 - main - INFO - === CHAT REQUEST ===
+2025-09-16 05:22:57,911 - main - INFO - Model: openai/gpt-4o
+2025-09-16 05:22:57,911 - main - INFO - WebSearch: False
+2025-09-16 05:22:57,911 - main - INFO - Messages count: 1
+2025-09-16 05:22:57,911 - main - INFO - Message 0: user - Vad är det för väder i Kramfors
+2025-09-16 05:22:57,912 - main - INFO - Starting chat stream for message f5902a41-c64f-4ca5-a3bd-02607723da9c
+2025-09-16 05:22:57,912 - main - INFO - Model: openai/gpt-4o, WebSearch: False
+2025-09-16 05:22:57,912 - main - INFO - Messages: 1 messages
+2025-09-16 05:22:57,912 - main - INFO - Message 0: ID=sc034vCUC4cWJqNO, Role=user
+2025-09-16 05:22:57,912 - main - INFO -   Parts: 1 parts
+2025-09-16 05:22:57,912 - main - INFO -     Part 0: type=text, text=Vad är det för väder i Kramfors...
+2025-09-16 05:22:57,912 - main - INFO - Converted messages for OpenAI: [{'role': 'user', 'content': 'Vad är det för väder i Kramfors'}]
+2025-09-16 05:22:57,912 - main - INFO - Starting OpenAI request...
+2025-09-16 05:22:59,448 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 05:22:59,450 - main - INFO - Processing tool call: getWeather with args: {"city":"Kramfors"}
+2025-09-16 05:23:01,660 - main - INFO - Tool getWeather executed successfully
+2025-09-16 05:23:02,478 - main - INFO - Chat completed for message f5902a41-c64f-4ca5-a3bd-02607723da9c
+2025-09-16 05:23:02,478 - main - INFO - Tool calls processed: 1
+2025-09-16 05:33:39,041 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 05:33:39,045 - main - INFO - Starting chat stream d4e38335-3e2f-4e36-a96e-326489b5e37d - 1 messages
+2025-09-16 05:33:44,295 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 05:33:44,315 - main - INFO - Executing tool: getWeather
+2025-09-16 05:33:46,317 - main - INFO - Tool getWeather executed successfully
+2025-09-16 05:34:41,679 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 05:34:41,681 - main - INFO - Starting chat stream 2a753fcf-8197-46f8-aa30-2e6a90c74bd7 - 1 messages
+2025-09-16 05:34:45,288 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 05:34:45,302 - main - INFO - Executing tool: getWeather
+2025-09-16 05:34:47,303 - main - INFO - Tool getWeather executed successfully
+2025-09-16 05:34:48,123 - main - INFO - Chat completed 2a753fcf-8197-46f8-aa30-2e6a90c74bd7
+2025-09-16 09:01:53,986 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 09:01:53,996 - main - INFO - Starting chat stream 7a15ce3f-3bf3-4097-9dc4-0b5d729068bd - 1 messages
+2025-09-16 09:01:55,682 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 09:01:55,696 - main - INFO - Executing tool: getWeather
+2025-09-16 09:01:57,697 - main - INFO - Tool getWeather executed successfully
+2025-09-16 09:01:58,517 - main - INFO - Chat completed 7a15ce3f-3bf3-4097-9dc4-0b5d729068bd
+2025-09-16 11:34:50,465 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 11:34:50,469 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 15:04:42,898 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 15:04:42,899 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 15:05:06,025 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 15:05:06,025 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 15:05:22,083 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:05:22,087 - main - INFO - Starting chat stream b2d56417-fec2-4397-b9e3-03476ec43187 - 1 messages
+2025-09-16 15:05:22,087 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:05:25,062 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:05:25,297 - main - INFO - Chat completed b2d56417-fec2-4397-b9e3-03476ec43187
+2025-09-16 15:05:40,922 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:05:40,926 - main - INFO - Starting chat stream b556324b-cb87-4011-98f2-2a4fc1213227 - 1 messages
+2025-09-16 15:05:40,927 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:05:42,417 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:05:42,426 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:05:42,680 - main - INFO - Chat completed b556324b-cb87-4011-98f2-2a4fc1213227
+2025-09-16 15:06:11,652 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 15:06:11,653 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 15:06:42,834 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 15:06:42,837 - main - INFO - Starting chat stream 01dfd2fb-6d43-45f9-9dcc-18b6a1c4fb0a - 1 messages
+2025-09-16 15:06:42,837 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:06:44,524 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:06:44,674 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:06:44,928 - main - INFO - Chat completed 01dfd2fb-6d43-45f9-9dcc-18b6a1c4fb0a
+2025-09-16 15:08:55,796 - main - INFO - Chat request: openai/gpt-4o, 3 messages
+2025-09-16 15:08:55,799 - main - INFO - Starting chat stream edf5c9fe-63ec-4baf-84ee-fb5e9485b511 - 3 messages
+2025-09-16 15:08:55,800 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:08:57,263 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:08:57,270 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:08:57,524 - main - INFO - Chat completed edf5c9fe-63ec-4baf-84ee-fb5e9485b511
+2025-09-16 15:14:39,966 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:14:39,970 - main - INFO - Starting chat stream 71d36813-855b-4d72-8259-184bdc2cd879 - 1 messages
+2025-09-16 15:14:39,970 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:14:41,499 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:14:41,503 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:14:41,757 - main - INFO - Chat completed 71d36813-855b-4d72-8259-184bdc2cd879
+2025-09-16 15:15:46,155 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:15:46,160 - main - INFO - Starting chat stream 6b793ee2-fd19-4ac6-b3fb-fd12a083dcf5 - 1 messages
+2025-09-16 15:15:46,162 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:15:47,543 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:15:47,743 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:16:31,861 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:16:31,871 - main - INFO - Starting chat stream 78e42c86-cb8c-4a37-9b7f-8b6e3fe1fa9f - 1 messages
+2025-09-16 15:16:31,871 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:16:33,378 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:16:33,419 - main - INFO - Tool call started: call_c9f1636331ba480e855fd81f - getWeather
+2025-09-16 15:16:33,520 - main - INFO - Tool call complete: call_c9f1636331ba480e855fd81f - event.arguments='', accumulated=''
+2025-09-16 15:16:33,520 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:17:08,195 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:17:08,200 - main - INFO - Starting chat stream f26d1dc5-64cf-460e-b0e1-0075fa188765 - 1 messages
+2025-09-16 15:17:08,200 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:17:10,655 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:17:10,699 - main - INFO - Tool call started: call_7e36f621c0e344049ac1d7d9 - getWeather
+2025-09-16 15:17:10,802 - main - INFO - Tool call complete: call_7e36f621c0e344049ac1d7d9 - event.arguments='', accumulated=''
+2025-09-16 15:17:10,803 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:18:56,433 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:18:56,438 - main - INFO - Starting chat stream 4d2e4e71-952c-41b0-ae50-e082efebe4f7 - 1 messages
+2025-09-16 15:18:56,438 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-next-80b-a3b-instruct, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:18:57,836 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:18:57,846 - main - INFO - Tool call started: call_45a431a53cf84a31861ef4a0 - getWeather
+2025-09-16 15:18:58,095 - main - INFO - Tool call complete: call_45a431a53cf84a31861ef4a0 - event.arguments='', accumulated=''
+2025-09-16 15:18:58,095 - main - ERROR - Failed to parse tool arguments: Expecting value: line 1 column 1 (char 0)
+2025-09-16 15:18:59,518 - main - INFO - Chat completed 4d2e4e71-952c-41b0-ae50-e082efebe4f7
+2025-09-16 15:19:21,926 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 15:19:21,926 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 15:19:33,177 - main - INFO - Chat request: any-model, 1 messages
+2025-09-16 15:19:33,181 - main - INFO - Starting chat stream 0c75b69e-54e0-49d9-bd31-00e3b305ae19 - 1 messages
+2025-09-16 15:19:33,181 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-235b-a22b-2507, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:19:34,915 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:19:34,924 - main - INFO - Tool call started: call_c3abc39a995c44aea705c6 - getWeather
+2025-09-16 15:19:34,925 - main - INFO - Tool call delta: call_c3abc39a995c44aea705c6 - '{' (total: '{')
+2025-09-16 15:19:34,925 - main - INFO - Tool call delta: call_c3abc39a995c44aea705c6 - '"' (total: '{"')
+2025-09-16 15:19:35,046 - main - INFO - Tool call complete: call_c3abc39a995c44aea705c6 - event.arguments='{"', accumulated='{"'
+2025-09-16 15:19:35,046 - main - ERROR - Failed to parse tool arguments: Unterminated string starting at: line 1 column 2 (char 1)
+2025-09-16 15:19:36,469 - main - INFO - Chat completed 0c75b69e-54e0-49d9-bd31-00e3b305ae19
+2025-09-16 15:20:26,897 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 15:20:26,899 - main - INFO - Starting chat stream 98919b95-c848-48be-8aa4-043827611f4b - 1 messages
+2025-09-16 15:20:26,899 - main - INFO - Config: api_key=sk-or-v1-f3fdc198470..., model=qwen/qwen3-235b-a22b-2507, base_url=https://openrouter.ai/api/v1
+2025-09-16 15:20:27,608 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 15:20:28,764 - main - INFO - Tool call started: 81c22b308 - getWeather
+2025-09-16 15:20:28,764 - main - INFO - Tool call delta: 81c22b308 - '{' (total: '{')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - '"' (total: '{"')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'c' (total: '{"c')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'i' (total: '{"ci')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 't' (total: '{"cit')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'y' (total: '{"city')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - '"' (total: '{"city"')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - ':' (total: '{"city":')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - ' ' (total: '{"city": ')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - '"' (total: '{"city": "')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'K' (total: '{"city": "K')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'r' (total: '{"city": "Kr')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'a' (total: '{"city": "Kra')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'm' (total: '{"city": "Kram')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'f' (total: '{"city": "Kramf')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'o' (total: '{"city": "Kramfo')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 'r' (total: '{"city": "Kramfor')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - 's' (total: '{"city": "Kramfors')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - '"' (total: '{"city": "Kramfors"')
+2025-09-16 15:20:28,765 - main - INFO - Tool call delta: 81c22b308 - '}' (total: '{"city": "Kramfors"}')
+2025-09-16 15:20:28,893 - main - INFO - Tool call complete: 81c22b308 - event.arguments='{"city": "Kramfors"}', accumulated='{"city": "Kramfors"}'
+2025-09-16 15:20:30,895 - main - INFO - Tool getWeather executed successfully
+2025-09-16 15:20:31,716 - main - INFO - Chat completed 98919b95-c848-48be-8aa4-043827611f4b
+2025-09-16 16:33:51,244 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 16:33:51,245 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 16:34:23,173 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 16:34:23,178 - main - INFO - Starting chat stream 894f3c6b-bfac-48ef-8ccf-0e77820bf427 - 1 messages
+2025-09-16 16:34:23,985 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 16:34:27,676 - main - INFO - Chat completed 894f3c6b-bfac-48ef-8ccf-0e77820bf427
+2025-09-16 16:44:02,933 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 16:44:02,934 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 16:45:26,954 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 16:45:26,954 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 16:46:40,066 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 16:46:40,070 - main - INFO - Starting chat stream 8a57b8b3-e750-4769-9cf0-6361ee0bf6e4 - 1 messages
+2025-09-16 16:46:42,069 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 16:46:42,259 - main - INFO - Chat completed 8a57b8b3-e750-4769-9cf0-6361ee0bf6e4
+2025-09-16 16:46:42,259 - asyncio - WARNING - socket.send() raised exception.
+2025-09-16 16:47:06,095 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 16:47:06,095 - main - INFO - Starting chat stream 3bed5cfc-a8b8-4217-b38c-1c0616bdc45c - 1 messages
+2025-09-16 16:47:07,271 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 16:47:10,769 - main - INFO - Chat completed 3bed5cfc-a8b8-4217-b38c-1c0616bdc45c
+2025-09-16 16:49:02,675 - __main__ - INFO - Starting FastAPI development server...
+2025-09-16 16:49:02,675 - __main__ - INFO - Backend directory: /Users/magnusbjelkenhed/think/projects/ai-elements/backend
+2025-09-16 16:49:38,670 - main - INFO - Chat request: openai/gpt-4o, 1 messages
+2025-09-16 16:49:38,674 - main - INFO - Starting chat stream a1b1d922-1e57-4aa1-a8ee-c255aae3c114 - 1 messages
+2025-09-16 16:49:39,233 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 16:49:42,909 - main - INFO - Chat completed a1b1d922-1e57-4aa1-a8ee-c255aae3c114
