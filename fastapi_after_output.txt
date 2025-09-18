@@ -1,0 +1,185 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   209    0     0  100   209      0   1016 --:--:-- --:--:-- --:--:--  1014data: {"type":"start"}
+
+data: {"type":"start-step"}
+
+100   262    0    53  100   209     42    168  0:00:01  0:00:01 --:--:--   210100   262    0    53  100   209     23     93  0:00:02  0:00:02 --:--:--   116100   262    0    53  100   209     16     64  0:00:03  0:00:03 --:--:--    80100   262    0    53  100   209     12     49  0:00:04  0:00:04 --:--:--    61data: {"type":"tool-input-start","toolCallId":"call_c3f3c4504b594986bf49f570","toolName":"getWeather"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"{"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"\""}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"c"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"i"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"t"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"y"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"\""}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":":"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":" "}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"\""}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"P"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"a"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"r"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"i"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"s"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"\""}
+
+data: {"type":"tool-input-delta","toolCallId":"call_c3f3c4504b594986bf49f570","inputTextDelta":"}"}
+
+data: {"type":"tool-input-available","toolCallId":"call_c3f3c4504b594986bf49f570","toolName":"getWeather","input":{"city":"Paris"},"providerMetadata":{"openai":{"itemId":"fc_call_c3f3c4504b594986bf49f570"}}}
+
+data: {"type":"tool-output-available","toolCallId":"call_c3f3c4504b594986bf49f570","output":{"status":"loading","text":"Getting weather for Paris..."},"preliminary":true}
+
+100  2468    0  2259  100   209    382     35  0:00:05  0:00:05 --:--:--   395data: {"type":"tool-output-available","toolCallId":"call_c3f3c4504b594986bf49f570","output":{"status":"success","text":"The weather in Paris is currently raining at 19°C. It's raining cats and dogs in Paris!","weather":{"city":"Paris","weather":"raining","temperature":"19°C","humidity":"95%","description":"It's raining cats and dogs in Paris!"}}}
+
+100  2820    0  2611  100   209    377     30  0:00:06  0:00:06 --:--:--   451data: {"type":"finish-step"}
+
+data: {"type":"start-step"}
+
+100  2879    0  2670  100   209    337     26  0:00:08  0:00:07  0:00:01   461100  2879    0  2670  100   209    299     23  0:00:09  0:00:08  0:00:01   461100  2879    0  2670  100   209    269     21  0:00:09  0:00:09 --:--:--   461100  2879    0  2670  100   209    244     19  0:00:11  0:00:10  0:00:01    81100  2879    0  2670  100   209    223     17  0:00:12  0:00:11  0:00:01    11100  2879    0  2670  100   209    206     16  0:00:13  0:00:12  0:00:01     0100  2879    0  2670  100   209    191     14  0:00:14  0:00:13  0:00:01     0100  2879    0  2670  100   209    178     13  0:00:16  0:00:14  0:00:02     0data: {"type":"text-start","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","providerMetadata":{"openai":{"itemId":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f"}}}
+
+100  3040    0  2831  100   209    182     13  0:00:16  0:00:15  0:00:01    35data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"\n\n"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"The"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" weather"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" in"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" Paris"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" is"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" currently"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" **"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"r"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"aining"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" heavily"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"**"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" with"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" a"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" temperature"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" of"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" **"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"1"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"9"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"°C"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"**"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" and"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" **"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"9"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"5"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"%"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" humidity"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"**"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"."}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" As"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" they"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" say"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":","}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" it"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"'s"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" \""}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"r"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"aining"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" cats"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" and"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" dogs"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"\""}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" in"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" Paris"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" right"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" now"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"!"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" "}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"🌧"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"️"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" Don"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"'t"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" forget"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" an"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" umbrella"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" if"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" you"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"'re"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" heading"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":" out"}
+
+data: {"type":"text-delta","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f","delta":"."}
+
+data: {"type":"text-end","id":"msg_836ae2f7-7e47-4a76-add0-fde9e1e7d68f"}
+
+data: {"type":"finish-step"}
+
+data: {"type":"finish"}
+
+data: [DONE]
+
+100  8783    0  8574  100   209    537     13  0:00:16  0:00:15  0:00:01  1465

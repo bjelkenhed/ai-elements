@@ -1,4 +1,11 @@
-import { streamText, UIMessage, convertToModelMessages, tool, stepCountIs } from 'ai';
+import {
+  streamText,
+  UIMessage,
+  convertToModelMessages,
+  tool,
+  stepCountIs,
+  createUIMessageStreamResponse
+} from 'ai';
 import { z } from 'zod';
 
 // Allow streaming responses up to 30 seconds
@@ -73,8 +80,51 @@ export async function POST(req: Request) {
       console.log('FastAPI response status:', response.status);
       console.log('FastAPI response headers:', Object.fromEntries(response.headers.entries()));
 
-      // Simply return the FastAPI response directly
-      return new Response(response.body, {
+      // Transform FastAPI stream to match AI Gateway format exactly
+      if (!response.body) {
+        throw new Error('FastAPI response has no body');
+      }
+
+      // The FastAPI response is already in SSE format, but we need to parse
+      // it back to UIMessageChunk objects, then re-transform it to match
+      // the AI Gateway's toUIMessageStreamResponse() format exactly
+
+      // First, parse the SSE stream back to chunks
+      const parsedChunks = new ReadableStream({
+        async start(controller) {
+          const reader = response.body!.pipeThrough(new TextDecoderStream()).getReader();
+
+          try {
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+
+              // Parse SSE lines into JSON chunks
+              const lines = value.split('\n');
+              for (const line of lines) {
+                if (line.startsWith('data: ')) {
+                  try {
+                    const jsonStr = line.slice(6); // Remove 'data: '
+                    if (jsonStr.trim()) {
+                      const chunk = JSON.parse(jsonStr);
+                      controller.enqueue(chunk);
+                    }
+                  } catch {
+                    // Skip invalid JSON lines
+                  }
+                }
+              }
+            }
+          } finally {
+            controller.close();
+            reader.releaseLock();
+          }
+        }
+      });
+
+      // Now transform through the same pipeline as AI Gateway
+      return createUIMessageStreamResponse({
+        stream: parsedChunks,
         status: response.status,
         headers: {
           'Content-Type': 'text/plain; charset=utf-8',

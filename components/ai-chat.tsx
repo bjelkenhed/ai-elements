@@ -59,8 +59,8 @@ import { Loader } from '@/components/ai-elements/loader';
 
 const models = [
   {
-    name: 'GPT 4o',
-    value: 'openai/gpt-4o',
+    name: 'Qwen3 Next 80B (Thinking)',
+    value: 'qwen/qwen3-next-80b-a3b-thinking',
   },
   {
     name: 'Deepseek R1',

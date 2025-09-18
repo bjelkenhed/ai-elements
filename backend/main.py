@@ -13,8 +13,7 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-from llm import call_llm_stream, TextDelta, ToolCallStart, ToolCallDelta, ToolCallComplete, ResponseComplete
-from messages import Messages
+from agentic_blocks import call_llm_stream, Messages
 
 # Setup
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env.local"))
@@ -91,53 +90,102 @@ tools_registry = {"getWeather": WeatherTool()}
 class FastAPIStreamAdapter:
     """Converts call_llm_stream events to AI Gateway SSE format."""
 
-    def __init__(self, message_id: str):
+    def __init__(self, message_id: str, model: str = "", messages=None, openai_tools=None):
         self.message_id = message_id
+        self.model = model
+        self.messages = messages
+        self.openai_tools = openai_tools
         self.text_id = f"msg_{message_id}"
         self.tool_calls = {}
         self.has_started_text = False
+        self.has_started_reasoning = False
+        self.reasoning_id = "reasoning-0"
 
-    async def convert_to_sse_stream(self, stream_events) -> AsyncGenerator[str, None]:
-        """Convert call_llm_stream events to AI Gateway SSE format."""
+    async def convert_to_sse_stream(self, response) -> AsyncGenerator[str, None]:
+        """Convert agentic-blocks LLMResponse to AI Gateway SSE format."""
+        logger = logging.getLogger(__name__)
 
+        logger.info(f"Starting chat stream {self.message_id} using model: {self.model}")
         yield self._sse_event({'type': 'start'})
         yield self._sse_event({'type': 'start-step'})
 
         has_tool_calls = False
+        streaming_events = []
+        text_content_buffer = ""
 
-        async for event in stream_events:
-            if isinstance(event, TextDelta):
-                async for text_event in self._handle_text_delta(event):
-                    yield text_event
-            elif isinstance(event, ToolCallStart):
-                has_tool_calls = True
-                async for tool_event in self._handle_tool_start(event):
-                    yield tool_event
-            elif isinstance(event, ToolCallDelta):
-                async for tool_event in self._handle_tool_delta(event):
-                    yield tool_event
-            elif isinstance(event, ToolCallComplete):
-                async for tool_event in self._handle_tool_complete(event):
-                    yield tool_event
-            elif isinstance(event, ResponseComplete):
-                if self.has_started_text:
-                    yield self._sse_event({'type': 'text-end', 'id': self.text_id})
+        # Stream text events from response.stream()
+        async for event in response.stream():
+            streaming_events.append(event.event_type)
+
+            if event.event_type == "text_delta":
+                # Buffer text content instead of immediately showing it
+                text_content_buffer += event.content
+            elif event.event_type == "reasoning_delta":
+                # Handle reasoning events only for thinking models
+                async for reasoning_event in self._handle_reasoning_delta(event):
+                    yield reasoning_event
+            elif event.event_type == "tool_call_start":
+                pass  # Tool call started
+            elif event.event_type == "tool_call_complete":
+                pass  # Tool call completed
+            elif event.event_type == "response_complete":
+                pass  # Response completed
+                if self.has_started_reasoning:
+                    yield self._sse_event({'type': 'reasoning-end', 'id': self.reasoning_id})
                 break
 
-        # Generate follow-up text after tool execution
+        reasoning_count = streaming_events.count("reasoning_delta")
+        other_events = [e for e in streaming_events if e != "reasoning_delta"]
+        # Stream processing completed
+
+        # Get reliable tool calls from response.tool_calls()
+        tool_calls = await response.tool_calls_async()
+        if tool_calls:
+            logger.info(f"Processing {len(tool_calls)} tool calls")
+
+        # Decide whether to show initial text content
+        should_show_initial_text = False
+        if text_content_buffer.strip():  # Only show if there's meaningful content
+            should_show_initial_text = True
+        elif not tool_calls:  # Show even empty content if no tool calls
+            should_show_initial_text = True
+
+        if should_show_initial_text and text_content_buffer:
+            yield self._sse_event({
+                'type': 'text-start',
+                'id': self.text_id,
+                'providerMetadata': {'openai': {'itemId': self.text_id}}
+            })
+            yield self._sse_event({'type': 'text-delta', 'id': self.text_id, 'delta': text_content_buffer})
+            yield self._sse_event({'type': 'text-end', 'id': self.text_id})
+
+        if tool_calls:
+            has_tool_calls = True
+            for i, tool_call in enumerate(tool_calls):
+                # Processing tool call silently
+                async for tool_event in self._handle_reliable_tool_call(tool_call):
+                    yield tool_event
+
+        # Generate follow-up response with tool results
         if has_tool_calls:
-            async for followup_event in self._generate_followup_response():
+            # Generating follow-up response
+            yield self._sse_event({'type': 'finish-step'})
+            yield self._sse_event({'type': 'start-step'})
+
+            async for followup_event in self._generate_model_followup_response(tool_calls):
                 yield followup_event
 
+        logger.info(f"Chat completed {self.message_id}")
         yield self._sse_event({'type': 'finish-step'})
         yield self._sse_event({'type': 'finish'})
         yield "data: [DONE]\n\n"
 
     def _sse_event(self, data: Dict[str, Any]) -> str:
         """Format data as SSE event."""
-        return f"data: {json.dumps(data)}\n\n"
+        event_str = f"data: {json.dumps(data)}\n\n"
+        return event_str
 
-    async def _handle_text_delta(self, event: TextDelta):
+    async def _handle_text_delta(self, event):
         """Handle streaming text content."""
         if not self.has_started_text:
             yield self._sse_event({
@@ -148,7 +196,21 @@ class FastAPIStreamAdapter:
             self.has_started_text = True
         yield self._sse_event({'type': 'text-delta', 'id': self.text_id, 'delta': event.content})
 
-    async def _handle_tool_start(self, event: ToolCallStart):
+    async def _handle_reasoning_delta(self, event):
+        """Handle reasoning content from thinking models."""
+        # Only expose reasoning for thinking models (indicated by "thinking" in model name)
+        if 'thinking' not in self.model.lower():
+            return
+
+        if not self.has_started_reasoning:
+            yield self._sse_event({
+                'type': 'reasoning-start',
+                'id': self.reasoning_id
+            })
+            self.has_started_reasoning = True
+        yield self._sse_event({'type': 'reasoning-delta', 'id': self.reasoning_id, 'delta': event.reasoning})
+
+    async def _handle_tool_start(self, event):
         """Handle tool call start."""
         self.tool_calls[event.tool_call_id] = {
             'name': event.tool_name, 'arguments': '', 'completed': False
@@ -159,7 +221,7 @@ class FastAPIStreamAdapter:
             'toolName': event.tool_name
         })
 
-    async def _handle_tool_delta(self, event: ToolCallDelta):
+    async def _handle_tool_delta(self, event):
         """Handle tool call argument deltas."""
         if event.tool_call_id in self.tool_calls:
             self.tool_calls[event.tool_call_id]['arguments'] += event.arguments_delta
@@ -169,7 +231,7 @@ class FastAPIStreamAdapter:
                 'inputTextDelta': event.arguments_delta
             })
 
-    async def _handle_tool_complete(self, event: ToolCallComplete):
+    async def _handle_tool_complete(self, event):
         """Handle tool call completion and execution."""
         if event.tool_call_id not in self.tool_calls:
             return
@@ -194,6 +256,51 @@ class FastAPIStreamAdapter:
 
         # Execute and stream tool
         async for tool_event in self._execute_tool(event.tool_call_id, event.tool_name, arguments):
+            yield tool_event
+
+    async def _handle_reliable_tool_call(self, tool_call):
+        """Handle complete tool call from response.tool_calls() - more reliable than streaming."""
+        logger = logging.getLogger(__name__)
+        tool_call_id = tool_call.id
+        tool_name = tool_call.function.name
+        arguments_str = tool_call.function.arguments or "{}"
+
+        logger.info(f"🎬 Simulating tool-input-delta events for {tool_name}")
+
+        # Parse arguments from the complete tool call
+        try:
+            arguments = json.loads(arguments_str) if arguments_str else {}
+        except json.JSONDecodeError:
+            arguments = {}
+
+        # Stream tool-input-start
+        yield self._sse_event({
+            'type': 'tool-input-start',
+            'toolCallId': tool_call_id,
+            'toolName': tool_name
+        })
+
+        # Stream tool-input-delta events character by character (like AI Gateway)
+        for char in arguments_str:
+            yield self._sse_event({
+                'type': 'tool-input-delta',
+                'toolCallId': tool_call_id,
+                'inputTextDelta': char
+            })
+            # Small delay to simulate streaming (optional)
+            await asyncio.sleep(0.01)
+
+        # Stream tool-input-available (complete arguments)
+        yield self._sse_event({
+            'type': 'tool-input-available',
+            'toolCallId': tool_call_id,
+            'toolName': tool_name,
+            'input': arguments,
+            'providerMetadata': {'openai': {'itemId': f'fc_{tool_call_id}'}}
+        })
+
+        # Execute and stream tool
+        async for tool_event in self._execute_tool(tool_call_id, tool_name, arguments):
             yield tool_event
 
     async def _execute_tool(self, tool_call_id: str, tool_name: str, arguments: Dict[str, Any]):
@@ -267,6 +374,69 @@ class FastAPIStreamAdapter:
 
         yield self._sse_event({'type': 'text-end', 'id': followup_id})
 
+    async def _generate_model_followup_response(self, tool_calls):
+        """Generate follow-up response from the model after tool execution."""
+        if not self.messages or not tool_calls:
+            return
+
+        logger = logging.getLogger(__name__)
+
+        # Add tool results to the conversation
+        for tool_call in tool_calls:
+            # Execute the tool to get the result
+            tool_name = tool_call.function.name
+            if tool_name in tools_registry:
+                try:
+                    arguments = json.loads(tool_call.function.arguments)
+                    tool = tools_registry[tool_name]
+                    result = await tool.execute(**arguments)
+
+                    # Add tool response to messages
+                    self.messages.add_tool_response(tool_call.id, json.dumps(result))
+                    logger.info(f"✅ Added tool result for {tool_name}: {result}")
+                except Exception as e:
+                    logger.error(f"❌ Tool execution failed for {tool_name}: {e}")
+                    self.messages.add_tool_response(tool_call.id, f"Error: {str(e)}")
+
+        # Generate follow-up response from the model
+        try:
+            followup_response = await call_llm_stream(
+                messages=self.messages,
+                tools=self.openai_tools,
+                temperature=0.7,
+                enable_fallback=True
+            )
+
+            # Stream the follow-up response
+            followup_id = f"msg_{uuid.uuid4()}"
+            has_started_followup = False
+
+            async for event in followup_response.stream():
+                if event.event_type == "text_delta":
+                    if not has_started_followup:
+                        yield self._sse_event({
+                            'type': 'text-start',
+                            'id': followup_id,
+                            'providerMetadata': {'openai': {'itemId': followup_id}}
+                        })
+                        has_started_followup = True
+                    yield self._sse_event({'type': 'text-delta', 'id': followup_id, 'delta': event.content})
+                elif event.event_type == "response_complete":
+                    if has_started_followup:
+                        yield self._sse_event({'type': 'text-end', 'id': followup_id})
+                    break
+
+        except Exception as e:
+            logger.error(f"❌ Follow-up response generation failed: {e}")
+            # Fallback to the tool output
+            yield self._sse_event({
+                'type': 'text-start',
+                'id': f"msg_{uuid.uuid4()}",
+                'providerMetadata': {'openai': {'itemId': f"msg_{uuid.uuid4()}"}}
+            })
+            yield self._sse_event({'type': 'text-delta', 'id': f"msg_{uuid.uuid4()}", 'delta': "Tool execution completed successfully."})
+            yield self._sse_event({'type': 'text-end', 'id': f"msg_{uuid.uuid4()}"})
+
 
 
 def extract_message_content(ui_msg: UIMessage) -> str:
@@ -293,9 +463,8 @@ async def generate_ui_message_stream(request: ChatRequest) -> AsyncGenerator[str
 
     try:
         # Build messages for LLM
-        messages = Messages(
-            system_prompt="You are a helpful assistant that can answer questions and help with tasks. When appropriate, use the available tools to provide accurate information."
-        )
+        messages = Messages()
+        messages.add_system_message("You are a helpful assistant that can answer questions and help with tasks. When appropriate, use the available tools to provide accurate information.")
 
         for ui_msg in request.messages:
             content = extract_message_content(ui_msg)
@@ -315,15 +484,15 @@ async def generate_ui_message_stream(request: ChatRequest) -> AsyncGenerator[str
         } for tool in tools_registry.values()]
 
         # Stream LLM response through adapter
-        adapter = FastAPIStreamAdapter(message_id)
-        stream_events = call_llm_stream(
+        adapter = FastAPIStreamAdapter(message_id, request.model, messages, openai_tools)
+        response = await call_llm_stream(
             messages=messages,
             tools=openai_tools,
-            model=None,  # Use MODEL_ID from environment
-            temperature=0.7
+            temperature=0.7,
+            enable_fallback=True  # Automatic fallback for reliable tool calls
         )
 
-        async for sse_event in adapter.convert_to_sse_stream(stream_events):
+        async for sse_event in adapter.convert_to_sse_stream(response):
             yield sse_event
 
         logger.info(f"Chat completed {message_id}")

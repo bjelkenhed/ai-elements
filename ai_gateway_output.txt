@@ -1,0 +1,81 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0data: {"type":"start"}
+
+data: {"type":"start-step"}
+
+100   219    0    53  100   166     61    193 --:--:-- --:--:-- --:--:--   255data: {"type":"tool-input-start","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","toolName":"getWeather"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","inputTextDelta":"{\""}
+
+100   426    0   260  100   166    146     93  0:00:01  0:00:01 --:--:--   239data: {"type":"tool-input-delta","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","inputTextDelta":"city"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","inputTextDelta":"\":\""}
+
+data: {"type":"tool-input-delta","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","inputTextDelta":"Paris"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","inputTextDelta":"\"}"}
+
+data: {"type":"tool-input-available","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","toolName":"getWeather","input":{"city":"Paris"},"providerMetadata":{"openai":{"itemId":"fc_68cc41169bec8191b29ceed1f67974510c80b08823ba8d03"}}}
+
+data: {"type":"tool-output-available","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","output":{"status":"loading","text":"Getting weather for Paris..."},"preliminary":true}
+
+100  1243    0  1077  100   166    355     54  0:00:03  0:00:03 --:--:--   410100  1243    0  1077  100   166    267     41  0:00:04  0:00:04 --:--:--   308data: {"type":"tool-output-available","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","output":{"status":"success","text":"The weather in Paris is currently raining at 19°C. It's raining cats and dogs in Paris!","weather":{"city":"Paris","weather":"raining","temperature":"19°C","humidity":"95%","description":"It's raining cats and dogs in Paris!"}},"preliminary":true}
+
+data: {"type":"tool-output-available","toolCallId":"call_tUDJDsRjAyiWtIjm9iV2Insa","output":{"status":"success","text":"The weather in Paris is currently raining at 19°C. It's raining cats and dogs in Paris!","weather":{"city":"Paris","weather":"raining","temperature":"19°C","humidity":"95%","description":"It's raining cats and dogs in Paris!"}}}
+
+data: {"type":"finish-step"}
+
+data: {"type":"start-step"}
+
+100  2025    0  1859  100   166    410     36  0:00:04  0:00:04 --:--:--   446data: {"type":"text-start","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","providerMetadata":{"openai":{"itemId":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03"}}}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":"The"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" weather"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" in"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" Paris"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" is"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" currently"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" raining"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" with"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" a"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" temperature"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" of"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" "}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":"19"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":"°C"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":"."}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" It's"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" raining"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" quite"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":" heavily"}
+
+data: {"type":"text-delta","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03","delta":"!"}
+
+data: {"type":"text-end","id":"msg_68cc4119eb2c8191a9c801def4bc73c10c80b08823ba8d03"}
+
+data: {"type":"finish-step"}
+
+data: {"type":"finish"}
+
+data: [DONE]
+
+100  4464    0  4298  100   166    812     31  0:00:05  0:00:05 --:--:--   958
