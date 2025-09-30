@@ -1,0 +1,306 @@
+data: {"type":"start"}
+
+data: {"type":"start-step"}
+
+data: {"type":"reasoning-start","id":"reasoning-0"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"Okay"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", let"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"'s see. The"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" user is asking for"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"3 times 4"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":". So"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" I need to multiply"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" those two numbers.\n\n"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"Looking"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" at the tools provided"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", there's a"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" multiply function. The"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" parameters are a and"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" b, both numbers"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":". So I should"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" call multiply with a"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"=3 and b"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"=4.\n\nLet"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" me check the requirements"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" The function"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" requires a"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" and b, both"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" numbers. Yep"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"3 and 4"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" are numbers. So"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the correct tool call"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" is multiply"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" with those"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" values"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":".\n\nNo need"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" to"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" use add"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" here."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" Just multiply."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" So the tool call"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" should be {\"name"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"\": \"multiply\","}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" \"arguments\": {\""}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"a\": 3"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", \"b\":"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" 4}}.\n\n"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"I need to make"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" sure there"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" are"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" no extra"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" parameters"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" and"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" JSON"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" is correctly formatted."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" Yep"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", that's right"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":". So"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the response"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" should"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" be the tool"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" call inside XML"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" tags."}
+
+data: {"type":"text-start","id":"txt-0"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"\n\n"}
+
+data: {"type":"tool-input-start","toolCallId":"call_23527d8c9c274178b0c8628a","toolName":"multiply"}
+
+data: {"type":"tool-input-delta","toolCallId":"call_23527d8c9c274178b0c8628a","inputTextDelta":"{\"a\": 3, \"b\": 4}"}
+
+data: {"type":"tool-input-available","toolCallId":"call_23527d8c9c274178b0c8628a","toolName":"multiply","input":{"a":3,"b":4}}
+
+data: {"type":"tool-output-available","toolCallId":"call_23527d8c9c274178b0c8628a","output":{"status":"loading","text":"Multiplying 3 × 4..."},"preliminary":true}
+
+data: {"type":"reasoning-end","id":"reasoning-0"}
+
+data: {"type":"text-end","id":"txt-0"}
+
+data: {"type":"tool-output-available","toolCallId":"call_23527d8c9c274178b0c8628a","output":{"status":"success","text":"The product of 3 × 4 = 12","result":12},"preliminary":true}
+
+data: {"type":"tool-output-available","toolCallId":"call_23527d8c9c274178b0c8628a","output":{"status":"success","text":"The product of 3 × 4 = 12","result":12}}
+
+data: {"type":"finish-step"}
+
+data: {"type":"start-step"}
+
+data: {"type":"reasoning-start","id":"reasoning-0"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"Okay"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", the user asked"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" \""}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"What is 3"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" times 4\"."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" I need"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" to calculate"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" that. Let"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" me check the tools"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" available. There's"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" a multiply function."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" So I should use"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" that. The parameters"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" are a and b"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", both numbers"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":". So for"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" 3 times"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" 4, a"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" is 3 and"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" b is 4"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":". Call"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the multiply tool with"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" those values.\n\n"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"Then"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the response"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" from"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the tool says"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the product is "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"12. So"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" I need to present"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" that answer clearly."}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" The user probably just"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" wants the result"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":","}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" so I should say"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" something"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" like \"3"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" times 4 is"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" 12\""}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" or \""}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"The product of "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"3 and 4"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" is 12"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"\". Let me make"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" sure it"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"'s straightforward. Yeah"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":", the tool"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"'s response text"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" says \"The product"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" of 3 ×"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" 4 = "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"12\", so"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" I can use"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" that or"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" a"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" similar"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" phrasing. Since"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the user asked"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" \""}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"What is 3"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" times 4\","}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" the answer is "}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"12. Just"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":" state it clearly"}
+
+data: {"type":"reasoning-delta","id":"reasoning-0","delta":"."}
+
+data: {"type":"text-start","id":"txt-0"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"\n\nThe"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" product of 3"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" times"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" 4 is **"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"12**."}
+
+data: {"type":"reasoning-end","id":"reasoning-0"}
+
+data: {"type":"text-end","id":"txt-0"}
+
+data: {"type":"finish-step"}
+
+data: {"type":"finish"}
+
+data: [DONE]
+

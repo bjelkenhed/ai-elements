@@ -1,19 +1,0 @@
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0data: {"type": "start"}
-
-data: {"type": "start-step"}
-
-100   264    0    55  100   209     43    164  0:00:01  0:00:01 --:--:--   208100   264    0    55  100   209     24     91  0:00:02  0:00:02 --:--:--   116100   264    0    55  100   209     16     63  0:00:03  0:00:03 --:--:--    80100   264    0    55  100   209     12     48  0:00:04  0:00:04 --:--:--    61data: {"type": "text-start", "id": "msg_1cda41d9-1b27-4758-a0b4-33bd9cd9a8d5", "providerMetadata": {"openai": {"itemId": "msg_1cda41d9-1b27-4758-a0b4-33bd9cd9a8d5"}}}
-
-100   432    0   223  100   209     44     41  0:00:05  0:00:05 --:--:--    85data: {"type": "text-delta", "id": "msg_1cda41d9-1b27-4758-a0b4-33bd9cd9a8d5", "delta": "\n\n<tools>\n{\"name\": \"getWeather\", \"arguments\": {\"city\": \"Paris\"}}\n</tools>"}
-
-data: {"type": "text-end", "id": "msg_1cda41d9-1b27-4758-a0b4-33bd9cd9a8d5"}
-
-data: {"type": "finish-step"}
-
-data: {"type": "finish"}
-
-data: [DONE]
-
-100   761    0   552  100   209    109     41  0:00:05  0:00:05 --:--:--   130

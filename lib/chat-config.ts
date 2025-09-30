@@ -13,7 +13,6 @@ export function getChatConfig(): ChatConfig {
   const fastapiUrl = process.env.NEXT_PUBLIC_FASTAPI_URL;
 
   if (fastapiUrl) {
-    console.log('Using FastAPI backend:', fastapiUrl);
     return {
       apiPath: '/chat',
       backendType: 'local',
@@ -21,7 +20,6 @@ export function getChatConfig(): ChatConfig {
     };
   }
 
-  console.log('Using AI Gateway backend');
   return {
     apiPath: '/api/chat',
     backendType: 'gateway'

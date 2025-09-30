@@ -43,6 +43,7 @@ import { useState, Fragment } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { getApiUrl, getChatConfig } from '@/lib/chat-config';
 import { Response } from '@/components/ai-elements/response';
+import { useChatLogger } from '@/hooks/use-chat-logger';
 import { GlobeIcon, RefreshCcwIcon, CopyIcon } from 'lucide-react';
 import {
   Source,
@@ -59,16 +60,8 @@ import { Loader } from '@/components/ai-elements/loader';
 
 const models = [
   {
-    name: 'Qwen3 Next 80B (Thinking)',
-    value: 'qwen/qwen3-next-80b-a3b-thinking',
-  },
-  {
-    name: 'Deepseek R1',
-    value: 'deepseek/deepseek-r1',
-  },
-  {
-    name: 'GPT OSS 120B',
-    value: 'openai/gpt-oss-120b',
+    name: 'Qwen3-235b',
+    value: 'alibaba/qwen-3-235b',
   },
   {
     name: 'Qwen3-Next-80B-A3B-Thinking',
@@ -76,14 +69,35 @@ const models = [
   },
 ];
 
+
+
 const AIChat = () => {
   const [input, setInput] = useState('');
   const [model, setModel] = useState<string>(models[0].value);
   const [webSearch, setWebSearch] = useState(false);
-  const [toolCalls, setToolCalls] = useState<any[]>([]);
+  const [toolCalls, setToolCalls] = useState<Array<{
+    toolCallId: string;
+    toolName: string;
+    state: string;
+    input?: unknown;
+    output?: unknown;
+    errorText?: string;
+  }>>([]);
 
   const chatConfig = getChatConfig();
-  const { messages, sendMessage, status, reload, setMessages } = useChat();
+  const { messages, sendMessage, status } = useChat({
+    api: '/api/chat',
+    onError: (error) => {
+      console.error('🚨 useChat error:', error);
+    }
+  });
+
+  // Frontend logging for UI interactions and state changes
+  const { logUserInteraction, logMessageSubmission, logBackendSwitch } = useChatLogger({
+    messages,
+    status,
+    backendType: chatConfig.backendType
+  });
 
   const handleSubmit = async (message: PromptInputMessage) => {
     const hasText = Boolean(message.text);
@@ -93,7 +107,16 @@ const AIChat = () => {
       return;
     }
 
-    console.log('backend:', chatConfig.backendType);
+    const requestOptions = {
+      body: {
+        model: model,
+        webSearch: webSearch,
+        _endpoint: chatConfig.backendType === 'local' ? getApiUrl() : undefined,
+      },
+    };
+
+    // Log message submission with frontend logging
+    logMessageSubmission(message.text || 'Message with attachments', requestOptions);
 
     // Clear previous tool calls
     setToolCalls([]);
@@ -104,13 +127,7 @@ const AIChat = () => {
         text: message.text || 'Sent with attachments',
         files: message.files
       },
-      {
-        body: {
-          model: model,
-          webSearch: webSearch,
-          _endpoint: chatConfig.backendType === 'local' ? getApiUrl() : undefined,
-        },
-      },
+      requestOptions,
     );
     setInput('');
   };
@@ -132,20 +149,6 @@ const AIChat = () => {
         <Conversation className="h-full">
           <ConversationContent>
             {messages.map((message) => {
-              // Debug logging for message parts
-              console.log('🔍 Message:', message.id, 'Role:', message.role, 'Parts:', message.parts.length);
-              message.parts.forEach((part, i) => {
-                console.log(`🔍 Part ${i}:`, part.type, part);
-                if (part.type === 'tool-call') {
-                  console.log('🔧 Tool-call part details:', {
-                    toolName: part.toolName,
-                    state: part.state,
-                    input: part.input,
-                    output: part.output,
-                    errorText: part.errorText
-                  });
-                }
-              });
 
               return (
                 <div key={message.id}>
@@ -205,7 +208,7 @@ const AIChat = () => {
                           {message.role === 'assistant' && i === messages.length - 1 && (
                             <Actions className="mt-2">
                               <Action
-                                onClick={() => reload()}
+                                onClick={() => window.location.reload()}
                                 label="Retry"
                               >
                                 <RefreshCcwIcon className="size-3" />
@@ -256,34 +259,35 @@ const AIChat = () => {
                     default:
                       // Handle dynamic tool types from AI Gateway (e.g., 'tool-getWeather')
                       if (part.type && part.type.startsWith('tool-')) {
-                        console.log('🔧 Found tool part:', part.type, part);
-                        console.log('🔧 Available properties:', Object.keys(part));
-
                         if ('state' in part) {
-                          const toolPart = part as any; // Type assertion for tool parts
+                          const toolPart = part as {
+                            type: string;
+                            state: string;
+                            input?: unknown;
+                            output?: unknown;
+                            errorText?: string;
+                          };
                           const toolName = part.type.replace('tool-', ''); // Extract tool name from type
-                          console.log('🔧 Rendering tool component for:', toolName, 'state:', toolPart.state);
+
                           return (
                             <Tool key={`${message.id}-${i}`} className="mb-4">
                               <ToolHeader
-                                type={toolName}
-                                state={toolPart.state}
+                                type={toolName as `tool-${string}`}
+                                state={toolPart.state as "input-streaming" | "input-available" | "output-available" | "output-error"}
                               />
                               <ToolContent>
                                 {toolPart.input && (
-                                  <ToolInput input={toolPart.input} />
+                                  <ToolInput input={toolPart.input as unknown} />
                                 )}
                                 {(toolPart.output || toolPart.errorText) && (
                                   <ToolOutput
-                                    output={toolPart.output}
+                                    output={toolPart.output as unknown}
                                     errorText={toolPart.errorText}
                                   />
                                 )}
                               </ToolContent>
                             </Tool>
                           );
-                        } else {
-                          console.log('🔧 Tool part missing state property, skipping');
                         }
                       }
                       return null;
@@ -317,7 +321,14 @@ const AIChat = () => {
               </PromptInputActionMenu>
               <PromptInputButton
                 variant={webSearch ? 'default' : 'ghost'}
-                onClick={() => setWebSearch(!webSearch)}
+                onClick={() => {
+                  const newWebSearchState = !webSearch;
+                  setWebSearch(newWebSearchState);
+                  logUserInteraction('web_search_toggle', {
+                    webSearch: newWebSearchState,
+                    model
+                  });
+                }}
               >
                 <GlobeIcon size={16} />
                 <span>Search</span>
@@ -325,6 +336,11 @@ const AIChat = () => {
               <PromptInputModelSelect
                 onValueChange={(value) => {
                   setModel(value);
+                  logUserInteraction('model_change', {
+                    previousModel: model,
+                    newModel: value,
+                    webSearch
+                  });
                 }}
                 value={model}
               >

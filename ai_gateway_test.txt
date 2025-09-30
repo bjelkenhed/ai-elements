@@ -1,0 +1,58 @@
+data: {"type":"start"}
+
+data: {"type":"start-step"}
+
+data: {"type":"tool-input-start","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","toolName":"multiply"}
+
+data: {"type":"tool-input-delta","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","inputTextDelta":"{\"a\": 3"}
+
+data: {"type":"tool-input-delta","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","inputTextDelta":", \"b\": 4}"}
+
+data: {"type":"tool-input-available","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","toolName":"multiply","input":{"a":3,"b":4}}
+
+data: {"type":"tool-output-available","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","output":{"status":"loading","text":"Multiplying 3 × 4..."},"preliminary":true}
+
+data: {"type":"tool-output-available","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","output":{"status":"success","text":"The product of 3 × 4 = 12","result":12},"preliminary":true}
+
+data: {"type":"tool-output-available","toolCallId":"chatcmpl-tool-4ef9ec106c6c4c30805286d5421defe5","output":{"status":"success","text":"The product of 3 × 4 = 12","result":12}}
+
+data: {"type":"finish-step"}
+
+data: {"type":"start-step"}
+
+data: {"type":"text-start","id":"txt-0"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"The"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" product"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" of"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" "}
+
+data: {"type":"text-delta","id":"txt-0","delta":"3"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" ×"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" "}
+
+data: {"type":"text-delta","id":"txt-0","delta":"4"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" is"}
+
+data: {"type":"text-delta","id":"txt-0","delta":" "}
+
+data: {"type":"text-delta","id":"txt-0","delta":"1"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"2"}
+
+data: {"type":"text-delta","id":"txt-0","delta":"."}
+
+data: {"type":"text-end","id":"txt-0"}
+
+data: {"type":"finish-step"}
+
+data: {"type":"finish"}
+
+data: [DONE]
+
